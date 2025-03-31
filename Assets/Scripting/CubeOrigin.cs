@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -19,7 +18,6 @@ public class SquareColourCorrection : CubeBase {
         AlignToGridAndColour();
     }
     private void Start() {
-        //Debug.Log(GetSquareInDirection(-1, 0));
         StartCoroutine(SpawnSurrounding());
     }
     void Update(){
@@ -27,11 +25,10 @@ public class SquareColourCorrection : CubeBase {
     }
 
     public void setSizeOfBoard(Slider slider) {
-        sizeNumber = (int)slider.value/* * 2 + 1*/;
+        sizeNumber = (int)slider.value;
         maxValue = (int)slider.maxValue;
         if (false == running) {
             StartCoroutine(SpawnSurrounding());
-            //StartCoroutine(RemoveSurrounding());
         }
     }
 
