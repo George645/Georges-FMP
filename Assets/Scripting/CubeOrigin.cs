@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SquareColourCorrection : CubeBase {
     public static GameObject cube;
     public GameObject cubetemp;
-    public int sizeNumber;
+    public int sizeNumber = 1;
     private bool running;
     int maxValue;
 
@@ -31,11 +31,12 @@ public class SquareColourCorrection : CubeBase {
         maxValue = (int)slider.maxValue;
         if (false == running) {
             StartCoroutine(SpawnSurrounding());
-            StartCoroutine(RemoveSurrounding());
+            //StartCoroutine(RemoveSurrounding());
         }
     }
 
     IEnumerator SpawnSurrounding() {
+        StartCoroutine(RemoveSurrounding());
         running = true;
         for (int i = 0; i <= sizeNumber; i++) {
             for (int j = -i; j <= i - 1; j++) {
@@ -71,9 +72,6 @@ public class SquareColourCorrection : CubeBase {
                 if(Mathf.Abs(z) <= sizeNumber && Mathf.Abs(x) <= sizeNumber || (GetSquareInDirection(z, x) && GetSquareInDirection(z, -x) && GetSquareInDirection(-z, x) && GetSquareInDirection(-z, -x)) == null) {
                     continue;
                 }
-
-                
-                Debug.Log(x + ", " + z + ", " + GetSquareInDirection(x, z));
                 Destroy(GetSquareInDirection(z, x));
                 Destroy(GetSquareInDirection(z, -x));
                 Destroy(GetSquareInDirection(-z, x));
