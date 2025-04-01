@@ -41,7 +41,7 @@ public class SquareColourCorrection : CubeBase {
                     if ((j == 0 && k == 0) || GetSquareInDirection(j, k) != null){
                         continue;
                     }
-                    Instantiate(cube, new Vector3(j, 0.5f, k), Quaternion.identity);
+                    Instantiate(cube, new Vector3(j, 0.5f, k), Quaternion.identity, transform);
                     yield return new WaitForSeconds(0.02f);
                 }
             }
@@ -50,7 +50,7 @@ public class SquareColourCorrection : CubeBase {
                     if ((j == 0 && k == 0) || GetSquareInDirection(j, k) != null) {
                         continue;
                     }
-                    Instantiate(cube, new Vector3(j, 0.5f, k), Quaternion.identity);
+                    Instantiate(cube, new Vector3(j, 0.5f, k), Quaternion.identity, transform);
                     yield return new WaitForSeconds(0.02f);
                 }
             }
