@@ -1,9 +1,6 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using UnityEditor.UIElements;
-using UnityEditor.Rendering;
-using NUnit.Framework;
 using System.Collections.Generic;
 
 public class SquareColourCorrection : CubeBase {
