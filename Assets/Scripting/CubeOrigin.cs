@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEditor.UIElements;
 using UnityEditor.Rendering;
+using NUnit.Framework;
+using System.Collections.Generic;
 
 public class SquareColourCorrection : CubeBase {
     public static GameObject cube;
@@ -10,9 +12,9 @@ public class SquareColourCorrection : CubeBase {
     public int sizeNumber = 1;
     private bool running;
     int maxValue;
-    Mode mode = Mode.levelling;
+    Mode mode = Mode.gaming;
     [SerializeField]
-    AnimationCurve dfgsd;
+    AnimationCurve animationCurve;
 
     void Awake(){
         if (blackMaterial == null) {
@@ -33,19 +35,53 @@ public class SquareColourCorrection : CubeBase {
     }
 
     void GenerateLevel() {
+        List<GameObject> allTheSquares = new();
         for (int x = 1; x <= 100; x++) {
             for (int y = 0; y <= 100; y++) {
                 //Animation curve 200 * x = combined distance to the square, subtract 0.4 from the animation curve, add plus or minus 0.5
-                if (dfgsd.Evaluate((x+y)/200) - 0.4 + Random.RandomRange(-0.5f, 0.5f) < 0) {
+                if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - 0.4 + Random.Range(-0.5f, 0.5f) < 0 && y != 0) {
+                    continue;
+                }
+                Debug.Log(((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200));
+                Debug.Log(animationCurve.Evaluate(1-(x + y) / 200));
+
+                //add each square to a list when they are created
+                allTheSquares.Add(Instantiate(cube, new Vector3(x, 0.5f, y), Quaternion.identity, transform));
+            }
+        }
+        for (int x = -1; x >= -100; x--) {
+            for (int y = 0; y >= -100; y--) {
+                if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - 0.4 + Random.Range(-0.5f, 0.5f) < 0) {
                     continue;
                 }
 
                 //add each square to a list when they are created
-                //get each square starting from this one to check itself and its neighbours to ensure that they are all directly connected back to the starting one
-                //repeat 4 times, one for each quadrant away from this
+                allTheSquares.Add(Instantiate(cube, new Vector3(x, 0.5f, y), Quaternion.identity, transform));
             }
         }
-    }
+        for (int y = 1; y <= 100; y++) {
+            for (int x = 0; x >= -100; x--) {
+                if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - 0.4 + Random.Range(-0.5f, 0.5f) < 0) {
+                    continue;
+                }
+
+                //add each square to a list when they are created
+                allTheSquares.Add(Instantiate(cube, new Vector3(x, 0.5f, y), Quaternion.identity, transform));
+            }
+        }
+        for (int y = -1; y >= -100; y--) {
+            for (int x = 0; x <= 100; x++) {
+                if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - 0.4 + Random.Range(-0.5f, 0.5f) < 0) {
+                    continue;
+                }
+
+                //add each square to a list when they are created
+                allTheSquares.Add(Instantiate(cube, new Vector3(x, 0.5f, y), Quaternion.identity, transform));
+            }
+        }
+            //repeat 4 times, one for each quadrant away from this
+            //get each square starting from this one to check itself and its neighbours to ensure that they are all directly connected back to the starting one
+        }
 
     public void setSizeOfBoard(Slider slider) {
         sizeNumber = (int)slider.value;
