@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e36519d097d0df74b8bce678c6789114, type: 3}
-  m_Name: Knight
+  m_Name: Player
   m_EditorClassIdentifier: 
-  pieceName: Knight
+  pieceName: Player
   sizeOfBoard: 5
