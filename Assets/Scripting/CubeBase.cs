@@ -5,6 +5,8 @@ public class CubeBase : MonoBehaviour {
     public List<Material> temporaryList = new();
     public static Material blackMaterial;
     public static Material whiteMaterial;
+    public bool connectsToCenter = false;
+    protected Mode mode = Mode.gaming;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,10 +14,9 @@ public class CubeBase : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (GetSquareInDirection(transform, -1, -1) == null && GetSquareInDirection(transform, -1, 0) == null && GetSquareInDirection(transform, -1, 1) == null && GetSquareInDirection(transform, 0, 1) == null && GetSquareInDirection(transform, 1, 1) == null && GetSquareInDirection(transform, 1, 0) == null && GetSquareInDirection(transform, 1, -1) == null && GetSquareInDirection(transform, 0, -1)) {
-            Destroy(this);
+    void Update(){
+        if (connectsToCenter == false && mode == Mode.gaming) {
+            Destroy(this.gameObject);
         }
     }
     public void AlignToGridAndColour() {
@@ -34,5 +35,16 @@ public class CubeBase : MonoBehaviour {
             returningGameObject = hitInfo.collider.gameObject;
         }
         return (returningGameObject);
+    }
+    public void ConnectsToCenter() {
+        connectsToCenter = true;
+        for (int i = -1; i <= 1; i += 2){
+            if (GetSquareInDirection(transform, i, 0) != null && GetSquareInDirection(transform, i, 0).GetComponent<CubeBase>().connectsToCenter == false) {
+                GetSquareInDirection(transform, i, 0).GetComponent<CubeBase>().ConnectsToCenter();
+            }
+            if (GetSquareInDirection(transform, 0, i) != null && GetSquareInDirection(transform, 0, i).GetComponent<CubeBase>().connectsToCenter == false) {
+                GetSquareInDirection(transform, 0, i).GetComponent<CubeBase>().ConnectsToCenter();
+            }
+        }
     }
 }
