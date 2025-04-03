@@ -1,23 +1,26 @@
+using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
+using static UnityEngine.UI.Image;
 
 public class CubeBase : MonoBehaviour {
     public List<Material> temporaryList = new();
     public static Material blackMaterial;
     public static Material whiteMaterial;
-    public bool connectsToCenter = false;
+    public bool connectsToCenter = true;
     protected Mode mode = Mode.gaming;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         AlignToGridAndColour();
+        if (connectsToCenter == false && mode == Mode.gaming) {
+            Destroy(this.gameObject);
+        }
     }
 
     // Update is called once per frame
     void Update(){
-        if (connectsToCenter == false && mode == Mode.gaming) {
-            Destroy(this.gameObject);
-        }
     }
     public void AlignToGridAndColour() {
         transform.position = new Vector3(Mathf.Round(transform.position.x), 0.5f, Mathf.Round(transform.position.z));
@@ -28,22 +31,67 @@ public class CubeBase : MonoBehaviour {
             gameObject.GetComponent<MeshRenderer>().material = whiteMaterial;
         }
     }
-    public static GameObject GetSquareInDirection(Transform origin, float x, float y) {
+    public static GameObject GetSquareInDirection(Vector3 origin, float x, float z) {
         GameObject returningGameObject = null;
-        Ray newRay = new(new Vector3(origin.transform.position.x + x, -0.2f, origin.transform.position.z + y), new Vector3(0, 100, 0));
-        if (Physics.Raycast(newRay, out RaycastHit hitInfo)) {
+        Ray newRay = new(new Vector3(origin.x + x, -0.2f, origin.z + z), new Vector3(0, 1, 0));
+        if (Physics.Raycast(newRay, out RaycastHit hitInfo, 1)) {
             returningGameObject = hitInfo.collider.gameObject;
         }
         return (returningGameObject);
     }
+    public static GameObject GetSquareInDirection(float x, float z) {
+        GameObject returningGameObject = null;
+        Ray newRay = new(new Vector3(x, -0.2f, z), new Vector3(0, 1, 0));
+        if (Physics.Raycast(newRay, out RaycastHit hitInfo, 1)) {
+            returningGameObject = hitInfo.collider.gameObject;
+        }
+        return (returningGameObject);
+
+    }
     public void ConnectsToCenter() {
         connectsToCenter = true;
-        for (int i = -1; i <= 1; i += 2){
-            if (GetSquareInDirection(transform, i, 0) != null && GetSquareInDirection(transform, i, 0).GetComponent<CubeBase>().connectsToCenter == false) {
-                GetSquareInDirection(transform, i, 0).GetComponent<CubeBase>().ConnectsToCenter();
+        if (transform.position.x >= 0 && Math.Abs(transform.position.x) >= Math.Abs(transform.position.z)) {
+            if (GetSquareInDirection(transform.position, 1, 0) != null) {
+                GetSquareInDirection(transform.position, 1, 0).GetComponent<CubeBase>().ConnectsToCenter();
             }
-            if (GetSquareInDirection(transform, 0, i) != null && GetSquareInDirection(transform, 0, i).GetComponent<CubeBase>().connectsToCenter == false) {
-                GetSquareInDirection(transform, 0, i).GetComponent<CubeBase>().ConnectsToCenter();
+            if (GetSquareInDirection(transform.position, 0, 1) != null && GetSquareInDirection(transform.position, 0, 1).GetComponent<CubeBase>().connectsToCenter == false) {
+                GetSquareInDirection(transform.position, 0, 1).GetComponent<CubeBase>().ConnectsToCenter();
+            }
+            if (GetSquareInDirection(transform.position, 0, -1) != null && GetSquareInDirection(transform.position, 0, -1).GetComponent<CubeBase>().connectsToCenter == false) {
+                GetSquareInDirection(transform.position, 0, -1).GetComponent<CubeBase>().ConnectsToCenter();
+            }
+        }
+        if (transform.position.x <= 0 && Math.Abs(transform.position.x) >= Math.Abs(transform.position.z)) {
+            if (GetSquareInDirection(transform.position, -1, 0) != null) {
+                GetSquareInDirection(transform.position, -1, 0).GetComponent<CubeBase>().ConnectsToCenter();
+            }
+            if (GetSquareInDirection(transform.position, 0, 1) != null && GetSquareInDirection(transform.position, 0, 1).GetComponent<CubeBase>().connectsToCenter == false) {
+                GetSquareInDirection(transform.position, 0, 1).GetComponent<CubeBase>().ConnectsToCenter();
+            }
+            if (GetSquareInDirection(transform.position, 0, -1) != null && GetSquareInDirection(transform.position, 0, -1).GetComponent<CubeBase>().connectsToCenter == false) {
+                GetSquareInDirection(transform.position, 0, -1).GetComponent<CubeBase>().ConnectsToCenter();
+            }
+        }
+        if (transform.position.z >= 0 && Math.Abs(transform.position.z) > Math.Abs(transform.position.x)) {
+            if (GetSquareInDirection(transform.position, 0, 1) != null) {
+                GetSquareInDirection(transform.position, 0, 1).GetComponent<CubeBase>().ConnectsToCenter();
+            }
+            if (GetSquareInDirection(transform.position, 1, 0) != null && GetSquareInDirection(transform.position, 1, 0).GetComponent<CubeBase>().connectsToCenter == false) {
+                GetSquareInDirection(transform.position, 1, 0).GetComponent<CubeBase>().ConnectsToCenter();
+            }
+            if (GetSquareInDirection(transform.position, -1, 0) != null && GetSquareInDirection(transform.position, -1, 0).GetComponent<CubeBase>().connectsToCenter == false) {
+                GetSquareInDirection(transform.position, -1, 0).GetComponent<CubeBase>().ConnectsToCenter();
+            }
+        }
+        if (transform.position.z <= 0 && Math.Abs(transform.position.z) > Math.Abs(transform.position.x)) {
+            if (GetSquareInDirection(transform.position, 0, -1) != null) {
+                GetSquareInDirection(transform.position, 0, -1).GetComponent<CubeBase>().ConnectsToCenter();
+            }
+            if (GetSquareInDirection(transform.position, 1, 0) != null && GetSquareInDirection(transform.position, 1, 0).GetComponent<CubeBase>().connectsToCenter == false) {
+                GetSquareInDirection(transform.position, 1, 0).GetComponent<CubeBase>().ConnectsToCenter();
+            }
+            if (GetSquareInDirection(transform.position, -1, 0) != null && GetSquareInDirection(transform.position, -1, 0).GetComponent<CubeBase>().connectsToCenter == false) {
+                GetSquareInDirection(transform.position, -1, 0).GetComponent<CubeBase>().ConnectsToCenter();
             }
         }
     }

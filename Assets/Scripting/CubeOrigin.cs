@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
 
 public class SquareColourCorrection : CubeBase {
     public static GameObject cube;
@@ -11,6 +13,7 @@ public class SquareColourCorrection : CubeBase {
     int maxValue;
     [SerializeField]
     AnimationCurve animationCurve;
+    int boundaryFillCount = 0;
 
     void Awake(){
         if (blackMaterial == null) {
@@ -24,10 +27,16 @@ public class SquareColourCorrection : CubeBase {
         }
     }
     private void Start() {
-        StartCoroutine(SpawnSurrounding());
+        if (mode == Mode.levelling) {
+            StartCoroutine(SpawnSurrounding());
+        }
     }
     void Update(){
-
+        if (boundaryFillCount < 400) {
+            /*
+            BoundaryFill(Random.Range(-100, 100), Random.Range(-100, 100));
+            boundaryFillCount += 1;//*/
+        }
     }
 
     void GenerateLevel() {
@@ -38,12 +47,13 @@ public class SquareColourCorrection : CubeBase {
         for (int x = 1; x <= 100; x++) {
             for (int y = 0; y <= 100; y++) {
                 //Animation curve 200 * x = combined distance to the square, subtract 0.4 from the animation curve, add plus or minus 0.5
-                if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - offset + Random.Range(-0.5f, 0.5f) < 0 && y != 0) {
+                if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - offset + Random.Range(-0.5f, 0.5f) < 0) {
                     continue;
                 }
 
                 //add each square to a list when they are created
                 allTheSquares.Add(Instantiate(cube, new Vector3(x, 0.5f, y), Quaternion.identity, transform));
+                allTheSquares.LastOrDefault().name = System.Convert.ToString(Mathf.RoundToInt(Random.Range(0, 1000000)));
             }
         }
         //repeat 4 times, one for each quadrant away from this
@@ -55,6 +65,7 @@ public class SquareColourCorrection : CubeBase {
 
                 //add each square to a list when they are created
                 allTheSquares.Add(Instantiate(cube, new Vector3(x, 0.5f, y), Quaternion.identity, transform));
+                allTheSquares.LastOrDefault().name = System.Convert.ToString(Mathf.RoundToInt(Random.Range(0, 1000000)));
             }
         }
         for (int y = 1; y <= 100; y++) {
@@ -65,6 +76,7 @@ public class SquareColourCorrection : CubeBase {
 
                 //add each square to a list when they are created
                 allTheSquares.Add(Instantiate(cube, new Vector3(x, 0.5f, y), Quaternion.identity, transform));
+                allTheSquares.LastOrDefault().name = System.Convert.ToString(Mathf.RoundToInt(Random.Range(0, 1000000)));
             }
         }
         for (int y = -1; y >= -100; y--) {
@@ -75,6 +87,7 @@ public class SquareColourCorrection : CubeBase {
 
                 //add each square to a list when they are created
                 allTheSquares.Add(Instantiate(cube, new Vector3(x, 0.5f, y), Quaternion.identity, transform));
+                allTheSquares.LastOrDefault().name = System.Convert.ToString(Mathf.RoundToInt(Random.Range(0, 1000000)));
             }
         }
         List<GameObject> removingSquares = new();
@@ -90,6 +103,26 @@ public class SquareColourCorrection : CubeBase {
         }
     }
 
+    void BoundaryFill(int x, int z, int count = 0) {
+        if (GetSquareInDirection(x, z) != null || !(IsThereACubeInDirection(transform, 0, 1) && IsThereACubeInDirection(transform, 1, 0) && IsThereACubeInDirection(transform, 0, -1) && IsThereACubeInDirection(transform, -1, 0)) || count > 20) {
+            return;
+        }
+        Instantiate(cube, new Vector3(x, 0, z), Quaternion.identity, transform);
+        BoundaryFill(x, z + 1, count + 1);
+        /*BoundaryFill(x, z - 1, count + 1);
+        BoundaryFill(x + 1, z, count + 1);
+        BoundaryFill(x - 1, z, count + 1);
+        //*/
+    }
+
+    bool IsThereACubeInDirection(Transform origin, int x, int z) {
+        if (Physics.Raycast(origin.position, new Vector3(x, 0, z), 100)) {
+            return true;
+        }
+
+        return false;
+    }
+
     IEnumerator SpawnSurrounding() {
         if (mode == Mode.levelling) {
             StartCoroutine(RemoveSurrounding());
@@ -97,7 +130,7 @@ public class SquareColourCorrection : CubeBase {
             for (int i = 0; i <= sizeNumber; i++) {
                 for (int j = -i; j <= i - 1; j++) {
                     for (int k = -i + 1; k <= i; k++) {
-                        if ((j == 0 && k == 0) || GetSquareInDirection(transform, j, k) != null) {
+                        if ((j == 0 && k == 0) || GetSquareInDirection(transform.position, j, k) != null) {
                             continue;
                         }
                         Instantiate(cube, new Vector3(j, 0.5f, k), Quaternion.identity, transform);
@@ -106,7 +139,7 @@ public class SquareColourCorrection : CubeBase {
                 }
                 for (int k = i; k >= -i; k--) {
                     for (int j = i; j >= -i; j--) {
-                        if ((j == 0 && k == 0) || GetSquareInDirection(transform, j, k) != null) {
+                        if ((j == 0 && k == 0) || GetSquareInDirection(transform.position, j, k) != null) {
                             continue;
                         }
                         Instantiate(cube, new Vector3(j, 0.5f, k), Quaternion.identity, transform);
@@ -129,14 +162,14 @@ public class SquareColourCorrection : CubeBase {
                 if (z > maxValue) {
                     break;
                 }
-                if (Mathf.Abs(z) <= sizeNumber && Mathf.Abs(x) <= sizeNumber || GetSquareInDirection(transform, z, x) == null && GetSquareInDirection(transform, z, -x) == null && GetSquareInDirection(transform, -z, x) == null && GetSquareInDirection(transform, -z, -x) == null) {
+                if (Mathf.Abs(z) <= sizeNumber && Mathf.Abs(x) <= sizeNumber || GetSquareInDirection(transform.position, z, x) == null && GetSquareInDirection(transform.position, z, -x) == null && GetSquareInDirection(transform.position, -z, x) == null && GetSquareInDirection(transform.position, -z, -x) == null) {
                     continue;
                 }
 
-                Destroy(GetSquareInDirection(transform, z, x));
-                Destroy(GetSquareInDirection(transform, z, -x));
-                Destroy(GetSquareInDirection(transform, -z, x));
-                Destroy(GetSquareInDirection(transform, -z, -x));
+                Destroy(GetSquareInDirection(transform.position, z, x));
+                Destroy(GetSquareInDirection(transform.position, z, -x));
+                Destroy(GetSquareInDirection(transform.position, -z, x));
+                Destroy(GetSquareInDirection(transform.position, -z, -x));
             }
             yield return new WaitForSeconds(0.1f);
         }

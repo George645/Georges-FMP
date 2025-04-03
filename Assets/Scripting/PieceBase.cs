@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using Unity.Mathematics;
 
 public class PieceBase : MonoBehaviour{
 
@@ -7,20 +8,39 @@ public class PieceBase : MonoBehaviour{
     Piece thisPiece;
 
     void Start() {
+        FindStartPosition();
+    }
+
+    void FindStartPosition() {
         transform.position = new Vector3(101, 0, 101);
+        int newX = 101;
+        int newZ = 101;
+        int count = 0;
+        System.Random random = new();
+        bool whileLoopVariable = true;
+        while (whileLoopVariable && count < 10) {
+            random = new System.Random();
+            newX = random.Next(-100, 100);
+            newZ = random.Next(-100, 100);
+            if (Physics.Raycast(new Vector3(newX, 3.2f, newZ), new Vector3(0, -1, 0), 1) == true) {
+                newX = 101;
+            }
+            count++;
+            CubeBase.GetSquareInDirection(newX, newZ);
+            try {
+                CubeBase.GetSquareInDirection(newX, newZ).GetComponent<MeshRenderer>().name = CubeBase.GetSquareInDirection(newX, newZ).GetComponent<MeshRenderer>().name;
+                whileLoopVariable = false;
+            }
+            catch {
+                whileLoopVariable = true;
+            }
+        }
+        transform.position = new Vector3(newX, 2, newZ);
     }
 
     void Update() {
-
-        while (CubeBase.GetSquareInDirection(transform, transform.position.x, transform.position.z) == null){
-            System.Random random = new System.Random();
-            int newX = random.Next(-100, 100);
-            int newZ = random.Next(-100, 100);
-            Debug.Log(Physics.Raycast(new Vector3(newX, 3.2f, newZ), new Vector3(0, -1, 0), 1));
-            if (Physics.Raycast(new Vector3(newX, 3.2f, newZ), new Vector3(0, -1, 0), 1) == true) {
-                transform.position = new Vector3(newX, 2, newZ);
-            }
-            Debug.Log(CubeBase.GetSquareInDirection(transform, transform.position.x, transform.position.z) + ", " + transform.position);
+        if (CubeBase.GetSquareInDirection(transform.position, 0, 0) == null) {
+            FindStartPosition();
         }
     }
 }
