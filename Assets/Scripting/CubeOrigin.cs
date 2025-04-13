@@ -14,6 +14,8 @@ public class SquareColourCorrection : CubeBase {
     [SerializeField]
     AnimationCurve animationCurve;
     int boundaryFillCount = 0;
+    GameObject newCube;
+    bool firstFrame = true;
 
     void Awake(){
         if (blackMaterial == null) {
@@ -31,11 +33,18 @@ public class SquareColourCorrection : CubeBase {
             StartCoroutine(SpawnSurrounding());
         }
     }
-    void Update(){
-        if (boundaryFillCount < 400) {
-            /*
-            BoundaryFill(Random.Range(-100, 100), Random.Range(-100, 100));
-            boundaryFillCount += 1;//*/
+    void Update() {
+        if (firstFrame) {
+            for (int x = -100; x < 100; x++) {
+                for (int z = -100; z < 100; z++) {
+                    Vector3 suggestedPosition = new Vector3(x, 0.5f, z);
+                    if (GetSquareInDirection(x, z) == null && CubeInDirection(suggestedPosition, new Vector3(10, 0.5f, 0)) && CubeInDirection(suggestedPosition, new Vector3(-10, 0.5f, 0)) && CubeInDirection(suggestedPosition, new Vector3(0, 0.5f, 10)) && CubeInDirection(suggestedPosition, new Vector3(0, 0.5f, -10))) {
+                        newCube = Instantiate(cube, new Vector3(x, 0, z), Quaternion.identity, transform);
+                        newCube.GetComponent<CubeBase>().connectsToCenter = true;
+                    }
+                }
+            }
+            firstFrame = false;
         }
     }
 
@@ -93,6 +102,11 @@ public class SquareColourCorrection : CubeBase {
         List<GameObject> removingSquares = new();
         //get each square starting from this one to check itself and its neighbours to ensure that they are all directly connected back to the starting one
         ConnectsToCenter();
+        for (int i = 0; i < transform.childCount; i++) {
+            if (transform.GetChild(i).GetComponent<CubeBase>().connectsToCenter == false) {
+                Destroy(transform.GetChild(i).gameObject);
+            }
+        }
     }
 
     public void setSizeOfBoard(Slider slider) {
@@ -103,20 +117,8 @@ public class SquareColourCorrection : CubeBase {
         }
     }
 
-    void BoundaryFill(int x, int z, int count = 0) {
-        if (GetSquareInDirection(x, z) != null || !(IsThereACubeInDirection(transform, 0, 1) && IsThereACubeInDirection(transform, 1, 0) && IsThereACubeInDirection(transform, 0, -1) && IsThereACubeInDirection(transform, -1, 0)) || count > 20) {
-            return;
-        }
-        Instantiate(cube, new Vector3(x, 0, z), Quaternion.identity, transform);
-        BoundaryFill(x, z + 1, count + 1);
-        /*BoundaryFill(x, z - 1, count + 1);
-        BoundaryFill(x + 1, z, count + 1);
-        BoundaryFill(x - 1, z, count + 1);
-        //*/
-    }
-
-    bool IsThereACubeInDirection(Transform origin, int x, int z) {
-        if (Physics.Raycast(origin.position, new Vector3(x, 0, z), 100)) {
+    bool CubeInDirection(Vector3 origin, Vector3 dir) {
+        if (Physics.Raycast(origin, dir, 100)) {
             return true;
         }
 

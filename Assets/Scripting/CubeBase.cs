@@ -8,15 +8,15 @@ public class CubeBase : MonoBehaviour {
     public List<Material> temporaryList = new();
     public static Material blackMaterial;
     public static Material whiteMaterial;
-    public bool connectsToCenter = true;
+    public bool connectsToCenter = false;
     protected Mode mode = Mode.gaming;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         AlignToGridAndColour();
-        if (connectsToCenter == false && mode == Mode.gaming) {
+        /*if (connectsToCenter == false && mode == Mode.gaming) {
             Destroy(this.gameObject);
-        }
+        }*/
     }
 
     // Update is called once per frame
