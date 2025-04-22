@@ -152,7 +152,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &4915340
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -277,7 +276,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &8134072
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -402,7 +400,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &14602561
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -527,7 +524,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &27140524
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -652,7 +648,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &30958477
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -777,7 +772,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &41748949
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -902,7 +896,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &71863978
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1027,7 +1020,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &84685881
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1152,7 +1144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &101756086
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1277,7 +1268,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &111379398
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1438,7 +1428,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &134042338
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1563,7 +1552,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &140647869
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1724,7 +1712,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &190808262
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1849,7 +1836,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &206747027
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1974,7 +1960,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &209389261
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2099,7 +2084,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &221475031
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2224,7 +2208,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &254416349
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2349,7 +2332,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &263689182
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2474,7 +2456,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &282494548
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2578,6 +2559,7 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
+  - component: {fileID: 330585548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2626,7 +2608,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2652,13 +2634,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7125119, z: -0, w: 0.70166}
-  m_LocalPosition: {x: -16.26, y: 1, z: -5.07}
+  m_LocalRotation: {x: 0.05775476, y: -0.70474416, z: 0.05775476, w: 0.70474416}
+  m_LocalPosition: {x: 9.39801, y: 1.421142, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90.879, z: 0}
+  m_Father: {fileID: 1398053900}
+  m_LocalEulerAnglesHint: {x: 9.37, y: -90, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2703,6 +2685,18 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &330585548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2bf4b3e687cc1c448e98c9adfa7f8dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &336559411
 GameObject:
   m_ObjectHideFlags: 0
@@ -2736,7 +2730,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &336559413
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2861,7 +2854,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &364819599
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2986,7 +2978,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &371939471
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3111,7 +3102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &378895302
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3236,7 +3226,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &389893698
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3361,7 +3350,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &392514577
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3607,7 +3595,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &414224036
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3732,7 +3719,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &456546969
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3857,7 +3843,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &479499379
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4084,7 +4069,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &484859934
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4209,7 +4193,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &498336944
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4334,7 +4317,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &553320569
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4459,7 +4441,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &591475500
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4584,7 +4565,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &610440599
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4709,7 +4689,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &614229786
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4834,7 +4813,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &641748674
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4959,7 +4937,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &647674925
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5084,7 +5061,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &651542529
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5209,7 +5185,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &666811319
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5334,7 +5309,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &675089697
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5459,7 +5433,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &686761135
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5584,7 +5557,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &694909375
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5709,7 +5681,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &731473588
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5834,7 +5805,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &746209879
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5959,7 +5929,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &747124963
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6084,7 +6053,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &769581871
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6209,7 +6177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &819840666
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6383,7 +6350,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &858083128
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6508,7 +6474,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &860644089
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6633,7 +6598,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &876170739
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6758,7 +6722,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &915830860
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6883,7 +6846,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &928768521
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7008,7 +6970,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &930505110
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7133,7 +7094,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &942017436
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7258,7 +7218,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &958449427
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7383,7 +7342,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &978967891
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7508,7 +7466,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &986377215
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7633,7 +7590,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &988947187
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7758,7 +7714,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1049114668
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7883,7 +7838,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1114761127
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8008,7 +7962,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1157560006
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8133,7 +8086,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1221338117
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8258,7 +8210,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1235716799
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8383,7 +8334,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1238543021
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8508,7 +8458,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1269478636
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8633,7 +8582,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1325223656
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8860,7 +8808,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1368901799
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8985,7 +8932,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1378827552
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9110,7 +9056,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1389198625
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9202,6 +9147,130 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1398053896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1398053900}
+  - component: {fileID: 1398053899}
+  - component: {fileID: 1398053898}
+  - component: {fileID: 1398053897}
+  - component: {fileID: 1398053901}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!136 &1398053897
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398053896}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &1398053898
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398053896}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1398053899
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398053896}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1398053900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398053896}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 330585546}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1398053901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398053896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db47b192deef74459084dd0545b8083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1414662549
 GameObject:
   m_ObjectHideFlags: 0
@@ -9235,7 +9304,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1414662551
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9435,7 +9503,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1453970405
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9560,7 +9627,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1456045345
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9685,7 +9751,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1479755501
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9810,7 +9875,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1523195386
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9935,7 +9999,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1527631332
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10060,7 +10123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1532276829
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10185,7 +10247,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1539650647
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10310,7 +10371,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1622267604
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10435,7 +10495,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1649346925
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10635,7 +10694,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1679961107
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10760,7 +10818,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1694667534
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10885,7 +10942,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1707110100
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11010,7 +11066,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1721402493
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11135,7 +11190,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1745089661
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11260,7 +11314,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1749733211
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11385,7 +11438,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1758687089
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11510,7 +11562,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1778008266
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11635,7 +11686,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1790817663
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11760,7 +11810,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1825117041
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11885,7 +11934,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1840638729
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12010,7 +12058,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1845493278
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12135,7 +12182,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1854125708
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12260,7 +12306,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1863778761
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12385,7 +12430,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1886422343
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12589,7 +12633,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1906751649
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12714,7 +12757,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1912563862
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12839,7 +12881,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1950658593
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12964,7 +13005,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1951593686
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13089,7 +13129,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &1955030846
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13300,7 +13339,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &2061137800
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13425,7 +13463,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &2093310073
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13550,7 +13587,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPiece: {fileID: 11400000, guid: 11f3e02cfbae9b443b0aec7b6617dd86, type: 2}
-  tempMaterial: {fileID: 2100000, guid: d1a3a9529c2bc444cb755b9972bb1484, type: 2}
 --- !u!136 &2107451369
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13835,10 +13871,10 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 8990830490832551128}
+  - {fileID: 1398053900}
   - {fileID: 1360438445}
   - {fileID: 1893940431}
   - {fileID: 134042341}

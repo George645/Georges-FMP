@@ -35,16 +35,20 @@ public class SquareColourCorrection : CubeBase {
     }
     void Update() {
         if (firstFrame) {
-            for (int x = -100; x < 100; x++) {
-                for (int z = -100; z < 100; z++) {
-                    Vector3 suggestedPosition = new Vector3(x, 0.5f, z);
-                    if (GetSquareInDirection(x, z) == null && CubeInDirection(suggestedPosition, new Vector3(10, 0.5f, 0)) && CubeInDirection(suggestedPosition, new Vector3(-10, 0.5f, 0)) && CubeInDirection(suggestedPosition, new Vector3(0, 0.5f, 10)) && CubeInDirection(suggestedPosition, new Vector3(0, 0.5f, -10))) {
-                        newCube = Instantiate(cube, new Vector3(x, 0, z), Quaternion.identity, transform);
-                        newCube.GetComponent<CubeBase>().connectsToCenter = true;
-                    }
+            BoundaryFill();
+            firstFrame = false;
+        }
+    }
+
+    void BoundaryFill() {
+        for (int x = -100; x < 100; x++) {
+            for (int z = -100; z < 100; z++) {
+                Vector3 suggestedPosition = new Vector3(x, 0.5f, z);
+                if (GetSquareInDirection(x, z) == null && CubeInDirection(suggestedPosition, new Vector3(10, 0.5f, 0)) && CubeInDirection(suggestedPosition, new Vector3(-10, 0.5f, 0)) && CubeInDirection(suggestedPosition, new Vector3(0, 0.5f, 10)) && CubeInDirection(suggestedPosition, new Vector3(0, 0.5f, -10))) {
+                    newCube = Instantiate(cube, new Vector3(x, 0, z), Quaternion.identity, transform);
+                    newCube.GetComponent<CubeBase>().connectsToCenter = true;
                 }
             }
-            firstFrame = false;
         }
     }
 
