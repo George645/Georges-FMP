@@ -23,4 +23,7 @@ public class MenuHandling : MonoBehaviour{
         int input = (int)transform.GetComponent<Slider>().value;
         PlayerPrefs.SetInt("Sensitivity", input);
     }
+    public void Continue(){
+        Debug.LogError("NotImplementedYet");
+    }
 }

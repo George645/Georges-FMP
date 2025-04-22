@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 using UnityEngine;
-using static UnityEngine.UI.Image;
 
 public class CubeBase : MonoBehaviour {
     public List<Material> temporaryList = new();
@@ -13,6 +11,12 @@ public class CubeBase : MonoBehaviour {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        try
+        {
+            blackMaterial = temporaryList[0];
+            whiteMaterial = temporaryList[1];
+        }
+        catch { }
         AlignToGridAndColour();
         /*if (connectsToCenter == false && mode == Mode.gaming) {
             Destroy(this.gameObject);
