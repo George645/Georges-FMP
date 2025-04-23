@@ -16,8 +16,30 @@ public class Player_Camera : MonoBehaviour{
         FaceCamera();
         WhileRightButtonPressed();
         Zoom();
+        SelectingPieces();
     }
 
+    #region Selecting a piece
+    RaycastHit objecta;
+    GameObject objectaObject;
+
+    void SelectingPieces() {
+        if (Input.GetMouseButtonUp(0)) {
+            try {
+                objectaObject.GetComponent<UnderlyingPiece>().selected = false;
+            }
+            catch (NullReferenceException) { }
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out objecta)) {
+                objectaObject = objecta.collider.gameObject;
+                try {
+                    objectaObject.GetComponent<UnderlyingPiece>().selected = true;
+                }
+                catch (MissingReferenceException) { }
+            }
+        }
+    }
+
+    #endregion
 
     #region Camera rotation and tilt
     float distanceSpun = 0;
@@ -52,6 +74,7 @@ public class Player_Camera : MonoBehaviour{
         previousFrameMousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
     }
     #endregion
+    
     void FaceCamera() {
         //potentially handled by virtual camera
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(player.transform.position - transform.position), 0.3f);

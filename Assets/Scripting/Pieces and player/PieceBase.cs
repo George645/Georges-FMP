@@ -2,10 +2,8 @@ using UnityEngine;
 using System;
 using Unity.Mathematics;
 
-public class PieceBase : MonoBehaviour{
+public class PieceBase : UnderlyingPiece{
 
-    [SerializeField]
-    Piece thisPiece;
 
     void Start() {
         FindStartPosition();
