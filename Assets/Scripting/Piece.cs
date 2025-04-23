@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using System;
+using static UnityEngine.GraphicsBuffer;
 
 [CreateAssetMenu(fileName = "Piece", menuName = "Scriptable Objects/Piece")]
 public class Piece : ScriptableObject {
@@ -25,14 +26,51 @@ public class Piece : ScriptableObject {
 
 [CustomEditor(typeof(Piece))]
 public class PieceEditor : Editor{
+    int difference;
+    Piece myTarget;
+    int previousBoardSize;
+
+
+    void MoveAllInArrayDownRight(int difference) {
+        //move all of the values in the board list down and right
+        for (int i = previousBoardSize; i >= 0; i--) {
+            for (int j = previousBoardSize; j >= 0; j--) {
+                myTarget.moveableTiles[i + difference][j + difference] = myTarget.moveableTiles[i][j];
+            }
+        }
+        for (int i = 0; i < difference; i++) {
+            for (int j = 0; j < myTarget.sizeOfBoard; j++) {
+                myTarget.moveableTiles[i][j] = false;
+                myTarget.moveableTiles[j][i] = false;
+            }
+        }
+    }
+
+    void MoveAllInArrayUpLeft(int difference) {
+        //move all of the values in the board list up and left
+        Debug.Log(previousBoardSize);
+        for (int i = difference; i <= previousBoardSize - 1; i++) {
+            for (int j = difference; j <= previousBoardSize - 1; j++) {
+                myTarget.moveableTiles[i - difference][j - difference] = myTarget.moveableTiles[i][j];
+            }
+        }
+    }
+
     public override void OnInspectorGUI(){
-        Piece myTarget = (Piece)target;
+        myTarget = (Piece)target;
         base.OnInspectorGUI();
         GUIContent guiContent = new GUIContent("Please input the radius of the moveable tiles for this character");
+        previousBoardSize = myTarget.sizeOfBoard;
         myTarget.sizeOfBoard = EditorGUILayout.IntSlider(guiContent, (myTarget.sizeOfBoard-1)/2, 1, 9) * 2 + 1;
+        if (previousBoardSize > myTarget.sizeOfBoard) {
+            MoveAllInArrayUpLeft(-(myTarget.sizeOfBoard - previousBoardSize)/2);
+        }
         Array.Resize<bool[]>(ref myTarget.moveableTiles, myTarget.sizeOfBoard);
-        for (int i = 0; i<myTarget.sizeOfBoard; i++) {
+        for (int i = 0; i < myTarget.sizeOfBoard; i++) {
             Array.Resize<bool>(ref myTarget.moveableTiles[i], myTarget.sizeOfBoard);
+        }
+        if (previousBoardSize < myTarget.sizeOfBoard) {
+            MoveAllInArrayDownRight((myTarget.sizeOfBoard - previousBoardSize)/2);
         }
         EditorGUILayout.PrefixLabel("Please input the square that can be moved to by this piece");
         EditorGUILayout.BeginVertical();
