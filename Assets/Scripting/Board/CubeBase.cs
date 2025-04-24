@@ -9,10 +9,8 @@ public class CubeBase : MonoBehaviour {
     public bool connectsToCenter = false;
     protected Mode mode = Mode.gaming;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        try
-        {
+    void Start(){
+        try{
             blackMaterial = temporaryList[0];
             whiteMaterial = temporaryList[1];
         }

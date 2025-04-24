@@ -5,11 +5,13 @@ public class Moveabledisplays : MonoBehaviour
 {
     public static Moveabledisplays Instance;
     [SerializeField]
-    GameObject objectToPool;
+    public GameObject objectToPool;
     public List<GameObject> ObjectPool;
+    [SerializeField]
     int amountToPool;
 
     void Start(){
+        ObjectPool.Clear();
         if (Instance == null) {
             Instance = this;
         }
@@ -24,8 +26,21 @@ public class Moveabledisplays : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    public GameObject GetObject() {
+        foreach (GameObject obj in ObjectPool) {
+            if (!obj.activeSelf) {
+                return obj;
+            }
+        }
+        GameObject tmp = Instantiate(objectToPool, transform);
+        ObjectPool.Add(tmp);
+        return tmp;
+    }
+
+
     void Update(){
         
     }
+
+
 }

@@ -16,8 +16,13 @@ public class MenuHandling : MonoBehaviour{
 #endif
     }
     public void SwapMenu() {
-        alternateMenuToSwapTo.SetActive(true);
-        transform.parent.gameObject.SetActive(false);
+        try {
+            alternateMenuToSwapTo.SetActive(true);
+            transform.parent.gameObject.SetActive(false);
+        }
+        catch {
+            Debug.LogError("FIX THIS YOU IDIOT");
+        }
     }
     public void adjustSensitivity() {
         int input = (int)transform.GetComponent<Slider>().value;

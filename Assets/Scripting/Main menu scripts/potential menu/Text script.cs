@@ -1,26 +1,28 @@
+using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class NewMonoBehaviourScript : MonoBehaviour{
+public class TextScript : MonoBehaviour{
+    public static List<GameObject> textList;
     public UnityEvent OnSelected;
-    void Start(){
-        SetRandomPosition();
+    void Awake(){
+        try {
+            textList.Add(this.gameObject);
+        }catch(NullReferenceException e) {
+            textList = new() {
+                this.gameObject
+            };
+        }
     }
 
     void Update(){
-        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z), Vector3.up)){
-            OnSelected.Invoke();
-        }
-    }
-    public void SetRandomPosition(){
-        transform.position = new Vector3(Random.Range(-4, 3) + 0.15f, 1, Random.Range(-4, 3) + 0.05f);
-        Debug.Log((Mathf.Round(transform.position.x) + Mathf.Round(transform.position.z)) % 2);
-        if ((transform.position.x + transform.position.z) % 2 == 1){
-            //try{
-                GetComponent<TMP_Text>().color = Color.black;
-            //}
-            //catch()
+        RaycastHit Info;
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), Vector3.down, out Info)){
+            if (Info.collider.gameObject.name.Contains("Knight")) {
+                OnSelected.Invoke();
+            }
         }
     }
 }

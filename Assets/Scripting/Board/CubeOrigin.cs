@@ -21,8 +21,8 @@ public class SquareColourCorrection : CubeBase {
         if (blackMaterial == null) {
             blackMaterial = temporaryList[0];
             whiteMaterial = temporaryList[1];
-            cube = cubetemp;
         }
+        if (cubetemp != null) cube = cubetemp;
         AlignToGridAndColour();
         if (mode == Mode.gaming) {
             GenerateLevel();
