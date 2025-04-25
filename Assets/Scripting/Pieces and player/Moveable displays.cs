@@ -23,9 +23,14 @@ public class Moveabledisplays : MonoBehaviour
             ObjectPool.Add(tmp);
         }
     }
-
-    // Update is called once per frame
-    void Update(){
-        
+    public GameObject GetObject() {
+        foreach (GameObject obj in ObjectPool) {
+            if (!obj.activeSelf) {
+                return obj;
+            }
+        }
+        GameObject tmp = Instantiate(objectToPool, transform);
+        ObjectPool.Add(tmp);
+        return tmp;
     }
 }
