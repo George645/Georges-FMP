@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &4915340
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &8134072
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &14602561
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -531,7 +531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &27140524
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -657,7 +657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &30958477
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -783,7 +783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &41748949
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -909,7 +909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &71863978
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1035,7 +1035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &84685881
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1161,7 +1161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &101756086
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1287,7 +1287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &111379398
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1449,7 +1449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &134042338
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1575,7 +1575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &140647869
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1737,7 +1737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &190808262
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1863,7 +1863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &206747027
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1989,7 +1989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &209389261
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2115,7 +2115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &221475031
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2241,7 +2241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &254416349
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2367,7 +2367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &263689182
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2493,7 +2493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &282494548
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2585,6 +2585,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &308920263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 308920264}
+  - component: {fileID: 308920265}
+  m_Layer: 0
+  m_Name: All the piece movements
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &308920264
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308920263}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.1292808, y: 0.6352486, z: -1.2047572}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &308920265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308920263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: badf90b6785e47446bed193e72ded308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allPieceMovement:
+  - name: Player
+    movableTiles1DArray: 010101010001010101
+    potentialRange: 1
+  - name: Knight
+    movableTiles1DArray: 00010001000100000001000000000001000000010001000100
+    potentialRange: 2
+  - name: Bishop
+    movableTiles1DArray: 01000000000001000100000001000000010001000000000000000000000001000100000001000000010001000000000001
+    potentialRange: 3
+  - name: Rook
+    movableTiles1DArray: 00000001000000000000010000000000000100000001010100010101000000010000000000000100000000000001000000
+    potentialRange: 3
+  - name: Queen
+    movableTiles1DArray: 01000001000000000100010000000000010100000001010100010101000001010100000001000100010001000001000001
+    potentialRange: 3
+  - name: Wisp
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 1
+  - name: Elephant
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 1
+  - name: Pedestal
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 1
+  - name: Snail
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 1
+  - name: Knight
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 1
+  - name: Knight
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 1
+  - name: Knight
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 1
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2672,12 +2753,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.05775476, y: -0.70474416, z: 0.05775476, w: 0.70474416}
-  m_LocalPosition: {x: 9.39801, y: 1.421142, z: 0}
+  m_LocalRotation: {x: 0.057754762, y: -0.7047442, z: 0.057754762, w: 0.7047442}
+  m_LocalPosition: {x: 9.39801, y: 3.421142, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1398053900}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 9.37, y: -90, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
@@ -2769,7 +2850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &336559413
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2895,7 +2976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &364819599
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3021,7 +3102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &371939471
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3147,7 +3228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &378895302
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3273,7 +3354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &389893698
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3399,7 +3480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &392514577
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3646,7 +3727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &414224036
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3772,7 +3853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &456546969
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3898,7 +3979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &479499379
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4126,7 +4207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &484859934
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4252,7 +4333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &498336944
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4378,7 +4459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &553320569
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4504,7 +4585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &591475500
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4630,7 +4711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &610440599
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4756,7 +4837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &614229786
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4882,7 +4963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &641748674
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5008,7 +5089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &647674925
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5134,7 +5215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &651542529
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5260,7 +5341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &666811319
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5386,7 +5467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &675089697
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5512,7 +5593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &686761135
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5638,7 +5719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &694909375
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5764,7 +5845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &731473588
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5890,7 +5971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &746209879
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6016,7 +6097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &747124963
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6142,7 +6223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &769581871
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6268,7 +6349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &819840666
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6443,7 +6524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &858083128
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6569,7 +6650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &860644089
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6695,7 +6776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &876170739
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6821,7 +6902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &915830860
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6947,7 +7028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &928768521
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7073,7 +7154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &930505110
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7199,7 +7280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &942017436
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7325,7 +7406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &958449427
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7451,7 +7532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &978967891
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7577,7 +7658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &986377215
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7703,7 +7784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &988947187
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7829,7 +7910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1049114668
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7955,7 +8036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1114761127
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8081,7 +8162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1157560006
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8207,7 +8288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1221338117
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8333,7 +8414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1235716799
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8459,7 +8540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1238543021
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8585,7 +8666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1269478636
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8843,7 +8924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1325223656
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9071,7 +9152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1368901799
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9197,7 +9278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1378827552
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9323,7 +9404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1389198625
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9523,8 +9604,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 330585546}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1398053901
@@ -9541,7 +9621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!1 &1414662549
 GameObject:
   m_ObjectHideFlags: 0
@@ -9576,7 +9656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1414662551
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9777,7 +9857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1453970405
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9903,7 +9983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1456045345
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10029,7 +10109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1479755501
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10155,7 +10235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1523195386
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10281,7 +10361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1527631332
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10407,7 +10487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1532276829
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10533,7 +10613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1539650647
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10659,7 +10739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1622267604
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10785,7 +10865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1649346925
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10986,7 +11066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1679961107
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11112,7 +11192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1694667534
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11238,7 +11318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1707110100
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11364,7 +11444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1721402493
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11485,8 +11565,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065b8df5aa36f24429deaadf244c83a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToPool: {fileID: 0}
+  objectToPool: {fileID: 700590414589731535, guid: 261aa4e6db317234cbdc17128a0a58ad, type: 3}
   ObjectPool: []
+  amountToPool: 20
 --- !u!4 &1742535883
 Transform:
   m_ObjectHideFlags: 0
@@ -11536,7 +11617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1745089661
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11662,7 +11743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1749733211
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11788,7 +11869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1758687089
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11914,7 +11995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1778008266
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12040,7 +12121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1790817663
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12166,7 +12247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1825117041
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12292,7 +12373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1840638729
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12418,7 +12499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1845493278
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12544,7 +12625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1854125708
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12670,7 +12751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1863778761
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12796,7 +12877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1886422343
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13001,7 +13082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1906751649
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13127,7 +13208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1912563862
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13253,7 +13334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1950658593
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13379,7 +13460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1951593686
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13505,7 +13586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &1955030846
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13717,7 +13798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &2061137800
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13843,7 +13924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &2093310073
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13969,7 +14050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece: {fileID: 0}
+  capturedPieces: 0
 --- !u!136 &2107451369
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14258,7 +14339,9 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 8990830490832551128}
   - {fileID: 1398053900}
+  - {fileID: 330585546}
   - {fileID: 1360438445}
   - {fileID: 1893940431}
   - {fileID: 1296698549}
   - {fileID: 1742535883}
+  - {fileID: 308920264}

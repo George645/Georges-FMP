@@ -7,6 +7,7 @@ public class Moveabledisplays : MonoBehaviour
     [SerializeField]
     GameObject objectToPool;
     public List<GameObject> ObjectPool;
+    [SerializeField]
     int amountToPool;
 
     void Start(){

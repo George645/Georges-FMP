@@ -21,6 +21,8 @@ public class SquareColourCorrection : CubeBase {
         if (blackMaterial == null) {
             blackMaterial = temporaryList[0];
             whiteMaterial = temporaryList[1];
+        }
+        if (cube == null) {
             cube = cubetemp;
         }
         AlignToGridAndColour();
@@ -46,6 +48,7 @@ public class SquareColourCorrection : CubeBase {
                 Vector3 suggestedPosition = new Vector3(x, 0.5f, z);
                 if (GetSquareInDirection(x, z) == null && CubeInDirection(suggestedPosition, new Vector3(10, 0.5f, 0)) && CubeInDirection(suggestedPosition, new Vector3(-10, 0.5f, 0)) && CubeInDirection(suggestedPosition, new Vector3(0, 0.5f, 10)) && CubeInDirection(suggestedPosition, new Vector3(0, 0.5f, -10))) {
                     newCube = Instantiate(cube, new Vector3(x, 0, z), Quaternion.identity, transform);
+                    newCube.name = System.Convert.ToString(Random.Range(0, 1000000));
                     newCube.GetComponent<CubeBase>().connectsToCenter = true;
                 }
             }
