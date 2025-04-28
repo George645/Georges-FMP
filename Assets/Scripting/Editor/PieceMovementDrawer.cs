@@ -4,10 +4,7 @@ using UnityEngine;
 
 [CustomPropertyDrawer(typeof(PieceMovement))]
 public class PieceMovementAttributes : PropertyDrawer {
-    //SerializedProperty property.FindPropertyRelative("potentialRange");
-    //SerializedProperty property.FindPropertyRelative("name");
     int previousBoardSize;
-    //SerializedProperty property.FindPropertyRelative("movableTiles1DArray");
 
     private const float FOLDOUT_HEIGHT = 20f;
 
@@ -16,9 +13,13 @@ public class PieceMovementAttributes : PropertyDrawer {
             property.FindPropertyRelative("name") = property.FindPropertyRelative("name");
         }*/
         float height = FOLDOUT_HEIGHT;
-        if (property.isExpanded) {/*
-        if (property.FindPropertyRelative("potentialRange") == null) {
+        if (property.isExpanded) {
+        /*if (property.FindPropertyRelative("potentialRange") == null) {
             property.FindPropertyRelative("potentialRange") = property.FindPropertyRelative("potentialRange");
+        }*/
+            height += FOLDOUT_HEIGHT;
+        /*if (infiniteRange == null){
+            infiniteRange = property.FindPropertyRelative("infiniteRange");
         }*/
             height += FOLDOUT_HEIGHT;
         /*if (property.FindPropertyRelative("movableTiles1DArray") == null) {
@@ -45,10 +46,10 @@ public class PieceMovementAttributes : PropertyDrawer {
             position.y += FOLDOUT_HEIGHT;
             EditorGUI.PropertyField(position, property.FindPropertyRelative("name"));
             position.y += FOLDOUT_HEIGHT;
+            EditorGUI.PropertyField(position, property.FindPropertyRelative("infiniteRange"));
+            position.y += FOLDOUT_HEIGHT;
             previousBoardSize = property.FindPropertyRelative("potentialRange").intValue;
             EditorGUI.IntSlider(position, property.FindPropertyRelative("potentialRange"), 1, 9);
-
-
 
             if (previousBoardSize < property.FindPropertyRelative("potentialRange").intValue) {
                 property.FindPropertyRelative("movableTiles1DArray").FindPropertyRelative("Array.size").intValue = (property.FindPropertyRelative("potentialRange").intValue * 2 + 1) * (property.FindPropertyRelative("potentialRange").intValue * 2 + 1);

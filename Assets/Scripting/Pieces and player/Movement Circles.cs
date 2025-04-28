@@ -15,6 +15,7 @@ public class MovementCircles : MonoBehaviour {
                 if (Info.collider.gameObject == gameObject) {
                     CheckIfTaking();
                     OriginalObject.transform.position = new Vector3(transform.position.x, transform.position.y + 0.9f, transform.position.z);
+                    OriginalObject.GetComponent<UnderlyingPiece>().DeactivateVisibility();
                 }
             }
         }

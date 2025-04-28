@@ -5,36 +5,10 @@ using NUnit.Framework;
 using System.Collections.Generic;
 
 public class PieceBase : UnderlyingPiece{
-    List<GameObject> movableTiles;
 
     void Start() {
-        //base.ActualStart();
         FindStartPosition();
-        if (selected) {
-            if (firstFrameSelected) {
-                int count = 0;
-                for (int i = -(thisPiece.potentialRange - 1) / 2; i <= (thisPiece.potentialRange - 1) / 2; i++) {
-                    for (int j = -(thisPiece.potentialRange - 1) / 2; j <= (thisPiece.potentialRange - 1) / 2; j++) {
-                        if (thisPiece.PositionIsUnlocked(i, j)) {
-                            movableTiles.Add(Moveabledisplays.Instance.GetObject());
-                            movableTiles[count].SetActive(true);
-                            movableTiles[count].GetComponent<MovementCircles>().OriginalObject = gameObject;
-                            movableTiles[count].GetComponent<MovementCircles>().offset = new Vector2(i, j);
-                            movableTiles[count].transform.position = new Vector3(transform.position.x + i, 1.1f, transform.position.z + j);
-                            count++;
-                        }
-                    }
-                }
-                firstFrameSelected = false;
-            }
-        }
-        else {
-            firstFrameSelected = true;
-            foreach (GameObject obj in movableTiles) {
-                obj.SetActive(false);
-            }
-            movableTiles = new();
-        }
+        base.ActualStart();
     }
 
     void FindStartPosition() {
@@ -68,5 +42,6 @@ public class PieceBase : UnderlyingPiece{
         if (CubeBase.GetSquareInDirection(transform.position, 0, 0) == null) {
             FindStartPosition();
         }
+        base.Selected();
     }
 }

@@ -33,7 +33,6 @@ public class Player_Camera : MonoBehaviour{
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out objecta)) {
                 if (!objecta.collider.gameObject.name[0..1].ContainsAny("1", "2", "3", "4", "5", "6", "7", "8", "9", "0")) {
                     objectaObject = objecta.collider.gameObject;
-                    Debug.Log(objectaObject.name);
                     try {
                         objectaObject.GetComponent<UnderlyingPiece>().selected = true;
                     }
@@ -87,6 +86,6 @@ public class Player_Camera : MonoBehaviour{
 
     float zoomInScale = 10;
     void Zoom() {
-        zoomInScale = math.clamp(zoomInScale + Input.mouseScrollDelta.y, 3, 50);
+        zoomInScale = math.clamp(zoomInScale + Input.mouseScrollDelta.y, 3, 200);
     }
 }

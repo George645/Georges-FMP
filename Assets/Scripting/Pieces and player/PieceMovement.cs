@@ -12,6 +12,7 @@ public class PieceMovement {
     public bool[][] moveableTiles = new bool[0][];
     [HideInInspector]
     public int potentialRange = 3;
+    public bool infiniteRange = false;
     #endregion
 
     public bool PositionIsUnlocked(int x, int z) {

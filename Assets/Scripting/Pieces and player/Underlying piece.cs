@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class UnderlyingPiece : MonoBehaviour{
@@ -5,8 +6,14 @@ public class UnderlyingPiece : MonoBehaviour{
     public bool selected;
     [HideInInspector]
     public bool firstFrameSelected = true;
+    [SerializeField]
     internal PieceMovement thisPiece;
     public int capturedPieces = 0;
+    [SerializeField]
+    internal bool playersTeam = false;
+    private void Awake() {
+        playersTeam = Random.Range(0, 2) < 0.5f;
+    }
     private void Start() {
         ActualStart();
     }
@@ -14,7 +21,6 @@ public class UnderlyingPiece : MonoBehaviour{
         foreach (PieceMovement piece in Overarchingpiecemovement.Instance.allPieceMovement) {
             if (piece.name == name) {
                 thisPiece = piece;
-                Debug.Log(thisPiece.name);
                 return;
             }
         }
@@ -29,4 +35,69 @@ public class UnderlyingPiece : MonoBehaviour{
         }
         return objecta;
     }
+
+    #region Selected
+    List<GameObject> movableTiles = new();
+    internal void Selected() {
+        if (selected && playersTeam) {
+            if (firstFrameSelected) {
+                int count = 0;
+                if (thisPiece.infiniteRange) {
+                    for (int x = -1; x < 2; x++) {
+                        for (int z = -1; z < 2; z++) {
+                            if (thisPiece.PositionIsUnlocked(x, z)) {
+                                for (int i = 1; i < 100; i++) {
+                                    if (CubeBase.GetSquareInDirection(transform.position, x * i, z * i) != null && (PieceInDirection(x * i, z * i) == null || PieceInDirection(x * i, z * i).GetComponent<UnderlyingPiece>().playersTeam == false)) {
+                                        movableTiles.Add(Moveabledisplays.Instance.GetObject());
+                                        movableTiles[count].SetActive(true);
+                                        movableTiles[count].GetComponent<MovementCircles>().OriginalObject = gameObject;
+                                        movableTiles[count].GetComponent<MovementCircles>().offset = new Vector2(x, z) * i;
+                                        movableTiles[count].transform.position = new Vector3(transform.position.x + x * i, 1.1f, transform.position.z + z * i);
+                                        count++;
+                                    }
+                                    else {
+                                        break;
+                                    }
+                                    try {
+                                        if (!PieceInDirection(x * i, z * i).GetComponent<UnderlyingPiece>().playersTeam) {
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                else {
+                    for (int i = -(thisPiece.potentialRange - 1) / 2; i <= (thisPiece.potentialRange - 1) / 2; i++) {
+                        for (int j = -(thisPiece.potentialRange - 1) / 2; j <= (thisPiece.potentialRange - 1) / 2; j++) {
+                            if (thisPiece.PositionIsUnlocked(i, j)) {
+                                movableTiles.Add(Moveabledisplays.Instance.GetObject());
+                                movableTiles[count].SetActive(true);
+                                movableTiles[count].GetComponent<MovementCircles>().OriginalObject = gameObject;
+                                movableTiles[count].GetComponent<MovementCircles>().offset = new Vector2(i, j);
+                                movableTiles[count].transform.position = new Vector3(transform.position.x + i, 1.1f, transform.position.z + j);
+                                count++;
+                            }
+                        }
+                    }
+                    firstFrameSelected = false;
+
+                }
+            }
+        }
+        else {
+            DeactivateVisibility();
+        }
+    }
+
+    public void DeactivateVisibility() {
+        firstFrameSelected = true;
+        foreach (GameObject obj in movableTiles) {
+            obj.SetActive(false);
+        }
+        movableTiles = new();
+    }
+
+    #endregion
 }
