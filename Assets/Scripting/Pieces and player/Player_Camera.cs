@@ -1,5 +1,6 @@
 using System;
 using Unity.Mathematics;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class Player_Camera : MonoBehaviour{
@@ -30,11 +31,14 @@ public class Player_Camera : MonoBehaviour{
             }
             catch (NullReferenceException) { }
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out objecta)) {
-                objectaObject = objecta.collider.gameObject;
-                try {
-                    objectaObject.GetComponent<UnderlyingPiece>().selected = true;
+                if (!objecta.collider.gameObject.name[0..1].ContainsAny("1", "2", "3", "4", "5", "6", "7", "8", "9", "0")) {
+                    objectaObject = objecta.collider.gameObject;
+                    Debug.Log(objectaObject.name);
+                    try {
+                        objectaObject.GetComponent<UnderlyingPiece>().selected = true;
+                    }
+                    catch (MissingReferenceException) { }
                 }
-                catch (MissingReferenceException) { }
             }
         }
     }
@@ -66,11 +70,11 @@ public class Player_Camera : MonoBehaviour{
 
             //calculate the height that the player should be at
             rotation *= Mathf.Cos(Mathf.Deg2Rad * tilt);
-            relativeCameraPosition = new Vector3(rotation.x, Mathf.Sin(Mathf.Deg2Rad * tilt) + 0.25f, rotation.y);
+            relativeCameraPosition = new Vector3(rotation.x, Mathf.Sin(Mathf.Deg2Rad * tilt), rotation.y);
         }
 
 
-        gameObject.transform.position = Vector3.Lerp(transform.position, new Vector3(relativeCameraPosition.x * zoomInScale, Math.Clamp(relativeCameraPosition.y * zoomInScale, 1.2f, 200), relativeCameraPosition.z * zoomInScale), 0.1f);
+        gameObject.transform.position = Vector3.Lerp(transform.position, player.transform.position + new Vector3(relativeCameraPosition.x * zoomInScale, Math.Clamp(relativeCameraPosition.y * zoomInScale, -.5f, 200), relativeCameraPosition.z * zoomInScale), 0.1f);
         previousFrameMousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
     }
     #endregion

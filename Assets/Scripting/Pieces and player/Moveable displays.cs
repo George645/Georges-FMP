@@ -25,7 +25,6 @@ public class Moveabledisplays : MonoBehaviour
             ObjectPool.Add(tmp);
         }
     }
-
     public GameObject GetObject() {
         foreach (GameObject obj in ObjectPool) {
             if (!obj.activeSelf) {
@@ -35,11 +34,6 @@ public class Moveabledisplays : MonoBehaviour
         GameObject tmp = Instantiate(objectToPool, transform);
         ObjectPool.Add(tmp);
         return tmp;
-    }
-
-
-    void Update(){
-        
     }
 
 

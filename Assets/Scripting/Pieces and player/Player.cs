@@ -1,19 +1,20 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : UnderlyingPiece{
     public static GameObject player;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    List<GameObject> movableTiles = new();
+    
     private void Awake() {
         if (player == null) {
             player = gameObject;
         }
     }
-    void Start(){
-        
+    
+    private void Start() {
+        ActualStart();
     }
 
-    // Update is called once per frame
     void Update(){
         Selected();
     }
@@ -23,10 +24,17 @@ public class Player : UnderlyingPiece{
     void Selected() {
         if (selected) {
             if (firstFrameSelected) {
-                for (int i = 0; i <= thisPiece.sizeOfBoard; i++) {
-                    for (int j = 0; j <= thisPiece.sizeOfBoard; j++) {
-                        if (thisPiece.moveableTiles[i][j]) {
-
+                int count = 0;
+                for (int i = - (thisPiece.potentialRange - 1) / 2; i <= (thisPiece.potentialRange - 1) / 2; i++) {
+                    for (int j = - (thisPiece.potentialRange - 1) / 2; j <= (thisPiece.potentialRange - 1)/2; j++) {
+                        Debug.Log(thisPiece.PositionIsUnlocked(i, j));
+                        if (thisPiece.PositionIsUnlocked(i, j)) {
+                            movableTiles.Add(Moveabledisplays.Instance.GetObject());
+                            movableTiles[count].SetActive(true);
+                            movableTiles[count].GetComponent<MovementCircles>().OriginalObject = gameObject;
+                            movableTiles[count].GetComponent<MovementCircles>().offset = new Vector2(i, j);
+                            movableTiles[count].transform.position = new Vector3(transform.position.x + i, 1.1f, transform.position.z + j);
+                            count++;
                         }
                     }
                 }
@@ -35,6 +43,10 @@ public class Player : UnderlyingPiece{
         }
         else {
             firstFrameSelected = true;
+            foreach (GameObject obj in movableTiles) {
+                obj.SetActive(false);
+            }
+            movableTiles = new();
         }
     }
 
