@@ -18,8 +18,8 @@ public class PieceMovementAttributes : PropertyDrawer {
                 property.FindPropertyRelative("potentialRange") = property.FindPropertyRelative("potentialRange");
             }*/
             height += FOLDOUT_HEIGHT;
-            /*if (infiniteRange == null){
-                infiniteRange = property.FindPropertyRelative("infiniteRange");
+            /*if (infinitelyScalingRange == null){
+                infinitelyScalingRange = property.FindPropertyRelative("infinitelyScalingRange");
             }*/
             height += FOLDOUT_HEIGHT;
             /*if (property.FindPropertyRelative("movableTiles1DArray") == null) {
@@ -46,7 +46,7 @@ public class PieceMovementAttributes : PropertyDrawer {
             position.y += FOLDOUT_HEIGHT;
             EditorGUI.PropertyField(position, property.FindPropertyRelative("name"));
             position.y += FOLDOUT_HEIGHT;
-            EditorGUI.PropertyField(position, property.FindPropertyRelative("infiniteRange"));
+            EditorGUI.PropertyField(position, property.FindPropertyRelative("infinitelyScalingRange"));
             position.y += FOLDOUT_HEIGHT;
             previousBoardSize = property.FindPropertyRelative("potentialRange").intValue;
             EditorGUI.IntSlider(position, property.FindPropertyRelative("potentialRange"), 1, 9);

@@ -41,9 +41,12 @@ public class UnderlyingPiece : MonoBehaviour{
     List<GameObject> movableTiles = new();
     internal void Selected() {
         if (selected && playersTeam) {
+            if (thisPiece.CanLevelUp(level, capturedPieces)){
+
+            }
             if (firstFrameSelected) {
                 int count = 0;
-                if (thisPiece.infiniteRange) {
+                if (thisPiece.infinitelyScalingRange) {
                     for (int x = -1; x < 2; x++) {
                         for (int z = -1; z < 2; z++) {
                             if (thisPiece.PositionIsUnlocked(x, z)) {

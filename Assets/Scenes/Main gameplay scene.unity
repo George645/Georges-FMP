@@ -157,9 +157,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &4915340
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -289,9 +288,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &8134072
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -421,9 +419,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &14602561
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -553,9 +550,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &27140524
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -685,9 +681,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &30958477
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -817,9 +812,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &41748949
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -949,9 +943,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &71863978
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1081,9 +1074,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &84685881
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1213,9 +1205,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &101756086
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1345,9 +1336,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &111379398
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1439,42 +1429,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &116797833
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 116797834}
-  m_Layer: 5
-  m_Name: Fill Area
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &116797834
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116797833}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1654776473}
-  m_Father: {fileID: 480945560}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.25}
-  m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &134042336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1513,9 +1467,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &134042338
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1645,9 +1598,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &140647869
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1739,42 +1691,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &189639265
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 189639266}
-  m_Layer: 5
-  m_Name: Handle Slide Area
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &189639266
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 189639265}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1453674423}
-  m_Father: {fileID: 480945560}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &190808260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1813,9 +1729,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &190808262
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1945,9 +1860,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &206747027
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2077,9 +1991,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &209389261
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2209,9 +2122,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &221475031
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2341,9 +2253,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &254416349
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2473,9 +2384,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &263689182
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2605,9 +2515,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &282494548
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2747,51 +2656,63 @@ MonoBehaviour:
   - name: Player
     movableTiles1DArray: 010101010001010101
     potentialRange: 1
-    infiniteRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
   - name: Knight
     movableTiles1DArray: 00010001000100000001000000000001000000010001000100
     potentialRange: 2
-    infiniteRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
   - name: Bishop
     movableTiles1DArray: 010001000000010001
     potentialRange: 1
-    infiniteRange: 1
+    infinitelyScalingRange: 1
+    currentRange: 8
   - name: Rook
     movableTiles1DArray: 000100010001000100
     potentialRange: 1
-    infiniteRange: 1
+    infinitelyScalingRange: 0
+    currentRange: 0
   - name: Queen
     movableTiles1DArray: 010101010001010101
     potentialRange: 1
-    infiniteRange: 1
+    infinitelyScalingRange: 0
+    currentRange: 0
   - name: Wisp
     movableTiles1DArray: 00000000000000000100010000000000000000000000010000
     potentialRange: 2
-    infiniteRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
   - name: Elephant
     movableTiles1DArray: 00000100010000000000000000000100000000000100000000000000010000000000010000000000000000000100010000
     potentialRange: 3
-    infiniteRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
   - name: Pedestal
     movableTiles1DArray: 010000000000000001000100000000000100000001000000010000000000000000000000000000000000000000000000000000000000000001000000010000000100000000000100010000000000000001
     potentialRange: 4
-    infiniteRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
   - name: Snail
     movableTiles1DArray: 00010000000100010001000100010001000100010000000100010000000100010001000100010001000100010000000100
     potentialRange: 3
-    infiniteRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
   - name: Wisp
     movableTiles1DArray: 000001000000010000000000000000000000010000010001000001000001000000010000000000000000000000000001000000010000010000010001000001000000000000000000000001000000010000
     potentialRange: 4
-    infiniteRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
   - name: Pedestal
     movableTiles1DArray: 00010100010100010001000100010101000000010100000000000000010100000001010100010001000100010100010100
     potentialRange: 3
-    infiniteRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
   - name: Cloud
     movableTiles1DArray: 010101010101010101010000000000000001010000000000000001010000000000000001010000000000000001010000000000000001010000000000000001010000000000000001010101010101010101
     potentialRange: 4
-    infiniteRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,9 +2901,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &336559413
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3112,9 +3032,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &364819599
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3244,9 +3163,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &371939471
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3376,9 +3294,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &378895302
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3508,9 +3425,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &389893698
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3640,9 +3556,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &392514577
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3893,9 +3808,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &414224036
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4025,9 +3939,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &456546969
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4157,9 +4070,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &479499379
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4251,108 +4163,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &480945559
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 480945560}
-  - component: {fileID: 480945561}
-  m_Layer: 5
-  m_Name: NumberOfSquares
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &480945560
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 480945559}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2052199967}
-  - {fileID: 116797834}
-  - {fileID: 189639266}
-  m_Father: {fileID: 1360438445}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -837, y: 496}
-  m_SizeDelta: {x: 160, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &480945561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 480945559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1453674424}
-  m_FillRect: {fileID: 1654776473}
-  m_HandleRect: {fileID: 1453674423}
-  m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 10
-  m_WholeNumbers: 1
-  m_Value: 1
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1992791947}
-        m_TargetAssemblyTypeName: SquareColourCorrection, Assembly-CSharp
-        m_MethodName: setSizeOfBoard
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 480945561}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &484859932
 GameObject:
   m_ObjectHideFlags: 0
@@ -4391,9 +4201,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &484859934
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4523,9 +4332,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &498336944
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4655,9 +4463,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &553320569
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4787,9 +4594,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &591475500
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4919,9 +4725,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &610440599
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5051,9 +4856,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &614229786
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5183,9 +4987,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &641748674
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5315,9 +5118,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &647674925
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5447,9 +5249,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &651542529
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5579,9 +5380,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &666811319
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5711,9 +5511,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &675089697
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5843,9 +5642,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &686761135
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5975,9 +5773,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &694909375
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6107,9 +5904,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &731473588
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6239,9 +6035,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &746209879
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6371,9 +6166,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &747124963
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6503,9 +6297,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &769581871
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6635,9 +6428,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &819840666
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6816,9 +6608,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &858083128
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6948,9 +6739,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &860644089
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7080,9 +6870,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &876170739
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7212,9 +7001,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &915830860
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7344,9 +7132,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &928768521
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7476,9 +7263,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &930505110
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7608,9 +7394,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &942017436
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7740,9 +7525,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &958449427
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7872,9 +7656,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &978967891
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8004,9 +7787,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &986377215
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8136,9 +7918,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &988947187
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8268,9 +8049,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1049114668
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8400,9 +8180,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1114761127
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8532,9 +8311,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1157560006
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8664,9 +8442,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1221338117
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8796,9 +8573,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1235716799
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8928,9 +8704,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1238543021
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9060,9 +8835,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1269478636
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9154,6 +8928,151 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1276081475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1276081476}
+  - component: {fileID: 1276081480}
+  - component: {fileID: 1276081479}
+  - component: {fileID: 1276081478}
+  - component: {fileID: 1276081477}
+  m_Layer: 5
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1276081476
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276081475}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1506809943}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -900, y: 0}
+  m_SizeDelta: {x: 30, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1276081477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276081475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a8e95cba05d244ca2cbcea41429547, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1276081478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276081475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1276081479}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1276081477}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1276081479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276081475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.89745194, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1276081480
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276081475}
+  m_CullTransparentMesh: 1
 --- !u!1 &1296698548
 GameObject:
   m_ObjectHideFlags: 0
@@ -9324,9 +9243,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1325223656
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9495,7 +9413,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -9512,7 +9430,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 480945560}
+  - {fileID: 1506809943}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9558,9 +9476,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1368901799
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9690,9 +9607,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1378827552
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9822,9 +9738,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1389198625
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10045,9 +9960,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!1 &1414662549
 GameObject:
   m_ObjectHideFlags: 0
@@ -10086,9 +10000,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1414662551
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10180,81 +10093,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1453674422
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1453674423}
-  - component: {fileID: 1453674425}
-  - component: {fileID: 1453674424}
-  m_Layer: 5
-  m_Name: Handle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1453674423
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453674422}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 189639266}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1453674424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453674422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1453674425
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453674422}
-  m_CullTransparentMesh: 1
 --- !u!1 &1453970403
 GameObject:
   m_ObjectHideFlags: 0
@@ -10293,9 +10131,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1453970405
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10425,9 +10262,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1456045345
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10557,9 +10393,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1479755501
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10651,6 +10486,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1506809942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1506809943}
+  - component: {fileID: 1506809944}
+  m_Layer: 5
+  m_Name: Level up button parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1506809943
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506809942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1276081476}
+  m_Father: {fileID: 1360438445}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1506809944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506809942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b642dd8a63e3ccb4da749b2840645fef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1523195384
 GameObject:
   m_ObjectHideFlags: 0
@@ -10689,9 +10573,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1523195386
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10821,9 +10704,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1527631332
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10953,9 +10835,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1532276829
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11085,9 +10966,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1539650647
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11217,9 +11097,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1622267604
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11349,9 +11228,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1649346925
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11443,81 +11321,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1654776472
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1654776473}
-  - component: {fileID: 1654776475}
-  - component: {fileID: 1654776474}
-  m_Layer: 5
-  m_Name: Fill
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1654776473
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1654776472}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 116797834}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1654776474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1654776472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1654776475
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1654776472}
-  m_CullTransparentMesh: 1
 --- !u!1 &1679961105
 GameObject:
   m_ObjectHideFlags: 0
@@ -11556,9 +11359,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1679961107
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11688,9 +11490,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1694667534
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11820,9 +11621,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1707110100
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11952,9 +11752,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1721402493
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12131,9 +11930,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1745089661
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12263,9 +12061,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1749733211
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12395,9 +12192,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1758687089
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12527,9 +12323,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1778008266
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12659,9 +12454,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1790817663
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12791,9 +12585,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1825117041
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12923,9 +12716,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1840638729
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13055,9 +12847,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1845493278
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13187,9 +12978,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1854125708
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13319,9 +13109,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1863778761
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13451,9 +13240,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1886422343
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13662,9 +13450,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1906751649
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13794,9 +13581,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1912563862
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13926,9 +13712,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1950658593
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14058,9 +13843,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1951593686
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14190,9 +13974,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &1955030846
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14284,92 +14067,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1992791947 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8027237587934538999, guid: 249762eb96bd1644c9726dd2ba6b74f9, type: 3}
-  m_PrefabInstance: {fileID: 8990830490832551128}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 411e93ca4139c2142bf43a8c605f0033, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &2052199966
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2052199967}
-  - component: {fileID: 2052199969}
-  - component: {fileID: 2052199968}
-  m_Layer: 5
-  m_Name: Background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2052199967
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052199966}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 480945560}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.25}
-  m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2052199968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052199966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2052199969
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052199966}
-  m_CullTransparentMesh: 1
 --- !u!1 &2061137798
 GameObject:
   m_ObjectHideFlags: 0
@@ -14408,9 +14105,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &2061137800
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14540,9 +14236,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &2093310073
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14672,9 +14367,8 @@ MonoBehaviour:
     name: 
     movableTiles1DArray: 000000000000000000
     potentialRange: 3
-    infiniteRange: 0
-  capturedPieces: 0
-  playersTeam: 0
+    infinitelyScalingRange: 0
+    currentRange: 0
 --- !u!136 &2107451369
 CapsuleCollider:
   m_ObjectHideFlags: 0

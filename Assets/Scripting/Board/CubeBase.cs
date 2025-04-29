@@ -7,6 +7,7 @@ public class CubeBase : MonoBehaviour {
     public static Material blackMaterial;
     public static Material whiteMaterial;
     public bool connectsToCenter = false;
+    [SerializeField]
     protected Mode mode = Mode.gaming;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start(){

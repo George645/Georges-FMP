@@ -3,7 +3,6 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 
 public class SquareColourCorrection : CubeBase {
     public static GameObject cube;
@@ -13,7 +12,6 @@ public class SquareColourCorrection : CubeBase {
     int maxValue;
     [SerializeField]
     AnimationCurve animationCurve;
-    int boundaryFillCount = 0;
     GameObject newCube;
     bool firstFrame = true;
 

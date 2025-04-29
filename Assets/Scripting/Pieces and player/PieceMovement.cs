@@ -12,7 +12,8 @@ public class PieceMovement {
     public bool[][] moveableTiles = new bool[0][];
     [HideInInspector]
     public int potentialRange = 3;
-    public bool infiniteRange = false;
+    public bool infinitelyScalingRange = false;
+    public int currentRange = 8;
     #endregion
 
     public bool PositionIsUnlocked(int x, int z) {
@@ -22,6 +23,34 @@ public class PieceMovement {
             }
             else {  return false; }
         }catch(IndexOutOfRangeException e) { return false; }
+    }
+    public bool CanLevelUp(int level, int capturedPieces){
+        if (infinitelyScalingRange) {
+            if ((level * level / 2) + (3 * level / 2) + 2 <= capturedPieces) {
+                return true;
+            }
+        }
+        else {
+            if (level < 4) {
+                if (level <= capturedPieces) {
+                    return true;
+                }
+            }
+            else{
+                if (3 <= capturedPieces){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public void AttemptLevelUp(){
+        if (infinitelyScalingRange){
+            currentRange += 2;
+        }
+        else{
+
+        }
     }
 }
 
