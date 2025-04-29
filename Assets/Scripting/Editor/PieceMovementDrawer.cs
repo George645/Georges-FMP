@@ -6,7 +6,7 @@ using UnityEngine;
 public class PieceMovementAttributes : PropertyDrawer {
     int previousBoardSize;
 
-    private const float FOLDOUT_HEIGHT = 20f;
+    private const float FOLDOUT_HEIGHT = 18f;
 
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label) {
         /*if (property.FindPropertyRelative("name") == null) {
@@ -14,18 +14,18 @@ public class PieceMovementAttributes : PropertyDrawer {
         }*/
         float height = FOLDOUT_HEIGHT;
         if (property.isExpanded) {
-        /*if (property.FindPropertyRelative("potentialRange") == null) {
-            property.FindPropertyRelative("potentialRange") = property.FindPropertyRelative("potentialRange");
-        }*/
+            /*if (property.FindPropertyRelative("potentialRange") == null) {
+                property.FindPropertyRelative("potentialRange") = property.FindPropertyRelative("potentialRange");
+            }*/
             height += FOLDOUT_HEIGHT;
-        /*if (infiniteRange == null){
-            infiniteRange = property.FindPropertyRelative("infiniteRange");
-        }*/
+            /*if (infiniteRange == null){
+                infiniteRange = property.FindPropertyRelative("infiniteRange");
+            }*/
             height += FOLDOUT_HEIGHT;
-        /*if (property.FindPropertyRelative("movableTiles1DArray") == null) {
-            property.FindPropertyRelative("movableTiles1DArray") = property.FindPropertyRelative("movableTiles1DArray");
-        }*/
-        height += FOLDOUT_HEIGHT;
+            /*if (property.FindPropertyRelative("movableTiles1DArray") == null) {
+                property.FindPropertyRelative("movableTiles1DArray") = property.FindPropertyRelative("movableTiles1DArray");
+            }*/
+            height += FOLDOUT_HEIGHT;
             for (int i = 0; i < Math.Floor(Math.Sqrt(property.FindPropertyRelative("movableTiles1DArray").arraySize)); i++) {
                 height += FOLDOUT_HEIGHT;
             }

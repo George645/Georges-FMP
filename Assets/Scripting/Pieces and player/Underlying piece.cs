@@ -8,8 +8,9 @@ public class UnderlyingPiece : MonoBehaviour{
     public bool firstFrameSelected = true;
     [SerializeField]
     internal PieceMovement thisPiece;
-    public int capturedPieces = 0;
-    [SerializeField]
+    internal int capturedPieces = 0;
+    internal int level = 1;
+    internal int previousLevel = 1;
     internal bool playersTeam = false;
     private void Awake() {
         playersTeam = Random.Range(0, 2) < 0.5f;
@@ -63,6 +64,7 @@ public class UnderlyingPiece : MonoBehaviour{
                                             break;
                                         }
                                     }
+                                    catch { }
                                 }
                             }
                         }

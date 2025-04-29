@@ -1,8 +1,4 @@
 using UnityEngine;
-using System;
-using Unity.Mathematics;
-using NUnit.Framework;
-using System.Collections.Generic;
 
 public class PieceBase : UnderlyingPiece{
 
