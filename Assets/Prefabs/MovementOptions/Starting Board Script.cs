@@ -1,12 +1,14 @@
 using UnityEngine;
 
-public class StartingBoardScript : MonoBehaviour{
+public class StartingBoardScript : MonoBehaviour {
     public GameObject OriginalObject;
-    void Start(){
-        
+    void Start() {
+
+
+
     }
 
-    void Update(){
+    void Update() {
         if (Input.GetMouseButtonDown(0)) {
             RaycastHit Info;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out Info)) {

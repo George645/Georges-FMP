@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class TextScript : MonoBehaviour{
     public static List<GameObject> textList;
     public UnityEvent OnSelected;
+    bool knightIsAbove = false;
     void Awake(){
         try {
             textList.Add(this.gameObject);
@@ -21,8 +22,17 @@ public class TextScript : MonoBehaviour{
         RaycastHit Info;
         if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), Vector3.down, out Info)){
             if (Info.collider.gameObject.name.Contains("Knight")) {
-                OnSelected.Invoke();
+                if (!knightIsAbove) {
+                    OnSelected.Invoke();
+                    knightIsAbove = !knightIsAbove;
+                }
             }
+            else {
+                knightIsAbove=true;
+            }
+        }
+        else {
+            knightIsAbove = false;
         }
     }
 }

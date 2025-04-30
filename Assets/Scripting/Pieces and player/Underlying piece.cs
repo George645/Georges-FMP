@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class UnderlyingPiece : MonoBehaviour{
@@ -12,6 +13,7 @@ public class UnderlyingPiece : MonoBehaviour{
     internal int level = 1;
     internal int previousLevel = 1;
     internal bool playersTeam = false;
+    public static GameObject instance;
     private void Awake() {
         playersTeam = Random.Range(0, 2) < 0.5f;
     }
@@ -42,7 +44,9 @@ public class UnderlyingPiece : MonoBehaviour{
     internal void Selected() {
         if (selected && playersTeam) {
             if (thisPiece.CanLevelUp(level, capturedPieces)){
-
+                LevelUpButton.levelUpButton.SetActive(true);
+                LevelUpButton.levelUpButton.GetComponent<LevelUpButton>().levelingUpObject = gameObject;
+                LevelUpButton.levelUpButton.GetComponent<LevelUpButton>().PreviousPosition = transform.position;
             }
             if (firstFrameSelected) {
                 int count = 0;
@@ -89,6 +93,7 @@ public class UnderlyingPiece : MonoBehaviour{
                     firstFrameSelected = false;
 
                 }
+                
             }
         }
         else {
@@ -97,6 +102,12 @@ public class UnderlyingPiece : MonoBehaviour{
     }
 
     public void DeactivateVisibility() {
+        if (!firstFrameSelected) {
+            try {
+                LevelUpButton.levelUpButton.SetActive(false);
+            }
+            catch { }
+        }
         firstFrameSelected = true;
         foreach (GameObject obj in movableTiles) {
             obj.SetActive(false);

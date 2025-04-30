@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Player_Camera : MonoBehaviour{
     GameObject player;
-    
+    public Mode mode = Mode.gaming;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start(){
@@ -15,8 +15,13 @@ public class Player_Camera : MonoBehaviour{
     // Update is called once per frame
     void Update(){
         FaceCamera();
-        WhileRightButtonPressed();
-        Zoom();
+        if (mode == Mode.gaming) {
+            WhileRightButtonPressed(player.transform.position);
+        }
+        else {
+            WhileRightButtonPressed(new Vector3(500, 0.5f, 500));
+        }
+            Zoom();
         SelectingPieces();
     }
 
@@ -54,7 +59,7 @@ public class Player_Camera : MonoBehaviour{
     float newRotationZNormalised = 0;
     Vector2 rotation;
     Vector3 relativeCameraPosition;
-    void WhileRightButtonPressed() {
+    void WhileRightButtonPressed(Vector3 rotateAround) {
         if (Input.GetMouseButton(1)) {
             relativeMousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - previousFrameMousePos;
             distanceSpun += (float)relativeMousePos.x / 500 * PlayerPrefs.GetInt("Sensitivity", 70);
@@ -73,7 +78,7 @@ public class Player_Camera : MonoBehaviour{
         }
 
 
-        gameObject.transform.position = Vector3.Lerp(transform.position, player.transform.position + new Vector3(relativeCameraPosition.x * zoomInScale, Math.Clamp(relativeCameraPosition.y * zoomInScale, -.5f, 200), relativeCameraPosition.z * zoomInScale), 0.1f);
+        gameObject.transform.position = Vector3.Lerp(transform.position, rotateAround + new Vector3(relativeCameraPosition.x * zoomInScale, Math.Clamp(relativeCameraPosition.y * zoomInScale, -.5f, 200), relativeCameraPosition.z * zoomInScale), 0.1f);
         previousFrameMousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
     }
     #endregion
