@@ -4,6 +4,7 @@ using UnityEngine;
 public class Moveabledisplays : MonoBehaviour
 {
     public static Moveabledisplays Instance;
+    public static Moveabledisplays Instance2;
     [SerializeField]
     public GameObject objectToPool;
     public List<GameObject> ObjectPool;
@@ -12,13 +13,16 @@ public class Moveabledisplays : MonoBehaviour
 
     void Start(){
         ObjectPool.Clear();
-        if (Instance == null) {
+        if (name == "Movement circle pool") {
             Instance = this;
         }
-        else {
-            Destroy(this);
+        else if (name == "Upgrade circle pool") {
+            Instance2 = this;
         }
-        GameObject tmp;
+        else {
+            Destroy(gameObject);
+        }
+            GameObject tmp;
         for (int i = 0; i < amountToPool; i++) {
             tmp = Instantiate(objectToPool, transform);
             tmp.SetActive(false);
@@ -35,6 +39,4 @@ public class Moveabledisplays : MonoBehaviour
         ObjectPool.Add(tmp);
         return tmp;
     }
-
-
 }

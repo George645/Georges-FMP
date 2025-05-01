@@ -1,5 +1,7 @@
 using UnityEngine;
 using System;
+using NUnit.Framework;
+using UnityEngine.UIElements;
 
 [Serializable]
 //[CreateAssetMenu(fileName = "Piece", menuName = "Scriptable Objects/Piece")]
@@ -52,6 +54,28 @@ public class PieceMovement {
 
         }
     }
+    public void AddPositionToMovables(Vector2Int offset) {
+        moveableTiles[offset.x + (potentialRange - 1) / 2][offset.y + (potentialRange - 1) / 2] = true;
+    }
+    public void ExpandSize() {
+        bool[][] tempArray = new bool[moveableTiles.Length + 2][];
+        for (int i = 0; i < tempArray.Length; i++) {
+            tempArray[i] = new bool[moveableTiles.Length + 2];
+        }
+        for (int x = 0; x < moveableTiles.Length; x++) {
+            for (int z = 0; z < moveableTiles.Length; z++) {
+                tempArray[x + 1][z + 1] = moveableTiles[x][z];
+                Debug.Log(tempArray[x + 1][z + 1] + ", " + moveableTiles[x][z]);
+            }
+        }
+        LevelUpOriginCubeIdentifier.instance.GetComponent<OriginCube>().sizeNumber = (tempArray.Length - 1) / 2;
+        potentialRange += 2;
+        moveableTiles = new bool[tempArray.Length][];
+        for (int i = 0; i < moveableTiles.Length; i++) {
+            moveableTiles[i] = new bool[moveableTiles.Length];
+            moveableTiles[i] = tempArray[i];
+        }
+        moveableTiles = tempArray;
+        Debug.Log(moveableTiles.Length);
+    }
 }
-
-

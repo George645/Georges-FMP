@@ -7,6 +7,7 @@ public class PieceBase : UnderlyingPiece{
         base.ActualStart();
     }
 
+
     void FindStartPosition() {
         transform.position = new Vector3(101, 0, 101);
         int newX = 101;
@@ -31,13 +32,17 @@ public class PieceBase : UnderlyingPiece{
                 whileLoopVariable = true;
             }
         }
-        transform.position = new Vector3(newX, 2, newZ);
+        base.previousPosition = new Vector3(newX, 2, newZ);
     }
 
     void Update() {
+        if (mode == Mode.levelling) {
+            base.IfNotLevellingReturn();
+        }
         if (CubeBase.GetSquareInDirection(transform.position, 0, 0) == null) {
             FindStartPosition();
         }
-        base.Selected();
+        Selected();
+        EnsureCorrectPositions();
     }
 }

@@ -159,6 +159,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &4915340
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -290,6 +291,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &8134072
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -421,6 +423,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &14602561
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -552,6 +555,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &27140524
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -683,6 +687,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &30958477
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -814,6 +819,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &41748949
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -945,6 +951,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &71863978
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1076,6 +1083,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &84685881
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1207,6 +1215,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &101756086
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1338,6 +1347,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &111379398
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1469,6 +1479,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &134042338
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1560,6 +1571,82 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &138901671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 138901672}
+  - component: {fileID: 138901674}
+  - component: {fileID: 138901673}
+  m_Layer: 5
+  m_Name: Level up Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &138901672
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138901671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1461682094}
+  m_Father: {fileID: 1360438445}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &138901673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138901671}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &138901674
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138901671}
+  m_CullTransparentMesh: 1
 --- !u!1 &140647867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,6 +1687,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &140647869
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1731,6 +1819,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &190808262
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1822,6 +1911,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &201993994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 201993996}
+  - component: {fileID: 201993995}
+  m_Layer: 0
+  m_Name: Upgrade circle pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &201993995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201993994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 065b8df5aa36f24429deaadf244c83a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToPool: {fileID: 3265459478104755004, guid: c1505eac0f7fca8498c06cd0981fe21f, type: 3}
+  ObjectPool: []
+  amountToPool: 40
+--- !u!4 &201993996
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201993994}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6666794, y: 5.1265154, z: 4.779288}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &206747025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,6 +1998,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &206747027
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1993,6 +2130,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &209389261
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2124,6 +2262,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &221475031
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2255,6 +2394,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &254416349
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2386,6 +2526,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &263689182
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2477,6 +2618,142 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &264068746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 264068747}
+  - component: {fileID: 264068749}
+  - component: {fileID: 264068748}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &264068747
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264068746}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1461682094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &264068748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264068746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Upgrade range (1 point)
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &264068749
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264068746}
+  m_CullTransparentMesh: 1
 --- !u!1 &282494546
 GameObject:
   m_ObjectHideFlags: 0
@@ -2517,6 +2794,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &282494548
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2863,6 +3141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bf4b3e687cc1c448e98c9adfa7f8dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mode: 1
 --- !u!1 &336559411
 GameObject:
   m_ObjectHideFlags: 0
@@ -2903,6 +3182,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &336559413
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3034,6 +3314,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &364819599
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3165,6 +3446,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &371939471
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3296,6 +3578,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &378895302
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3427,6 +3710,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &389893698
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3558,6 +3842,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &392514577
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3810,6 +4095,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &414224036
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3941,6 +4227,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &456546969
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4072,6 +4359,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &479499379
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4203,6 +4491,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &484859934
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4334,6 +4623,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &498336944
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4465,6 +4755,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &553320569
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4596,6 +4887,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &591475500
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4727,6 +5019,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &610440599
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4858,6 +5151,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &614229786
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4989,6 +5283,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &641748674
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5120,6 +5415,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &647674925
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5251,6 +5547,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &651542529
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5382,6 +5679,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &666811319
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5513,6 +5811,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &675089697
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5644,6 +5943,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &686761135
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5775,6 +6075,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &694909375
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5906,6 +6207,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &731473588
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6037,6 +6339,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &746209879
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6168,6 +6471,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &747124963
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6299,6 +6603,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &769581871
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6430,6 +6735,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &819840666
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6610,6 +6916,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &858083128
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6741,6 +7048,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &860644089
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6872,6 +7180,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &876170739
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7003,6 +7312,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &915830860
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7134,6 +7444,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &928768521
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7265,6 +7576,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &930505110
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7396,6 +7708,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &942017436
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7527,6 +7840,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &958449427
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7658,6 +7972,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &978967891
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7789,6 +8104,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &986377215
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7920,6 +8236,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &988947187
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8051,6 +8368,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1049114668
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8182,6 +8500,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1114761127
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8313,6 +8632,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1157560006
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8444,6 +8764,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1221338117
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8575,6 +8896,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1235716799
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8706,6 +9028,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1238543021
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8837,6 +9160,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1269478636
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8980,7 +9304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelingUpObject: {fileID: 0}
-  PreviousPosition: {x: 0, y: 0, z: 0}
+  canvasToDisplay: {fileID: 138901671}
 --- !u!114 &1276081478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9247,6 +9571,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1325223656
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9433,6 +9758,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1506809943}
+  - {fileID: 138901672}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9480,6 +9806,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1368901799
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9611,6 +9938,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1378827552
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9742,6 +10070,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1389198625
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9964,6 +10293,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1414662549
 GameObject:
   m_ObjectHideFlags: 0
@@ -10004,6 +10334,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1414662551
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10135,6 +10466,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1453970405
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10266,6 +10598,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1456045345
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10357,6 +10690,153 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1461682093
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1461682094}
+  - component: {fileID: 1461682097}
+  - component: {fileID: 1461682096}
+  - component: {fileID: 1461682095}
+  - component: {fileID: 1461682098}
+  m_Layer: 5
+  m_Name: Upgrade range (1 upgrade point)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1461682094
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461682093}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 264068747}
+  m_Father: {fileID: 138901672}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -800, y: 200}
+  m_SizeDelta: {x: 300, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1461682095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461682093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1461682096}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1461682098}
+        m_TargetAssemblyTypeName: Enlargeareabutton, Assembly-CSharp
+        m_MethodName: ButtonPushed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1461682096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461682093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1461682097
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461682093}
+  m_CullTransparentMesh: 1
+--- !u!114 &1461682098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461682093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36744aba108dc434d848cc75e53049ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradingObject: {fileID: 0}
 --- !u!1 &1479755499
 GameObject:
   m_ObjectHideFlags: 0
@@ -10397,6 +10877,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1479755501
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10577,6 +11058,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1523195386
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10708,6 +11190,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1527631332
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10839,6 +11322,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1532276829
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10970,6 +11454,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1539650647
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11101,6 +11586,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1622267604
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11232,6 +11718,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1649346925
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11363,6 +11850,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1679961107
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11494,6 +11982,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1694667534
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11625,6 +12114,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1707110100
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11756,6 +12246,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1721402493
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11858,7 +12349,7 @@ GameObject:
   - component: {fileID: 1742535883}
   - component: {fileID: 1742535882}
   m_Layer: 0
-  m_Name: Moveable displays
+  m_Name: Movement circle pool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11934,6 +12425,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1745089661
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12065,6 +12557,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1749733211
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12196,6 +12689,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1758687089
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12327,6 +12821,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1778008266
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12458,6 +12953,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1790817663
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12589,6 +13085,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1825117041
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12720,6 +13217,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1840638729
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12851,6 +13349,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1845493278
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12982,6 +13481,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1854125708
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13113,6 +13613,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1863778761
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13244,6 +13745,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1886422343
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13454,6 +13956,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1906751649
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13585,6 +14088,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1912563862
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13716,6 +14220,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1950658593
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13847,6 +14352,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1951593686
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13978,6 +14484,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1955030846
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14109,6 +14616,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &2061137800
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14240,6 +14748,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &2093310073
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14371,6 +14880,7 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 0
+  previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &2107451369
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14665,3 +15175,4 @@ SceneRoots:
   - {fileID: 1296698549}
   - {fileID: 1742535883}
   - {fileID: 308920264}
+  - {fileID: 201993996}

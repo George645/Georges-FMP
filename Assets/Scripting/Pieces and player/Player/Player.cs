@@ -1,3 +1,4 @@
+using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class Player : UnderlyingPiece{
@@ -10,11 +11,16 @@ public class Player : UnderlyingPiece{
     }
     
     private void Start() {
+        base.previousPosition = new Vector3(0, 2, 0);
         ActualStart();
         playersTeam = true;
     }
 
     void Update(){
+        if (mode == Mode.levelling) {
+            base.IfNotLevellingReturn();
+        }
         base.Selected();
+        EnsureCorrectPositions();
     }
 }

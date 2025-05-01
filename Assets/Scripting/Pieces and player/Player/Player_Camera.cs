@@ -14,11 +14,13 @@ public class Player_Camera : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
-        FaceCamera();
+        Debug.Log(mode);
         if (mode == Mode.gaming) {
+            FaceCamera(player.transform.position);
             WhileRightButtonPressed(player.transform.position);
         }
         else {
+            FaceCamera(new Vector3(500, 0.5f, 500));
             WhileRightButtonPressed(new Vector3(500, 0.5f, 500));
         }
             Zoom();
@@ -83,9 +85,9 @@ public class Player_Camera : MonoBehaviour{
     }
     #endregion
     
-    void FaceCamera() {
+    void FaceCamera(Vector3 target) {
         //potentially handled by virtual camera
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(player.transform.position - transform.position), 0.3f);
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(target - transform.position), 0.3f);
     }
 
 

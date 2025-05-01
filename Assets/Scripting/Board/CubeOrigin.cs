@@ -4,16 +4,18 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
 
-public class SquareColourCorrection : CubeBase {
+public class OriginCube : CubeBase {
     public static GameObject cube;
     public GameObject cubetemp;
     public int sizeNumber = 1;
+    int currentSizeOfBoard = 1;
     private bool running;
-    int maxValue;
+    int maxValue = 10;
     [SerializeField]
     AnimationCurve animationCurve;
     GameObject newCube;
     bool firstFrame = true;
+    bool coroutineRunning = false;
 
     void Awake(){
         if (blackMaterial == null) {
@@ -32,9 +34,14 @@ public class SquareColourCorrection : CubeBase {
     private void Start() {
         if (mode == Mode.levelling) {
             StartCoroutine(SpawnSurrounding());
+            currentSizeOfBoard = sizeNumber;
         }
     }
-    void Update() {
+    void Update() { 
+        if (mode == Mode.levelling && currentSizeOfBoard != sizeNumber && !coroutineRunning) {
+            currentSizeOfBoard = sizeNumber;
+            StartCoroutine(SpawnSurrounding());
+        }
         if (firstFrame) {
             BoundaryFill();
             firstFrame = false;
@@ -132,6 +139,7 @@ public class SquareColourCorrection : CubeBase {
     }
 
     IEnumerator SpawnSurrounding() {
+        coroutineRunning = true;
         if (mode == Mode.levelling) {
             StartCoroutine(RemoveSurrounding());
             running = true;
@@ -141,7 +149,7 @@ public class SquareColourCorrection : CubeBase {
                         if ((j == 0 && k == 0) || GetSquareInDirection(transform.position, j, k) != null) {
                             continue;
                         }
-                        Instantiate(cube, new Vector3(j, 0.5f, k), Quaternion.identity, transform);
+                        Instantiate(cube, new Vector3(transform.position.x + j, transform.position.y, transform.position.z + k), Quaternion.identity, transform);
                         yield return new WaitForSeconds(0.02f);
                     }
                 }
@@ -150,12 +158,13 @@ public class SquareColourCorrection : CubeBase {
                         if ((j == 0 && k == 0) || GetSquareInDirection(transform.position, j, k) != null) {
                             continue;
                         }
-                        Instantiate(cube, new Vector3(j, 0.5f, k), Quaternion.identity, transform);
+                        Instantiate(cube, new Vector3(transform.position.x + j, transform.position.y, transform.position.z + k), Quaternion.identity, transform);
                         yield return new WaitForSeconds(0.02f);
                     }
                 }
             }
             running = false;
+            coroutineRunning = false;
             yield return null;
         }
         else {

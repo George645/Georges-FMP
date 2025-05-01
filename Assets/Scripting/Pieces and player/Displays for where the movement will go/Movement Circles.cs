@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MovementCircles : MonoBehaviour {
     public GameObject OriginalObject;
-    public Vector2 offset;
+    public Vector2Int offset;
     void Start() {
 
     }
@@ -14,16 +14,16 @@ public class MovementCircles : MonoBehaviour {
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out Info)) {
                 if (Info.collider.gameObject == gameObject) {
                     CheckIfTaking();
-                    OriginalObject.transform.position = new Vector3(transform.position.x, transform.position.y + 0.9f, transform.position.z);
+                    OriginalObject.GetComponent<UnderlyingPiece>().previousPosition = new Vector3(transform.position.x, transform.position.y + 0.9f, transform.position.z);
                     OriginalObject.GetComponent<UnderlyingPiece>().DeactivateVisibility();
                 }
             }
         }
     }
     void CheckIfTaking() {
-        if (OriginalObject.GetComponent<UnderlyingPiece>().PieceInDirection((int)offset.x, (int)offset.y) != null) {
+        if (OriginalObject.GetComponent<UnderlyingPiece>().PieceInDirection(offset.x, offset.y) != null) {
             OriginalObject.GetComponent<UnderlyingPiece>().capturedPieces += 1;
-            Destroy(OriginalObject.GetComponent<UnderlyingPiece>().PieceInDirection((int)offset.x, (int)offset.y));
+            Destroy(OriginalObject.GetComponent<UnderlyingPiece>().PieceInDirection(offset.x, offset.y));
         }
     }
 }
