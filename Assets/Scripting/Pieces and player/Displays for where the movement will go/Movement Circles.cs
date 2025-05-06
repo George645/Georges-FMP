@@ -3,18 +3,14 @@ using UnityEngine;
 public class MovementCircles : MonoBehaviour {
     public GameObject OriginalObject;
     public Vector2Int offset;
-    void Start() {
-
-    }
-
 
     void Update() {
         if (Input.GetMouseButtonDown(0)) {
-            RaycastHit Info;
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out Info)) {
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit Info)) {
                 if (Info.collider.gameObject == gameObject) {
                     CheckIfTaking();
                     OriginalObject.GetComponent<UnderlyingPiece>().previousPosition = new Vector3(transform.position.x, transform.position.y + 0.9f, transform.position.z);
+                    OriginalObject.GetComponent<UnderlyingPiece>().selected = false;
                     OriginalObject.GetComponent<UnderlyingPiece>().DeactivateVisibility();
                 }
             }

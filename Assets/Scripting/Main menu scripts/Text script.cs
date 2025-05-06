@@ -4,24 +4,24 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TextScript : MonoBehaviour{
+public class TextScript : MonoBehaviour {
     public static List<GameObject> textList;
     public UnityEvent OnSelected;
     bool knightIsAbove = false;
-    void Awake(){
+    void Awake() {
         try {
             textList.Add(this.gameObject);
-        }catch(NullReferenceException e) {
+        }
+        catch (NullReferenceException) {
             textList = new() {
                 this.gameObject
             };
         }
     }
 
-    void Update(){
-        RaycastHit Info;
+    void Update() {
         Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), Vector3.down, Color.red, 10);
-        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), Vector3.down, out Info)){
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), Vector3.down, out RaycastHit Info)) {
             if (Info.collider.gameObject.name.Contains("Knight")) {
                 if (!knightIsAbove) {
                     OnSelected.Invoke();
@@ -29,7 +29,7 @@ public class TextScript : MonoBehaviour{
                 }
             }
             else {
-                knightIsAbove=true;
+                knightIsAbove = true;
             }
         }
         else {

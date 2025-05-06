@@ -1,17 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Moveabledisplays : MonoBehaviour
-{
-    public static Moveabledisplays Instance;
-    public static Moveabledisplays Instance2;
-    [SerializeField]
+public class MoveableDisplays : MonoBehaviour {
+    public static MoveableDisplays Instance;
+    public static MoveableDisplays Instance2;
     public GameObject objectToPool;
     public List<GameObject> ObjectPool;
     [SerializeField]
     int amountToPool;
 
-    void Start(){
+    void Start() {
         ObjectPool.Clear();
         if (name == "Movement circle pool") {
             Instance = this;
@@ -22,7 +20,7 @@ public class Moveabledisplays : MonoBehaviour
         else {
             Destroy(gameObject);
         }
-            GameObject tmp;
+        GameObject tmp;
         for (int i = 0; i < amountToPool; i++) {
             tmp = Instantiate(objectToPool, transform);
             tmp.SetActive(false);

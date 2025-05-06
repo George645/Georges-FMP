@@ -6,13 +6,13 @@ using UnityEngine;
 public class KnightScript : MonoBehaviour {
     [SerializeField]
     bool selected = false;
-    List<GameObject> displayedMovementList = new();
+    readonly List<GameObject> displayedMovementList = new();
 
-    void Start(){
+    void Start() {
         SetAllPositions();
     }
 
-    void Update(){
+    void Update() {
         CheckIfSelected();
         ShowMovablePositions();
     }
@@ -23,14 +23,14 @@ public class KnightScript : MonoBehaviour {
             for (int x = -1; x <= 1; x += 2) {
                 for (int z = -1; z <= 1; z += 2) {
                     if (CubeBase.GetSquareInDirection(transform.position.x + 2 * x, transform.position.z + 1 * z)) {
-                        displayedMovementList.Add(Moveabledisplays.Instance.GetObject());
+                        displayedMovementList.Add(MoveableDisplays.Instance.GetObject());
                         displayedMovementList[count].SetActive(true);
                         displayedMovementList[count].transform.position = new Vector3(transform.position.x + 2 * x, 1.1f, transform.position.z + 1 * z);
                         displayedMovementList[count].GetComponent<StartingBoardScript>().OriginalObject = gameObject;
                         count++;
                     }
                     if (CubeBase.GetSquareInDirection(transform.position.x + 1 * x, transform.position.z + 2 * z)) {
-                        displayedMovementList.Add(Moveabledisplays.Instance.GetObject());
+                        displayedMovementList.Add(MoveableDisplays.Instance.GetObject());
                         displayedMovementList[count].SetActive(true);
                         displayedMovementList[count].transform.position = new Vector3(transform.position.x + 1 * x, 1.1f, transform.position.z + 2 * z);
                         displayedMovementList[count].GetComponent<StartingBoardScript>().OriginalObject = gameObject;
@@ -46,11 +46,11 @@ public class KnightScript : MonoBehaviour {
         if (Input.GetMouseButtonUp(0)) {
             selected = false;
             int count = displayedMovementList.Count;
-            for(int i = 0; i < count; i++){
+            for (int i = 0; i < count; i++) {
                 displayedMovementList[0].SetActive(false);
                 displayedMovementList.RemoveAt(0);
             }
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo)){
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo)) {
                 if (hitInfo.collider.gameObject == gameObject) {
                     selected = true;
                 }
@@ -81,7 +81,7 @@ public class KnightScript : MonoBehaviour {
                 try {
                     text.GetComponent<TMP_Text>().color = Color.black;
                 }
-                catch (NullReferenceException e) {
+                catch (NullReferenceException) {
                     text.transform.GetChild(0).GetComponent<TMP_Text>().color = Color.black;
                 }
             }

@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MenuHandling : MonoBehaviour{
+public class MenuHandling : MonoBehaviour {
     [SerializeField]
     GameObject alternateMenuToSwapTo;
     public void ChangeScene(string scene) {
@@ -27,7 +27,7 @@ public class MenuHandling : MonoBehaviour{
     IEnumerator MoveCamera(Vector3 position, bool setActiveTo) {
         for (float i = 1; i <= 100; i++) {
             Debug.Log(i);
-            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, position, i/100);
+            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, position, i / 100);
             yield return new WaitForSeconds(0.05f);
         }
         yield return new WaitForSeconds(0.01f);
@@ -38,11 +38,11 @@ public class MenuHandling : MonoBehaviour{
     public void Return() {
         StartCoroutine(MoveCamera(new Vector3(0.5f, 8, -0.5f), false));
     }
-    public void adjustSensitivity() {
+    public void AdjustSensitivity() {
         int input = (int)transform.GetComponent<Slider>().value;
         PlayerPrefs.SetInt("Sensitivity", input);
     }
-    public void Continue(){
+    public void Continue() {
         Debug.LogError("NotImplementedYet");
     }
 }

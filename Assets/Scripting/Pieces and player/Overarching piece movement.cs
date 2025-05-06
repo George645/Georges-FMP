@@ -1,12 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Overarchingpiecemovement : MonoBehaviour{
-    public static Overarchingpiecemovement Instance;
-    [SerializeField]
+public class OverarchingPieceMovement : MonoBehaviour {
+    public static OverarchingPieceMovement Instance;
     public List<PieceMovement> allPieceMovement;
 
-    void Awake(){
+    void Awake() {
         if (Instance == null) {
             Instance = this;
         }
@@ -15,7 +14,7 @@ public class Overarchingpiecemovement : MonoBehaviour{
         }
         foreach (PieceMovement pieceMovement in allPieceMovement) {
             pieceMovement.moveableTiles = new bool[(int)Mathf.Sqrt(pieceMovement.movableTiles1DArray.Length)][];
-            for (int i = 0; i < pieceMovement.moveableTiles.Length; i++){
+            for (int i = 0; i < pieceMovement.moveableTiles.Length; i++) {
                 pieceMovement.moveableTiles[i] = new bool[pieceMovement.moveableTiles.Length];
             }
             for (int y = 0; y < pieceMovement.moveableTiles.Length; y++) {
@@ -25,11 +24,5 @@ public class Overarchingpiecemovement : MonoBehaviour{
             }
             pieceMovement.potentialRange = pieceMovement.potentialRange * 2 + 1;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

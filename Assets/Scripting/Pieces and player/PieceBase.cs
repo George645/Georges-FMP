@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PieceBase : UnderlyingPiece{
+public class PieceBase : UnderlyingPiece {
 
     void Start() {
         FindStartPosition();
@@ -13,7 +13,7 @@ public class PieceBase : UnderlyingPiece{
         int newX = 101;
         int newZ = 101;
         int count = 0;
-        System.Random random = new();
+        System.Random random;
         bool whileLoopVariable = true;
         while (whileLoopVariable && count < 10) {
             random = new System.Random();
@@ -38,6 +38,7 @@ public class PieceBase : UnderlyingPiece{
     void Update() {
         if (mode == Mode.levelling) {
             base.IfNotLevellingReturn();
+            selected = true;
         }
         if (CubeBase.GetSquareInDirection(transform.position, 0, 0) == null) {
             FindStartPosition();

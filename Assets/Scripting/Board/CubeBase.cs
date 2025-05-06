@@ -10,8 +10,8 @@ public class CubeBase : MonoBehaviour {
     [SerializeField]
     protected Mode mode = Mode.gaming;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start(){
-        try{
+    void Start() {
+        try {
             blackMaterial = temporaryList[0];
             whiteMaterial = temporaryList[1];
         }
@@ -22,9 +22,6 @@ public class CubeBase : MonoBehaviour {
         }*/
     }
 
-    // Update is called once per frame
-    void Update(){
-    }
     public void AlignToGridAndColour() {
         transform.position = new Vector3(Mathf.Round(transform.position.x), 0.5f, Mathf.Round(transform.position.z));
         if ((transform.position.x + transform.position.z) % 2 == 0) {

@@ -23,10 +23,11 @@ public class PieceMovement {
             if (moveableTiles[x + (potentialRange - 1) / 2][z + (potentialRange - 1) / 2]) {
                 return true;
             }
-            else {  return false; }
-        }catch(IndexOutOfRangeException e) { return false; }
+            else { return false; }
+        }
+        catch (IndexOutOfRangeException) { return false; }
     }
-    public bool CanLevelUp(int level, int capturedPieces){
+    public bool CanLevelUp(int level, int capturedPieces) {
         if (infinitelyScalingRange) {
             if ((level * level / 2) + (3 * level / 2) + 2 <= capturedPieces) {
                 return true;
@@ -38,19 +39,19 @@ public class PieceMovement {
                     return true;
                 }
             }
-            else{
-                if (3 <= capturedPieces){
+            else {
+                if (3 <= capturedPieces) {
                     return true;
                 }
             }
         }
         return false;
     }
-    public void AttemptLevelUp(){
-        if (infinitelyScalingRange){
+    public void AttemptLevelUp() {
+        if (infinitelyScalingRange) {
             currentRange += 2;
         }
-        else{
+        else {
 
         }
     }
@@ -65,7 +66,6 @@ public class PieceMovement {
         for (int x = 0; x < moveableTiles.Length; x++) {
             for (int z = 0; z < moveableTiles.Length; z++) {
                 tempArray[x + 1][z + 1] = moveableTiles[x][z];
-                Debug.Log(tempArray[x + 1][z + 1] + ", " + moveableTiles[x][z]);
             }
         }
         LevelUpOriginCubeIdentifier.instance.GetComponent<OriginCube>().sizeNumber = (tempArray.Length - 1) / 2;
@@ -76,6 +76,5 @@ public class PieceMovement {
             moveableTiles[i] = tempArray[i];
         }
         moveableTiles = tempArray;
-        Debug.Log(moveableTiles.Length);
     }
 }

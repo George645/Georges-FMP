@@ -153,12 +153,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &4915340
 CapsuleCollider:
@@ -285,12 +279,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &8134072
 CapsuleCollider:
@@ -417,12 +405,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &14602561
 CapsuleCollider:
@@ -549,12 +531,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &27140524
 CapsuleCollider:
@@ -681,12 +657,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &30958477
 CapsuleCollider:
@@ -813,12 +783,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &41748949
 CapsuleCollider:
@@ -945,12 +909,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &71863978
 CapsuleCollider:
@@ -1077,12 +1035,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &84685881
 CapsuleCollider:
@@ -1209,12 +1161,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &101756086
 CapsuleCollider:
@@ -1341,12 +1287,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &111379398
 CapsuleCollider:
@@ -1473,12 +1413,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &134042338
 CapsuleCollider:
@@ -1681,12 +1615,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &140647869
 CapsuleCollider:
@@ -1813,12 +1741,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &190808262
 CapsuleCollider:
@@ -1992,12 +1914,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &206747027
 CapsuleCollider:
@@ -2124,12 +2040,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &209389261
 CapsuleCollider:
@@ -2256,12 +2166,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &221475031
 CapsuleCollider:
@@ -2388,12 +2292,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &254416349
 CapsuleCollider:
@@ -2520,12 +2418,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &263689182
 CapsuleCollider:
@@ -2788,12 +2680,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &282494548
 CapsuleCollider:
@@ -3051,7 +2937,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 300
   field of view: 60.000004
   orthographic: 0
   orthographic size: 5
@@ -3176,12 +3062,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &336559413
 CapsuleCollider:
@@ -3308,12 +3188,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &364819599
 CapsuleCollider:
@@ -3440,12 +3314,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &371939471
 CapsuleCollider:
@@ -3572,12 +3440,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &378895302
 CapsuleCollider:
@@ -3704,12 +3566,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &389893698
 CapsuleCollider:
@@ -3836,12 +3692,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &392514577
 CapsuleCollider:
@@ -4089,12 +3939,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &414224036
 CapsuleCollider:
@@ -4221,12 +4065,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &456546969
 CapsuleCollider:
@@ -4353,12 +4191,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &479499379
 CapsuleCollider:
@@ -4485,12 +4317,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &484859934
 CapsuleCollider:
@@ -4617,12 +4443,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &498336944
 CapsuleCollider:
@@ -4749,12 +4569,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &553320569
 CapsuleCollider:
@@ -4881,12 +4695,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &591475500
 CapsuleCollider:
@@ -5013,12 +4821,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &610440599
 CapsuleCollider:
@@ -5145,12 +4947,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &614229786
 CapsuleCollider:
@@ -5277,12 +5073,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &641748674
 CapsuleCollider:
@@ -5409,12 +5199,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &647674925
 CapsuleCollider:
@@ -5541,12 +5325,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &651542529
 CapsuleCollider:
@@ -5673,12 +5451,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &666811319
 CapsuleCollider:
@@ -5805,12 +5577,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &675089697
 CapsuleCollider:
@@ -5937,12 +5703,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &686761135
 CapsuleCollider:
@@ -6069,12 +5829,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &694909375
 CapsuleCollider:
@@ -6201,12 +5955,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &731473588
 CapsuleCollider:
@@ -6333,12 +6081,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &746209879
 CapsuleCollider:
@@ -6465,12 +6207,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &747124963
 CapsuleCollider:
@@ -6597,12 +6333,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &769581871
 CapsuleCollider:
@@ -6729,12 +6459,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &819840666
 CapsuleCollider:
@@ -6910,12 +6634,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &858083128
 CapsuleCollider:
@@ -7042,12 +6760,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &860644089
 CapsuleCollider:
@@ -7174,12 +6886,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &876170739
 CapsuleCollider:
@@ -7306,12 +7012,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &915830860
 CapsuleCollider:
@@ -7438,12 +7138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &928768521
 CapsuleCollider:
@@ -7570,12 +7264,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &930505110
 CapsuleCollider:
@@ -7702,12 +7390,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &942017436
 CapsuleCollider:
@@ -7834,12 +7516,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &958449427
 CapsuleCollider:
@@ -7966,12 +7642,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &978967891
 CapsuleCollider:
@@ -8098,12 +7768,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &986377215
 CapsuleCollider:
@@ -8230,12 +7894,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &988947187
 CapsuleCollider:
@@ -8362,12 +8020,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1049114668
 CapsuleCollider:
@@ -8494,12 +8146,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1114761127
 CapsuleCollider:
@@ -8626,12 +8272,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1157560006
 CapsuleCollider:
@@ -8758,12 +8398,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1221338117
 CapsuleCollider:
@@ -8890,12 +8524,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1235716799
 CapsuleCollider:
@@ -9022,12 +8650,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1238543021
 CapsuleCollider:
@@ -9154,12 +8776,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1269478636
 CapsuleCollider:
@@ -9351,7 +8967,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1276081477}
         m_TargetAssemblyTypeName: LevelUpButton, Assembly-CSharp
-        m_MethodName: levelUpSceneChange
+        m_MethodName: LevelUpSceneChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9565,12 +9181,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1325223656
 CapsuleCollider:
@@ -9800,12 +9410,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1368901799
 CapsuleCollider:
@@ -9932,12 +9536,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1378827552
 CapsuleCollider:
@@ -10064,12 +9662,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1389198625
 CapsuleCollider:
@@ -10287,12 +9879,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1414662549
 GameObject:
@@ -10328,12 +9914,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1414662551
 CapsuleCollider:
@@ -10460,12 +10040,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1453970405
 CapsuleCollider:
@@ -10592,12 +10166,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1456045345
 CapsuleCollider:
@@ -10871,12 +10439,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1479755501
 CapsuleCollider:
@@ -11052,12 +10614,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1523195386
 CapsuleCollider:
@@ -11184,12 +10740,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1527631332
 CapsuleCollider:
@@ -11316,12 +10866,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1532276829
 CapsuleCollider:
@@ -11448,12 +10992,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1539650647
 CapsuleCollider:
@@ -11580,12 +11118,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1622267604
 CapsuleCollider:
@@ -11712,12 +11244,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1649346925
 CapsuleCollider:
@@ -11844,12 +11370,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1679961107
 CapsuleCollider:
@@ -11976,12 +11496,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1694667534
 CapsuleCollider:
@@ -12108,12 +11622,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1707110100
 CapsuleCollider:
@@ -12240,12 +11748,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1721402493
 CapsuleCollider:
@@ -12369,7 +11871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToPool: {fileID: 700590414589731535, guid: 261aa4e6db317234cbdc17128a0a58ad, type: 3}
   ObjectPool: []
-  amountToPool: 300
+  amountToPool: 100
 --- !u!4 &1742535883
 Transform:
   m_ObjectHideFlags: 0
@@ -12419,12 +11921,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1745089661
 CapsuleCollider:
@@ -12551,12 +12047,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1749733211
 CapsuleCollider:
@@ -12683,12 +12173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1758687089
 CapsuleCollider:
@@ -12815,12 +12299,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1778008266
 CapsuleCollider:
@@ -12947,12 +12425,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1790817663
 CapsuleCollider:
@@ -13079,12 +12551,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1825117041
 CapsuleCollider:
@@ -13211,12 +12677,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1840638729
 CapsuleCollider:
@@ -13343,12 +12803,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1845493278
 CapsuleCollider:
@@ -13475,12 +12929,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1854125708
 CapsuleCollider:
@@ -13607,12 +13055,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1863778761
 CapsuleCollider:
@@ -13739,12 +13181,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1886422343
 CapsuleCollider:
@@ -13950,12 +13386,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1906751649
 CapsuleCollider:
@@ -14082,12 +13512,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1912563862
 CapsuleCollider:
@@ -14214,12 +13638,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1950658593
 CapsuleCollider:
@@ -14346,12 +13764,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1951593686
 CapsuleCollider:
@@ -14478,12 +13890,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1955030846
 CapsuleCollider:
@@ -14610,12 +14016,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &2061137800
 CapsuleCollider:
@@ -14742,12 +14142,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &2093310073
 CapsuleCollider:
@@ -14874,12 +14268,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
-  thisPiece:
-    name: 
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 3
-    infinitelyScalingRange: 0
-    currentRange: 0
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &2107451369
 CapsuleCollider:
@@ -15024,6 +14412,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 6705822350818088667, guid: 249762eb96bd1644c9726dd2ba6b74f9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6705822350818088667, guid: 249762eb96bd1644c9726dd2ba6b74f9, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 8027237587934538999, guid: 249762eb96bd1644c9726dd2ba6b74f9, type: 3}
       propertyPath: cubetemp
       value: 

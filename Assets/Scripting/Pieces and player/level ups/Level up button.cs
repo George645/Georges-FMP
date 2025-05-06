@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelUpButton : MonoBehaviour{
+public class LevelUpButton : MonoBehaviour {
     public static GameObject levelUpButton;
     public GameObject levelingUpObject;
     [SerializeField] GameObject canvasToDisplay;
@@ -11,17 +11,11 @@ public class LevelUpButton : MonoBehaviour{
         levelUpButton = gameObject;
     }
 
-    void Update() {
-        
-    }
-    public void levelUpSceneChange(){
-        Camera.main.gameObject.GetComponent<Player_Camera>().mode = Mode.levelling;
-        Debug.Log(Camera.main.gameObject.GetComponent<Player_Camera>().mode);
-        Debug.Log(Camera.main.gameObject);  
+    public void LevelUpSceneChange() {
+        Camera.main.gameObject.GetComponent<PlayerCamera>().mode = Mode.levelling;
         SceneManager.LoadScene("Level Up scene", LoadSceneMode.Additive);
-        levelingUpObject.GetComponent<UnderlyingPiece>().runCoroutine();
+        levelingUpObject.GetComponent<UnderlyingPiece>().RunCoroutine();
         canvasToDisplay.SetActive(true);
-        Debug.Log(canvasToDisplay.transform.GetChild(0).GetChild(0).gameObject);
-        canvasToDisplay.transform.GetChild(0).gameObject.GetComponent<Enlargeareabutton>().upgradingObject = levelingUpObject;
+        canvasToDisplay.transform.GetChild(0).gameObject.GetComponent<EnlargeAreaButton>().upgradingObject = levelingUpObject;
     }
 }

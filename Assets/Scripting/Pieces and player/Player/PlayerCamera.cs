@@ -3,18 +3,17 @@ using Unity.Mathematics;
 using UnityEditor.Rendering;
 using UnityEngine;
 
-public class Player_Camera : MonoBehaviour{
+public class PlayerCamera : MonoBehaviour {
     GameObject player;
     public Mode mode = Mode.gaming;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start(){
+    void Start() {
         player = Player.player;
     }
 
     // Update is called once per frame
-    void Update(){
-        Debug.Log(mode);
+    void Update() {
         if (mode == Mode.gaming) {
             FaceCamera(player.transform.position);
             WhileRightButtonPressed(player.transform.position);
@@ -23,7 +22,7 @@ public class Player_Camera : MonoBehaviour{
             FaceCamera(new Vector3(500, 0.5f, 500));
             WhileRightButtonPressed(new Vector3(500, 0.5f, 500));
         }
-            Zoom();
+        Zoom();
         SelectingPieces();
     }
 
@@ -70,7 +69,7 @@ public class Player_Camera : MonoBehaviour{
             tilt += -relativeMousePos.y / 500 * PlayerPrefs.GetInt("Sensitivity", 70);
             tilt = math.clamp(tilt, -5, 90);
             //calculate the rotation around the player
-            newRotationXNormalised = Mathf.Cos(Mathf.Deg2Rad*distanceSpun);
+            newRotationXNormalised = Mathf.Cos(Mathf.Deg2Rad * distanceSpun);
             newRotationZNormalised = Mathf.Sin(Mathf.Deg2Rad * distanceSpun);
             rotation = new Vector2(newRotationXNormalised, newRotationZNormalised);
 
@@ -84,7 +83,7 @@ public class Player_Camera : MonoBehaviour{
         previousFrameMousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
     }
     #endregion
-    
+
     void FaceCamera(Vector3 target) {
         //potentially handled by virtual camera
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(target - transform.position), 0.3f);

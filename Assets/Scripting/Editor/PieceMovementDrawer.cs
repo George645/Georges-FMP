@@ -37,7 +37,7 @@ public class PieceMovementAttributes : PropertyDrawer {
         EditorGUI.BeginProperty(position, label, property);
 
         label.text = property.FindPropertyRelative("name").stringValue;
-        Rect foldoutRect = new Rect(position.x, position.y, position.width, FOLDOUT_HEIGHT);
+        Rect foldoutRect = new(position.x, position.y, position.width, FOLDOUT_HEIGHT);
         property.isExpanded = EditorGUI.Foldout(foldoutRect, property.isExpanded, label);
 
         if (property.isExpanded) {
@@ -62,13 +62,13 @@ public class PieceMovementAttributes : PropertyDrawer {
             //hook the difference things up; oh yeah, they will need to be completely rewritten as they are for the old 2D array
 
             float addY = 0;
-            Rect rect = new();
+            Rect rect;
             position.y += FOLDOUT_HEIGHT;
             EditorGUI.PrefixLabel(position, EditorGUIUtility.GetControlID(FocusType.Passive), new GUIContent("Movement array"));
             for (int i = 0; i < Math.Floor(Math.Sqrt(property.FindPropertyRelative("movableTiles1DArray").arraySize)); i++) {
                 float addX = 265;
                 for (int j = 0; j < Math.Floor(Math.Sqrt(property.FindPropertyRelative("movableTiles1DArray").arraySize)); j++) {
-                    rect = new Rect(position.x + addX, position.y + addY, EditorGUI.GetPropertyHeight(property.FindPropertyRelative("movableTiles1DArray").GetArrayElementAtIndex(i)), EditorGUI.GetPropertyHeight(property.FindPropertyRelative("movableTiles1DArray").GetArrayElementAtIndex(i)));
+                    rect = new(position.x + addX, position.y + addY, EditorGUI.GetPropertyHeight(property.FindPropertyRelative("movableTiles1DArray").GetArrayElementAtIndex(i)), EditorGUI.GetPropertyHeight(property.FindPropertyRelative("movableTiles1DArray").GetArrayElementAtIndex(i)));
                     addX += EditorGUI.GetPropertyHeight(property.FindPropertyRelative("movableTiles1DArray").GetArrayElementAtIndex(i));
                     if (i == j && j == property.FindPropertyRelative("potentialRange").intValue) {
                         rect.x += 2;
@@ -89,10 +89,10 @@ public class PieceMovementAttributes : PropertyDrawer {
         bool[] tempBoolArray = new bool[(property.FindPropertyRelative("potentialRange").intValue * 2 + 1) * (property.FindPropertyRelative("potentialRange").intValue * 2 + 1)];
         for (int y = previousBoardSize * 2; y >= 0; y--) {
             for (int x = previousBoardSize * 2; x >= 0; x--) {
-                tempBoolArray[(y + difference) * (2 * property.FindPropertyRelative("potentialRange").intValue + 1) + (x + difference)] = property.FindPropertyRelative("movableTiles1DArray").GetArrayElementAtIndex(y * (2*previousBoardSize + 1) + x).boolValue;
+                tempBoolArray[(y + difference) * (2 * property.FindPropertyRelative("potentialRange").intValue + 1) + (x + difference)] = property.FindPropertyRelative("movableTiles1DArray").GetArrayElementAtIndex(y * (2 * previousBoardSize + 1) + x).boolValue;
             }
         }
-        for(int i = 0; i < tempBoolArray.Length; i++) {
+        for (int i = 0; i < tempBoolArray.Length; i++) {
             property.FindPropertyRelative("movableTiles1DArray").GetArrayElementAtIndex(i).boolValue = tempBoolArray[i];
         }
         /*
@@ -119,7 +119,7 @@ public class PieceMovementAttributes : PropertyDrawer {
         }
     }
 
-     
+
 
     /*public override VisualElement CreatePropertyGUI(SerializedProperty property) {
         base.CreatePropertyGUI(property);

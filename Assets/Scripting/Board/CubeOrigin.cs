@@ -17,7 +17,7 @@ public class OriginCube : CubeBase {
     bool firstFrame = true;
     bool coroutineRunning = false;
 
-    void Awake(){
+    void Awake() {
         if (blackMaterial == null) {
             blackMaterial = temporaryList[0];
             whiteMaterial = temporaryList[1];
@@ -37,7 +37,7 @@ public class OriginCube : CubeBase {
             currentSizeOfBoard = sizeNumber;
         }
     }
-    void Update() { 
+    void Update() {
         if (mode == Mode.levelling && currentSizeOfBoard != sizeNumber && !coroutineRunning) {
             currentSizeOfBoard = sizeNumber;
             StartCoroutine(SpawnSurrounding());
@@ -51,7 +51,7 @@ public class OriginCube : CubeBase {
     void BoundaryFill() {
         for (int x = -100; x < 100; x++) {
             for (int z = -100; z < 100; z++) {
-                Vector3 suggestedPosition = new Vector3(x, 0.5f, z);
+                Vector3 suggestedPosition = new(x, 0.5f, z);
                 if (GetSquareInDirection(x, z) == null && CubeInDirection(suggestedPosition, new Vector3(10, 0.5f, 0)) && CubeInDirection(suggestedPosition, new Vector3(-10, 0.5f, 0)) && CubeInDirection(suggestedPosition, new Vector3(0, 0.5f, 10)) && CubeInDirection(suggestedPosition, new Vector3(0, 0.5f, -10))) {
                     newCube = Instantiate(cube, new Vector3(x, 0, z), Quaternion.identity, transform);
                     newCube.name = System.Convert.ToString(Random.Range(0, 1000000));
@@ -112,7 +112,6 @@ public class OriginCube : CubeBase {
                 allTheSquares.LastOrDefault().name = System.Convert.ToString(Mathf.RoundToInt(Random.Range(0, 1000000)));
             }
         }
-        List<GameObject> removingSquares = new();
         //get each square starting from this one to check itself and its neighbours to ensure that they are all directly connected back to the starting one
         ConnectsToCenter();
         for (int i = 0; i < transform.childCount; i++) {
@@ -122,7 +121,7 @@ public class OriginCube : CubeBase {
         }
     }
 
-    public void setSizeOfBoard(Slider slider) {
+    public void SetSizeOfBoard(Slider slider) {
         sizeNumber = (int)slider.value;
         maxValue = (int)slider.maxValue;
         if (false == running) {
@@ -173,7 +172,7 @@ public class OriginCube : CubeBase {
         ConnectsToCenter();
     }
     IEnumerator RemoveSurrounding() {
-        for (int i = maxValue * 2; i>=0; i--) {
+        for (int i = maxValue * 2; i >= 0; i--) {
             for (int x = maxValue; x >= 0; x--) {
                 int z = i - x;
                 if (z > maxValue) {
