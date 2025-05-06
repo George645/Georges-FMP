@@ -17,5 +17,6 @@ public class LevelUpButton : MonoBehaviour {
         levelingUpObject.GetComponent<UnderlyingPiece>().RunCoroutine();
         canvasToDisplay.SetActive(true);
         canvasToDisplay.transform.GetChild(0).gameObject.GetComponent<EnlargeAreaButton>().upgradingObject = levelingUpObject;
+        levelingUpObject.GetComponent<UnderlyingPiece>().selected = false;
     }
 }

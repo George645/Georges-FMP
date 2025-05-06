@@ -14,18 +14,19 @@ public class PieceMovementAttributes : PropertyDrawer {
         }*/
         float height = FOLDOUT_HEIGHT;
         if (property.isExpanded) {
-            /*if (property.FindPropertyRelative("potentialRange") == null) {
-                property.FindPropertyRelative("potentialRange") = property.FindPropertyRelative("potentialRange");
-            }*/
+            //name
             height += FOLDOUT_HEIGHT;
-            /*if (infinitelyScalingRange == null){
-                infinitelyScalingRange = property.FindPropertyRelative("infinitelyScalingRange");
-            }*/
+            //gameobject
             height += FOLDOUT_HEIGHT;
-            /*if (property.FindPropertyRelative("movableTiles1DArray") == null) {
-                property.FindPropertyRelative("movableTiles1DArray") = property.FindPropertyRelative("movableTiles1DArray");
-            }*/
+            //Good Material
             height += FOLDOUT_HEIGHT;
+            //Evil material
+            height += FOLDOUT_HEIGHT;
+            //infiniteRange
+            height += FOLDOUT_HEIGHT;
+            //range
+            height += FOLDOUT_HEIGHT;
+            //1D array
             for (int i = 0; i < Math.Floor(Math.Sqrt(property.FindPropertyRelative("movableTiles1DArray").arraySize)); i++) {
                 height += FOLDOUT_HEIGHT;
             }
@@ -45,6 +46,12 @@ public class PieceMovementAttributes : PropertyDrawer {
             position.height = EditorGUI.GetPropertyHeight(property.FindPropertyRelative("name"));
             position.y += FOLDOUT_HEIGHT;
             EditorGUI.PropertyField(position, property.FindPropertyRelative("name"));
+            position.y += FOLDOUT_HEIGHT;
+            EditorGUI.PropertyField(position, property.FindPropertyRelative("thisPiece"));
+            position.y += FOLDOUT_HEIGHT;
+            EditorGUI.PropertyField(position, property.FindPropertyRelative("playerTeamMaterial"));
+            position.y += FOLDOUT_HEIGHT;
+            EditorGUI.PropertyField(position, property.FindPropertyRelative("enemyTeamMaterial"));
             position.y += FOLDOUT_HEIGHT;
             EditorGUI.PropertyField(position, property.FindPropertyRelative("infinitelyScalingRange"));
             position.y += FOLDOUT_HEIGHT;
@@ -106,7 +113,6 @@ public class PieceMovementAttributes : PropertyDrawer {
 
     void MoveAllInArrayUpLeft(int difference, SerializedProperty property) {
         //move all of the values in the board list up and left
-        Debug.Log(difference);
         bool[] tempBoolArray = new bool[(property.FindPropertyRelative("potentialRange").intValue * 2 + 1) * (property.FindPropertyRelative("potentialRange").intValue * 2 + 1)];
         for (int y = 0; y <= property.FindPropertyRelative("potentialRange").intValue * 2; y++) {
             for (int x = 0; x <= property.FindPropertyRelative("potentialRange").intValue * 2; x++) {

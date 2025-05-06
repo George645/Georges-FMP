@@ -145,6 +145,7 @@ public class UnderlyingPiece : MonoBehaviour {
                     else {
                         for (int x = -(thisPiece.potentialRange - 1) / 2; x < (thisPiece.potentialRange - 1) / 2 + 1; x++) {
                             for (int z = -(thisPiece.potentialRange - 1) / 2; z < (thisPiece.potentialRange - 1) / 2 + 1; z++) {
+                                if (x == 0 && z == 0) continue;
                                 if (!thisPiece.PositionIsUnlocked(x, z)) {
                                     movableTiles.Add(MoveableDisplays.Instance2.GetObject());
                                     movableTiles[count].SetActive(true);

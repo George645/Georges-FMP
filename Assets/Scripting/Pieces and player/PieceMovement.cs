@@ -1,19 +1,21 @@
 using UnityEngine;
 using System;
-using NUnit.Framework;
-using UnityEngine.UIElements;
-
 [Serializable]
 //[CreateAssetMenu(fileName = "Piece", menuName = "Scriptable Objects/Piece")]
 public class PieceMovement {
-
+    [SerializeField]
+    internal Mesh thisPiece;
+    [SerializeField]
+    internal Material playerTeamMaterial;
+    [SerializeField]
+    internal Material enemyTeamMaterial;
     public string name;
     #region handled by custom editor
     [SerializeField]
     public bool[] movableTiles1DArray = new bool[9];
-    public bool[][] moveableTiles = new bool[0][];
+    internal bool[][] moveableTiles = new bool[0][];
     [HideInInspector]
-    public int potentialRange = 3;
+    public int potentialRange = 1;
     public bool infinitelyScalingRange = false;
     public int currentRange = 8;
     #endregion

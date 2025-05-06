@@ -5,8 +5,18 @@ public class PieceBase : UnderlyingPiece {
     void Start() {
         FindStartPosition();
         base.ActualStart();
+        AssignMaterialAndMesh();
     }
 
+    void AssignMaterialAndMesh() {
+        gameObject.GetComponent<MeshFilter>().mesh = thisPiece.thisPiece;
+        if (playersTeam) {
+            gameObject.GetComponent<MeshRenderer>().material = thisPiece.playerTeamMaterial;
+        }
+        else {
+            gameObject.GetComponent<MeshRenderer>().material = thisPiece.enemyTeamMaterial;
+        }
+    }
 
     void FindStartPosition() {
         transform.position = new Vector3(101, 0, 101);

@@ -149,7 +149,7 @@ public class OriginCube : CubeBase {
                             continue;
                         }
                         Instantiate(cube, new Vector3(transform.position.x + j, transform.position.y, transform.position.z + k), Quaternion.identity, transform);
-                        yield return new WaitForSeconds(0.02f);
+                        //yield return new WaitForSeconds(0.02f);
                     }
                 }
                 for (int k = i; k >= -i; k--) {
@@ -158,7 +158,7 @@ public class OriginCube : CubeBase {
                             continue;
                         }
                         Instantiate(cube, new Vector3(transform.position.x + j, transform.position.y, transform.position.z + k), Quaternion.identity, transform);
-                        yield return new WaitForSeconds(0.02f);
+                        //yield return new WaitForSeconds(0.02f);
                     }
                 }
             }
