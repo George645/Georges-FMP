@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,8 @@ public class UnderlyingPiece : MonoBehaviour {
     public bool selected;
     [HideInInspector]
     public bool firstFrameSelected = true;
-    internal PieceMovement thisPiece;
+    [SerializeField]
+    internal PieceMovement thisPiece = new PieceMovement();
     internal int capturedPieces = 0;
     internal int level = 1;
     internal int previousLevel = 1;
@@ -17,7 +19,7 @@ public class UnderlyingPiece : MonoBehaviour {
     internal Mode mode = Mode.gaming;
     public Vector3 previousPosition;
     private void Awake() {
-        playersTeam = Random.Range(0, 2) < 0.5f;
+        playersTeam = UnityEngine.Random.Range(0, 2) < 0.5f;
     }
     private void Start() {
         ActualStart();
@@ -25,17 +27,41 @@ public class UnderlyingPiece : MonoBehaviour {
     public void ActualStart() {
         foreach (PieceMovement piece in OverarchingPieceMovement.Instance.allPieceMovement) {
             if (piece.name == name) {
-                thisPiece = piece;
+                thisPiece.thisPiece = piece.thisPiece;
+                thisPiece.playerTeamMaterial = piece.playerTeamMaterial;
+                thisPiece.enemyTeamMaterial = piece.enemyTeamMaterial;
+                thisPiece.name = piece.name;
+                thisPiece.movableTiles1DArray = piece.movableTiles1DArray;
+                thisPiece.moveableTiles = piece.moveableTiles;
+                thisPiece.potentialRange = piece.potentialRange;
+                thisPiece.infinitelyScalingRange = piece.infinitelyScalingRange;
+                thisPiece.currentRange = piece.currentRange;
                 return;
             }
         }
-        thisPiece = OverarchingPieceMovement.Instance.allPieceMovement[Random.Range(1, OverarchingPieceMovement.Instance.allPieceMovement.Count)];
+        thisPiece = new PieceMovement();
+        int randomNumber = UnityEngine.Random.Range(1, OverarchingPieceMovement.Instance.allPieceMovement.Count);
+        thisPiece.thisPiece = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].thisPiece;
+        thisPiece.playerTeamMaterial = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].playerTeamMaterial;
+        thisPiece.enemyTeamMaterial = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].enemyTeamMaterial;
+        thisPiece.name = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].name + ", " + UnityEngine.Random.Range(0, 1000);
+        thisPiece.movableTiles1DArray = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].movableTiles1DArray;
+        thisPiece.moveableTiles = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].moveableTiles;
+        thisPiece.potentialRange = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].potentialRange;
+        thisPiece.infinitelyScalingRange = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].infinitelyScalingRange;
+        thisPiece.currentRange = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].currentRange;
+        if (thisPiece.infinitelyScalingRange) {
+            for (int i = 0; i < 8; i++) {
+                thisPiece.ExpandSize();
+            }
+        }
     }
 
     internal void IfNotLevellingReturn() {
         if (!thisPiece.CanLevelUp(level, capturedPieces)) {
             SceneManager.UnloadSceneAsync("Level up scene");
             mode = Mode.gaming;
+            EnlargeAreaButton.thisGameObject.transform.parent.gameObject.SetActive(false);
             Camera.main.gameObject.GetComponent<PlayerCamera>().mode = Mode.gaming;
         }
     }
@@ -54,7 +80,7 @@ public class UnderlyingPiece : MonoBehaviour {
         mode = Mode.levelling;
         previousPosition = transform.position;
         yield return null;
-        LevelUpOriginCubeIdentifier.instance.GetComponent<OriginCube>().sizeNumber = (thisPiece.potentialRange - 1) / 2;
+        LevelUpOriginCubeIdentifier.instance.GetComponent<OriginCube>().sizeNumber = thisPiece.potentialRange;
         yield return null;
     }
     public void EnsureCorrectPositions() {
@@ -77,7 +103,12 @@ public class UnderlyingPiece : MonoBehaviour {
 
     #region Selected
     List<GameObject> movableTiles = new();
+    bool[][] previousFrame = new bool[1][];
     internal void Selected() {
+        if (previousFrame != thisPiece.moveableTiles) {
+            Debug.Log(gameObject);
+        }
+        previousFrame = thisPiece.moveableTiles;
         if (mode == Mode.gaming) {
             if (selected && playersTeam) {
                 if (thisPiece.CanLevelUp(level, capturedPieces)) {
@@ -86,11 +117,20 @@ public class UnderlyingPiece : MonoBehaviour {
                 }
                 if (firstFrameSelected) {
                     int count = 0;
+                    try {
+                        if (movableTiles[count].name.Contains("Starting")) {
+                            DeactivateVisibility();
+                        }
+                    }
+                    catch { }
                     if (thisPiece.infinitelyScalingRange) {
-                        for (int x = -1; x < 2; x++) {
-                            for (int z = -1; z < 2; z++) {
+                        for (int x = -1; x <= 1; x++) {
+                            for (int z = -1; z <= 1; z++) {
+                                Debug.Log(1);
                                 if (thisPiece.PositionIsUnlocked(x, z)) {
-                                    for (int i = 1; i < 100; i++) {
+                                    Debug.Log(2);
+                                    for (int i = 1; i < (thisPiece.potentialRange - 1) / 2; i++) {
+                                        Debug.Log(3 + ", " + i);
                                         if (CubeBase.GetSquareInDirection(transform.position, x * i, z * i) != null && (PieceInDirection(x * i, z * i) == null || PieceInDirection(x * i, z * i).GetComponent<UnderlyingPiece>().playersTeam == false)) {
                                             movableTiles.Add(MoveableDisplays.Instance.GetObject());
                                             movableTiles[count].SetActive(true);
@@ -114,8 +154,13 @@ public class UnderlyingPiece : MonoBehaviour {
                         }
                     }
                     else {
-                        for (int i = -(thisPiece.potentialRange - 1) / 2; i <= (thisPiece.potentialRange - 1) / 2; i++) {
-                            for (int j = -(thisPiece.potentialRange - 1) / 2; j <= (thisPiece.potentialRange - 1) / 2; j++) {
+                        /*for (int i = 0; i < thisPiece.moveableTiles.Length; i++) {
+                            for (int j = 0; j < thisPiece.moveableTiles.Length; j++) {
+                                Debug.Log(thisPiece.moveableTiles[i][j] + ", " + (i - thisPiece.potentialRange) + ", " + (j - thisPiece.potentialRange));
+                            }
+                        }*/
+                        for (int i = -thisPiece.potentialRange; i <= thisPiece.potentialRange; i++) {
+                            for (int j = -thisPiece.potentialRange; j <= thisPiece.potentialRange; j++) {
                                 if (thisPiece.PositionIsUnlocked(i, j)) {
                                     movableTiles.Add(MoveableDisplays.Instance.GetObject());
                                     movableTiles[count].SetActive(true);
@@ -143,8 +188,8 @@ public class UnderlyingPiece : MonoBehaviour {
 
                     }
                     else {
-                        for (int x = -(thisPiece.potentialRange - 1) / 2; x < (thisPiece.potentialRange - 1) / 2 + 1; x++) {
-                            for (int z = -(thisPiece.potentialRange - 1) / 2; z < (thisPiece.potentialRange - 1) / 2 + 1; z++) {
+                        for (int x = -thisPiece.potentialRange; x <= thisPiece.potentialRange; x++) {
+                            for (int z = -thisPiece.potentialRange; z <= thisPiece.potentialRange; z++) {
                                 if (x == 0 && z == 0) continue;
                                 if (!thisPiece.PositionIsUnlocked(x, z)) {
                                     movableTiles.Add(MoveableDisplays.Instance2.GetObject());

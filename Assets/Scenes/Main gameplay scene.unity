@@ -153,6 +153,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &4915340
 CapsuleCollider:
@@ -279,6 +288,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &8134072
 CapsuleCollider:
@@ -405,6 +423,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &14602561
 CapsuleCollider:
@@ -531,6 +558,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &27140524
 CapsuleCollider:
@@ -657,6 +693,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &30958477
 CapsuleCollider:
@@ -783,6 +828,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &41748949
 CapsuleCollider:
@@ -909,6 +963,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &71863978
 CapsuleCollider:
@@ -1035,6 +1098,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &84685881
 CapsuleCollider:
@@ -1161,6 +1233,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &101756086
 CapsuleCollider:
@@ -1287,6 +1368,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &111379398
 CapsuleCollider:
@@ -1413,6 +1503,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &134042338
 CapsuleCollider:
@@ -1615,6 +1714,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &140647869
 CapsuleCollider:
@@ -1741,6 +1849,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &190808262
 CapsuleCollider:
@@ -1914,6 +2031,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &206747027
 CapsuleCollider:
@@ -2040,6 +2166,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &209389261
 CapsuleCollider:
@@ -2166,6 +2301,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &221475031
 CapsuleCollider:
@@ -2292,6 +2436,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &254416349
 CapsuleCollider:
@@ -2418,6 +2571,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &263689182
 CapsuleCollider:
@@ -2680,6 +2842,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &282494548
 CapsuleCollider:
@@ -2818,96 +2989,128 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allPieceMovement:
   - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
-    playerTeamMaterial: {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
-    enemyTeamMaterial: {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    playerTeamMaterial:
+    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    enemyTeamMaterial:
+    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
     name: Player
     movableTiles1DArray: 010101010001010101
     potentialRange: 1
     infinitelyScalingRange: 0
     currentRange: 8
-  - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
-    playerTeamMaterial: {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
-    enemyTeamMaterial: {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+  - thisPiece: {fileID: 2534964839176971238, guid: 683adf2eaf6894649b67e9249ec7d913, type: 3}
+    playerTeamMaterial:
+    - {fileID: 2974492615009998173, guid: 2bad9e2b9d552b04491523bd10b2872a, type: 3}
+    - {fileID: -3846018093981099296, guid: 2bad9e2b9d552b04491523bd10b2872a, type: 3}
+    - {fileID: 8163168557425998208, guid: 2bad9e2b9d552b04491523bd10b2872a, type: 3}
+    enemyTeamMaterial:
+    - {fileID: -3323769186618514494, guid: 683adf2eaf6894649b67e9249ec7d913, type: 3}
+    - {fileID: -6478536213147159724, guid: 683adf2eaf6894649b67e9249ec7d913, type: 3}
+    - {fileID: 1692818905984270835, guid: 683adf2eaf6894649b67e9249ec7d913, type: 3}
     name: Rook
     movableTiles1DArray: 000100010001000100
     potentialRange: 1
     infinitelyScalingRange: 1
     currentRange: 8
-  - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
-    playerTeamMaterial: {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
-    enemyTeamMaterial: {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+  - thisPiece: {fileID: -7387706064836869012, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
+    playerTeamMaterial:
+    - {fileID: 2974492615009998173, guid: 2bad9e2b9d552b04491523bd10b2872a, type: 3}
+    - {fileID: 8163168557425998208, guid: 2bad9e2b9d552b04491523bd10b2872a, type: 3}
+    - {fileID: -3846018093981099296, guid: 2bad9e2b9d552b04491523bd10b2872a, type: 3}
+    enemyTeamMaterial:
+    - {fileID: -876546973899608171, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
+    - {fileID: -6478536213147159724, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
+    - {fileID: -3846018093981099296, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
     name: Bishop
     movableTiles1DArray: 010001000100010001
     potentialRange: 1
     infinitelyScalingRange: 1
     currentRange: 8
   - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
-    playerTeamMaterial: {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
-    enemyTeamMaterial: {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    playerTeamMaterial:
+    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    enemyTeamMaterial:
+    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
     name: Knight
     movableTiles1DArray: 00010001000100000001000000000001000000010001000100
     potentialRange: 2
     infinitelyScalingRange: 0
     currentRange: 8
   - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
-    playerTeamMaterial: {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
-    enemyTeamMaterial: {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    playerTeamMaterial:
+    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    enemyTeamMaterial:
+    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
     name: Queen
     movableTiles1DArray: 010101010001010101
     potentialRange: 1
     infinitelyScalingRange: 1
     currentRange: 8
-  - thisPiece: {fileID: 0}
-    playerTeamMaterial: {fileID: 0}
-    enemyTeamMaterial: {fileID: 0}
+  - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+    playerTeamMaterial:
+    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    enemyTeamMaterial:
+    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
     name: Pawn
     movableTiles1DArray: 000100010001000100
     potentialRange: 1
     infinitelyScalingRange: 0
     currentRange: 8
   - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
-    playerTeamMaterial: {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
-    enemyTeamMaterial: {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    playerTeamMaterial:
+    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    enemyTeamMaterial:
+    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
     name: Wisp
     movableTiles1DArray: 01010101010100000001010000000101000000010101010101
     potentialRange: 2
     infinitelyScalingRange: 0
     currentRange: 8
   - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
-    playerTeamMaterial: {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
-    enemyTeamMaterial: {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    playerTeamMaterial:
+    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    enemyTeamMaterial:
+    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
     name: Elephant
     movableTiles1DArray: 00000100010000000000000000000100000000000100000000000000010000000000010000000000000000000100010000
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 8
   - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
-    playerTeamMaterial: {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
-    enemyTeamMaterial: {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    playerTeamMaterial:
+    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    enemyTeamMaterial:
+    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
     name: Pedestal
     movableTiles1DArray: 00000001000100000000000000000000000001000000000000
     potentialRange: 2
     infinitelyScalingRange: 0
     currentRange: 8
   - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
-    playerTeamMaterial: {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
-    enemyTeamMaterial: {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    playerTeamMaterial:
+    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    enemyTeamMaterial:
+    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
     name: Snail
     movableTiles1DArray: 010001000100010001
     potentialRange: 1
     infinitelyScalingRange: 0
     currentRange: 8
   - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
-    playerTeamMaterial: {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
-    enemyTeamMaterial: {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    playerTeamMaterial:
+    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    enemyTeamMaterial:
+    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
     name: Peanut
     movableTiles1DArray: 01000000010000000000000000000000000000000100000001
     potentialRange: 2
     infinitelyScalingRange: 0
     currentRange: 8
   - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
-    playerTeamMaterial: {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
-    enemyTeamMaterial: {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    playerTeamMaterial:
+    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    enemyTeamMaterial:
+    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
     name: Lightning bolt
     movableTiles1DArray: 000100000000000100010000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000001000100000000000100
     potentialRange: 4
@@ -3098,6 +3301,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &336559413
 CapsuleCollider:
@@ -3224,6 +3436,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &364819599
 CapsuleCollider:
@@ -3350,6 +3571,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &371939471
 CapsuleCollider:
@@ -3476,6 +3706,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &378895302
 CapsuleCollider:
@@ -3602,6 +3841,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &389893698
 CapsuleCollider:
@@ -3728,6 +3976,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &392514577
 CapsuleCollider:
@@ -3975,6 +4232,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &414224036
 CapsuleCollider:
@@ -4101,6 +4367,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &456546969
 CapsuleCollider:
@@ -4227,6 +4502,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &479499379
 CapsuleCollider:
@@ -4353,6 +4637,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &484859934
 CapsuleCollider:
@@ -4479,6 +4772,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &498336944
 CapsuleCollider:
@@ -4605,6 +4907,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &553320569
 CapsuleCollider:
@@ -4731,6 +5042,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &591475500
 CapsuleCollider:
@@ -4857,6 +5177,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &610440599
 CapsuleCollider:
@@ -4983,6 +5312,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &614229786
 CapsuleCollider:
@@ -5109,6 +5447,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &641748674
 CapsuleCollider:
@@ -5235,6 +5582,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &647674925
 CapsuleCollider:
@@ -5361,6 +5717,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &651542529
 CapsuleCollider:
@@ -5487,6 +5852,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &666811319
 CapsuleCollider:
@@ -5613,6 +5987,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &675089697
 CapsuleCollider:
@@ -5739,6 +6122,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &686761135
 CapsuleCollider:
@@ -5865,6 +6257,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &694909375
 CapsuleCollider:
@@ -5991,6 +6392,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &731473588
 CapsuleCollider:
@@ -6117,6 +6527,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &746209879
 CapsuleCollider:
@@ -6243,6 +6662,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &747124963
 CapsuleCollider:
@@ -6369,6 +6797,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &769581871
 CapsuleCollider:
@@ -6495,6 +6932,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &819840666
 CapsuleCollider:
@@ -6670,6 +7116,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &858083128
 CapsuleCollider:
@@ -6796,6 +7251,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &860644089
 CapsuleCollider:
@@ -6922,6 +7386,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &876170739
 CapsuleCollider:
@@ -7048,6 +7521,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &915830860
 CapsuleCollider:
@@ -7174,6 +7656,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &928768521
 CapsuleCollider:
@@ -7300,6 +7791,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &930505110
 CapsuleCollider:
@@ -7426,6 +7926,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &942017436
 CapsuleCollider:
@@ -7552,6 +8061,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &958449427
 CapsuleCollider:
@@ -7678,6 +8196,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &978967891
 CapsuleCollider:
@@ -7804,6 +8331,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &986377215
 CapsuleCollider:
@@ -7930,6 +8466,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &988947187
 CapsuleCollider:
@@ -8056,6 +8601,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1049114668
 CapsuleCollider:
@@ -8182,6 +8736,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1114761127
 CapsuleCollider:
@@ -8308,6 +8871,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1157560006
 CapsuleCollider:
@@ -8434,6 +9006,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1221338117
 CapsuleCollider:
@@ -8560,6 +9141,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1235716799
 CapsuleCollider:
@@ -8686,6 +9276,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1238543021
 CapsuleCollider:
@@ -8812,6 +9411,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1269478636
 CapsuleCollider:
@@ -9217,6 +9825,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1325223656
 CapsuleCollider:
@@ -9446,6 +10063,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1368901799
 CapsuleCollider:
@@ -9572,6 +10198,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1378827552
 CapsuleCollider:
@@ -9698,6 +10333,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1389198625
 CapsuleCollider:
@@ -9915,6 +10559,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1414662549
 GameObject:
@@ -9950,6 +10603,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1414662551
 CapsuleCollider:
@@ -10076,6 +10738,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1453970405
 CapsuleCollider:
@@ -10202,6 +10873,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1456045345
 CapsuleCollider:
@@ -10475,6 +11155,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1479755501
 CapsuleCollider:
@@ -10576,7 +11265,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1506809943}
-  - component: {fileID: 1506809944}
   m_Layer: 5
   m_Name: Level up button parent
   m_TagString: Untagged
@@ -10604,18 +11292,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1506809944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506809942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b642dd8a63e3ccb4da749b2840645fef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1523195384
 GameObject:
   m_ObjectHideFlags: 0
@@ -10650,6 +11326,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1523195386
 CapsuleCollider:
@@ -10776,6 +11461,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1527631332
 CapsuleCollider:
@@ -10902,6 +11596,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1532276829
 CapsuleCollider:
@@ -11028,6 +11731,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1539650647
 CapsuleCollider:
@@ -11154,6 +11866,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1622267604
 CapsuleCollider:
@@ -11280,6 +12001,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1649346925
 CapsuleCollider:
@@ -11406,6 +12136,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1679961107
 CapsuleCollider:
@@ -11532,6 +12271,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1694667534
 CapsuleCollider:
@@ -11658,6 +12406,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1707110100
 CapsuleCollider:
@@ -11784,6 +12541,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1721402493
 CapsuleCollider:
@@ -11907,7 +12673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToPool: {fileID: 700590414589731535, guid: 261aa4e6db317234cbdc17128a0a58ad, type: 3}
   ObjectPool: []
-  amountToPool: 100
+  amountToPool: 400
 --- !u!4 &1742535883
 Transform:
   m_ObjectHideFlags: 0
@@ -11957,6 +12723,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1745089661
 CapsuleCollider:
@@ -12083,6 +12858,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1749733211
 CapsuleCollider:
@@ -12209,6 +12993,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1758687089
 CapsuleCollider:
@@ -12335,6 +13128,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1778008266
 CapsuleCollider:
@@ -12461,6 +13263,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1790817663
 CapsuleCollider:
@@ -12587,6 +13398,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1825117041
 CapsuleCollider:
@@ -12713,6 +13533,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1840638729
 CapsuleCollider:
@@ -12839,6 +13668,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1845493278
 CapsuleCollider:
@@ -12965,6 +13803,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1854125708
 CapsuleCollider:
@@ -13091,6 +13938,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1863778761
 CapsuleCollider:
@@ -13217,6 +14073,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1886422343
 CapsuleCollider:
@@ -13422,6 +14287,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1906751649
 CapsuleCollider:
@@ -13548,6 +14422,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1912563862
 CapsuleCollider:
@@ -13674,6 +14557,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1950658593
 CapsuleCollider:
@@ -13800,6 +14692,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1951593686
 CapsuleCollider:
@@ -13926,6 +14827,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &1955030846
 CapsuleCollider:
@@ -14052,6 +14962,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &2061137800
 CapsuleCollider:
@@ -14178,6 +15097,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &2093310073
 CapsuleCollider:
@@ -14304,6 +15232,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &2107451369
 CapsuleCollider:

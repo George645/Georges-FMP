@@ -22,7 +22,6 @@ public class OverarchingPieceMovement : MonoBehaviour {
                     pieceMovement.moveableTiles[y][x] = pieceMovement.movableTiles1DArray[y * pieceMovement.moveableTiles.Length + x];
                 }
             }
-            pieceMovement.potentialRange = pieceMovement.potentialRange * 2 + 1;
         }
     }
 }

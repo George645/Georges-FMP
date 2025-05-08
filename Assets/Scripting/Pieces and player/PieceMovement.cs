@@ -4,25 +4,25 @@ using System;
 //[CreateAssetMenu(fileName = "Piece", menuName = "Scriptable Objects/Piece")]
 public class PieceMovement {
     [SerializeField]
-    internal Mesh thisPiece;
+    public Mesh thisPiece;
     [SerializeField]
-    internal Material playerTeamMaterial;
+    public Material[] playerTeamMaterial;
     [SerializeField]
-    internal Material enemyTeamMaterial;
+    public Material[] enemyTeamMaterial;
     public string name;
     #region handled by custom editor
     [SerializeField]
     public bool[] movableTiles1DArray = new bool[9];
-    internal bool[][] moveableTiles = new bool[0][];
+    public bool[][] moveableTiles = new bool[0][];
     [HideInInspector]
-    public int potentialRange = 1;
+    public int potentialRange;
     public bool infinitelyScalingRange = false;
     public int currentRange = 8;
     #endregion
 
     public bool PositionIsUnlocked(int x, int z) {
         try {
-            if (moveableTiles[x + (potentialRange - 1) / 2][z + (potentialRange - 1) / 2]) {
+            if (moveableTiles[x + potentialRange][z + potentialRange]) {
                 return true;
             }
             else { return false; }
@@ -58,7 +58,7 @@ public class PieceMovement {
         }
     }
     public void AddPositionToMovables(Vector2Int offset) {
-        moveableTiles[offset.x + (potentialRange - 1) / 2][offset.y + (potentialRange - 1) / 2] = true;
+        moveableTiles[offset.x + potentialRange][offset.y + potentialRange] = true;
     }
     public void ExpandSize() {
         bool[][] tempArray = new bool[moveableTiles.Length + 2][];
@@ -70,7 +70,10 @@ public class PieceMovement {
                 tempArray[x + 1][z + 1] = moveableTiles[x][z];
             }
         }
-        LevelUpOriginCubeIdentifier.instance.GetComponent<OriginCube>().sizeNumber = (tempArray.Length - 1) / 2;
+        try {
+            LevelUpOriginCubeIdentifier.instance.GetComponent<OriginCube>().sizeNumber = (tempArray.Length - 1) / 2;
+        }
+        catch (NullReferenceException){ }
         potentialRange += 2;
         moveableTiles = new bool[tempArray.Length][];
         for (int i = 0; i < moveableTiles.Length; i++) {

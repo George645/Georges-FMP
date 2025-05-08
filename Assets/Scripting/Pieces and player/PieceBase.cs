@@ -11,10 +11,10 @@ public class PieceBase : UnderlyingPiece {
     void AssignMaterialAndMesh() {
         gameObject.GetComponent<MeshFilter>().mesh = thisPiece.thisPiece;
         if (playersTeam) {
-            gameObject.GetComponent<MeshRenderer>().material = thisPiece.playerTeamMaterial;
+            gameObject.GetComponent<MeshRenderer>().materials = thisPiece.playerTeamMaterial;
         }
         else {
-            gameObject.GetComponent<MeshRenderer>().material = thisPiece.enemyTeamMaterial;
+            gameObject.GetComponent<MeshRenderer>().materials = thisPiece.enemyTeamMaterial;
         }
     }
 

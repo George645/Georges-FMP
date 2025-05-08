@@ -19,9 +19,19 @@ public class PieceMovementAttributes : PropertyDrawer {
             //gameobject
             height += FOLDOUT_HEIGHT;
             //Good Material
-            height += FOLDOUT_HEIGHT;
+                height += FOLDOUT_HEIGHT;
+            if (property.FindPropertyRelative("playerTeamMaterial").isExpanded) {
+                for (int i = 0; i <= property.FindPropertyRelative("playerTeamMaterial").arraySize; i++) {
+                    height += 30;
+                }
+            }
             //Evil material
             height += FOLDOUT_HEIGHT;
+            if (property.FindPropertyRelative("enemyTeamMaterial").isExpanded) {
+                for (int i = 0; i <= property.FindPropertyRelative("enemyTeamMaterial").arraySize; i++) {
+                    height += 30;
+                }
+            }
             //infiniteRange
             height += FOLDOUT_HEIGHT;
             //range
@@ -51,8 +61,20 @@ public class PieceMovementAttributes : PropertyDrawer {
             position.y += FOLDOUT_HEIGHT;
             EditorGUI.PropertyField(position, property.FindPropertyRelative("playerTeamMaterial"));
             position.y += FOLDOUT_HEIGHT;
+            if (property.FindPropertyRelative("playerTeamMaterial").isExpanded) {
+                position.y += 38;
+                for (int i = 0; i < property.FindPropertyRelative("playerTeamMaterial").arraySize; i++) {
+                    position.y += 20;
+                }
+            }
             EditorGUI.PropertyField(position, property.FindPropertyRelative("enemyTeamMaterial"));
             position.y += FOLDOUT_HEIGHT;
+            if (property.FindPropertyRelative("enemyTeamMaterial").isExpanded) {
+                position.y += 38;
+                for (int i = 0; i < property.FindPropertyRelative("enemyTeamMaterial").arraySize; i++) {
+                    position.y += 20;
+                }
+            }
             EditorGUI.PropertyField(position, property.FindPropertyRelative("infinitelyScalingRange"));
             position.y += FOLDOUT_HEIGHT;
             previousBoardSize = property.FindPropertyRelative("potentialRange").intValue;

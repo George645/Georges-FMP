@@ -36,6 +36,7 @@ public class PlayerCamera : MonoBehaviour {
                 objectaObject.GetComponent<UnderlyingPiece>().selected = false;
             }
             catch (NullReferenceException) { }
+            catch (MissingReferenceException) { objectaObject = null; }
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out objecta)) {
                 if (!objecta.collider.gameObject.name[0..1].ContainsAny("1", "2", "3", "4", "5", "6", "7", "8", "9", "0")) {
                     objectaObject = objecta.collider.gameObject;
