@@ -18,14 +18,14 @@ public class PieceMovementAttributes : PropertyDrawer {
             height += FOLDOUT_HEIGHT;
             //gameobject
             height += FOLDOUT_HEIGHT;
-            //Good Material
+            //Allied Material
                 height += FOLDOUT_HEIGHT;
             if (property.FindPropertyRelative("playerTeamMaterial").isExpanded) {
                 for (int i = 0; i <= property.FindPropertyRelative("playerTeamMaterial").arraySize; i++) {
                     height += 30;
                 }
             }
-            //Evil material
+            //Enemy material
             height += FOLDOUT_HEIGHT;
             if (property.FindPropertyRelative("enemyTeamMaterial").isExpanded) {
                 for (int i = 0; i <= property.FindPropertyRelative("enemyTeamMaterial").arraySize; i++) {

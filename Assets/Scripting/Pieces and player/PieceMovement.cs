@@ -74,7 +74,7 @@ public class PieceMovement {
             LevelUpOriginCubeIdentifier.instance.GetComponent<OriginCube>().sizeNumber = (tempArray.Length - 1) / 2;
         }
         catch (NullReferenceException){ }
-        potentialRange += 2;
+        potentialRange += 1;
         moveableTiles = new bool[tempArray.Length][];
         for (int i = 0; i < moveableTiles.Length; i++) {
             moveableTiles[i] = new bool[moveableTiles.Length];

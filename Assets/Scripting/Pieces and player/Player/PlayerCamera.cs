@@ -44,6 +44,7 @@ public class PlayerCamera : MonoBehaviour {
                         objectaObject.GetComponent<UnderlyingPiece>().selected = true;
                     }
                     catch (MissingReferenceException) { }
+                    catch (NullReferenceException) { }
                 }
             }
         }

@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +10,7 @@ public class UnderlyingPiece : MonoBehaviour {
     public bool firstFrameSelected = true;
     [SerializeField]
     internal PieceMovement thisPiece = new PieceMovement();
-    internal int capturedPieces = 0;
+    internal int capturedPieces = 3;
     internal int level = 1;
     internal int previousLevel = 1;
     internal bool playersTeam = false;
@@ -19,43 +18,63 @@ public class UnderlyingPiece : MonoBehaviour {
     internal Mode mode = Mode.gaming;
     public Vector3 previousPosition;
     private void Awake() {
-        playersTeam = UnityEngine.Random.Range(0, 2) < 0.5f;
+        playersTeam = Random.Range(0, 2) < 0.5f;
     }
     private void Start() {
+        previousFrame = thisPiece.moveableTiles;
         ActualStart();
     }
     public void ActualStart() {
         foreach (PieceMovement piece in OverarchingPieceMovement.Instance.allPieceMovement) {
             if (piece.name == name) {
-                thisPiece.thisPiece = piece.thisPiece;
-                thisPiece.playerTeamMaterial = piece.playerTeamMaterial;
-                thisPiece.enemyTeamMaterial = piece.enemyTeamMaterial;
-                thisPiece.name = piece.name;
-                thisPiece.movableTiles1DArray = piece.movableTiles1DArray;
-                thisPiece.moveableTiles = piece.moveableTiles;
-                thisPiece.potentialRange = piece.potentialRange;
-                thisPiece.infinitelyScalingRange = piece.infinitelyScalingRange;
-                thisPiece.currentRange = piece.currentRange;
+                thisPiece = new PieceMovement();
+                AssignAllValuesOfPieceMovement(piece);
                 return;
             }
         }
         thisPiece = new PieceMovement();
-        int randomNumber = UnityEngine.Random.Range(1, OverarchingPieceMovement.Instance.allPieceMovement.Count);
-        thisPiece.thisPiece = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].thisPiece;
-        thisPiece.playerTeamMaterial = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].playerTeamMaterial;
-        thisPiece.enemyTeamMaterial = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].enemyTeamMaterial;
-        thisPiece.name = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].name + ", " + UnityEngine.Random.Range(0, 1000);
-        thisPiece.movableTiles1DArray = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].movableTiles1DArray;
-        thisPiece.moveableTiles = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].moveableTiles;
-        thisPiece.potentialRange = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].potentialRange;
-        thisPiece.infinitelyScalingRange = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].infinitelyScalingRange;
-        thisPiece.currentRange = OverarchingPieceMovement.Instance.allPieceMovement[randomNumber].currentRange;
+        int randomNumber = Random.Range(1, OverarchingPieceMovement.Instance.allPieceMovement.Count);
+        AssignAllValuesOfPieceMovement(OverarchingPieceMovement.Instance.allPieceMovement[randomNumber]);
+
+
+    }
+
+    #region Assign all neccessary values for this piece
+    void AssignAllValuesOfPieceMovement(PieceMovement piece) {
+
+        #region Assign all variables other than the 2D array
+        thisPiece.thisPiece = piece.thisPiece;
+        thisPiece.playerTeamMaterial = piece.playerTeamMaterial;
+        thisPiece.enemyTeamMaterial = piece.enemyTeamMaterial;
+        thisPiece.name = piece.name + ", " + Random.Range(0, 1000);
+        thisPiece.movableTiles1DArray = piece.movableTiles1DArray;
+        thisPiece.moveableTiles = piece.moveableTiles;
+        thisPiece.potentialRange = piece.potentialRange;
+        thisPiece.infinitelyScalingRange = piece.infinitelyScalingRange;
+        thisPiece.currentRange = piece.currentRange;
+        thisPiece.moveableTiles = new bool[(int)Mathf.Sqrt(thisPiece.movableTiles1DArray.Length)][];
+        #endregion
+
+        #region Generate the 2D array
+        for (int i = 0; i < thisPiece.moveableTiles.Length; i++) {
+            thisPiece.moveableTiles[i] = new bool[thisPiece.moveableTiles.Length];
+        }
+        for (int y = 0; y < thisPiece.moveableTiles.Length; y++) {
+            for (int x = 0; x < thisPiece.moveableTiles.Length; x++) {
+                thisPiece.moveableTiles[y][x] = thisPiece.movableTiles1DArray[y * thisPiece.moveableTiles.Length + x];
+            }
+        }
+        #endregion
+
+        #region Make the infinitely scaling pieces start at a small range
         if (thisPiece.infinitelyScalingRange) {
-            for (int i = 0; i < 8; i++) {
+            for (int i = 0; i < 7; i++) {
                 thisPiece.ExpandSize();
             }
         }
+        #endregion
     }
+    #endregion
 
     internal void IfNotLevellingReturn() {
         if (!thisPiece.CanLevelUp(level, capturedPieces)) {
@@ -126,11 +145,8 @@ public class UnderlyingPiece : MonoBehaviour {
                     if (thisPiece.infinitelyScalingRange) {
                         for (int x = -1; x <= 1; x++) {
                             for (int z = -1; z <= 1; z++) {
-                                Debug.Log(1);
                                 if (thisPiece.PositionIsUnlocked(x, z)) {
-                                    Debug.Log(2);
-                                    for (int i = 1; i < (thisPiece.potentialRange - 1) / 2; i++) {
-                                        Debug.Log(3 + ", " + i);
+                                    for (int i = 1; i < thisPiece.potentialRange; i++) {
                                         if (CubeBase.GetSquareInDirection(transform.position, x * i, z * i) != null && (PieceInDirection(x * i, z * i) == null || PieceInDirection(x * i, z * i).GetComponent<UnderlyingPiece>().playersTeam == false)) {
                                             movableTiles.Add(MoveableDisplays.Instance.GetObject());
                                             movableTiles[count].SetActive(true);
@@ -211,6 +227,7 @@ public class UnderlyingPiece : MonoBehaviour {
     }
 
     public void DeactivateVisibility() {
+        selected = false;
         if (!firstFrameSelected) {
             try {
                 LevelUpButton.levelUpButton.SetActive(false);
