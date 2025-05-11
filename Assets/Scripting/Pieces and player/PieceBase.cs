@@ -6,6 +6,13 @@ public class PieceBase : UnderlyingPiece {
         FindStartPosition();
         base.ActualStart();
         AssignMaterialAndMesh();
+        FacePlayer();
+    }
+
+    void FacePlayer() {
+        Quaternion a = new Quaternion();
+        a.SetLookRotation(transform.position - Player.player.transform.position);
+        transform.rotation = a;
     }
 
     void AssignMaterialAndMesh() {
@@ -55,5 +62,6 @@ public class PieceBase : UnderlyingPiece {
         }
         Selected();
         EnsureCorrectPositions();
+        FacePlayer();
     }
 }

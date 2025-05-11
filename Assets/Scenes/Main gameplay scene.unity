@@ -3036,21 +3036,27 @@ MonoBehaviour:
     potentialRange: 2
     infinitelyScalingRange: 0
     currentRange: 8
-  - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  - thisPiece: {fileID: -7387706064836869012, guid: 03536b3073c6de848add24ecdcf1b6f8, type: 3}
     playerTeamMaterial:
-    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    - {fileID: 2974492615009998173, guid: 03536b3073c6de848add24ecdcf1b6f8, type: 3}
+    - {fileID: 6072125505953278879, guid: 03536b3073c6de848add24ecdcf1b6f8, type: 3}
     enemyTeamMaterial:
-    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    - {fileID: -3846018093981099296, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
+    - {fileID: -876546973899608171, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
     name: Queen
     movableTiles1DArray: 010101010001010101
     potentialRange: 1
     infinitelyScalingRange: 1
     currentRange: 8
-  - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  - thisPiece: {fileID: -7387706064836869012, guid: f9808e55a83509e4d9c2f01fd486d6e6, type: 3}
     playerTeamMaterial:
-    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    - {fileID: 2974492615009998173, guid: f9808e55a83509e4d9c2f01fd486d6e6, type: 3}
+    - {fileID: 8163168557425998208, guid: f9808e55a83509e4d9c2f01fd486d6e6, type: 3}
+    - {fileID: 6072125505953278879, guid: f9808e55a83509e4d9c2f01fd486d6e6, type: 3}
     enemyTeamMaterial:
-    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    - {fileID: -3846018093981099296, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
+    - {fileID: -6478536213147159724, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
+    - {fileID: -876546973899608171, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
     name: Pawn
     movableTiles1DArray: 000100010001000100
     potentialRange: 1
@@ -3076,11 +3082,15 @@ MonoBehaviour:
     potentialRange: 3
     infinitelyScalingRange: 0
     currentRange: 8
-  - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  - thisPiece: {fileID: -462981019419857548, guid: dbad6c4b5055c1442aa7a475931ecd92, type: 3}
     playerTeamMaterial:
-    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    - {fileID: 2100000, guid: b3e89405d12adbd4c872ee3a1f203328, type: 2}
+    - {fileID: 8163168557425998208, guid: dbad6c4b5055c1442aa7a475931ecd92, type: 3}
+    - {fileID: 6072125505953278879, guid: dbad6c4b5055c1442aa7a475931ecd92, type: 3}
     enemyTeamMaterial:
-    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    - {fileID: -3846018093981099296, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
+    - {fileID: -6478536213147159724, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
+    - {fileID: -876546973899608171, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
     name: Pedestal
     movableTiles1DArray: 00000001000100000000000000000000000001000000000000
     potentialRange: 2
@@ -3096,11 +3106,13 @@ MonoBehaviour:
     potentialRange: 1
     infinitelyScalingRange: 0
     currentRange: 8
-  - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  - thisPiece: {fileID: 4711208715938537054, guid: a8e17c8b08a6c824ba9b3ad2ca51442e, type: 3}
     playerTeamMaterial:
-    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    - {fileID: 2974492615009998173, guid: a8e17c8b08a6c824ba9b3ad2ca51442e, type: 3}
+    - {fileID: 6072125505953278879, guid: a8e17c8b08a6c824ba9b3ad2ca51442e, type: 3}
     enemyTeamMaterial:
-    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    - {fileID: -3846018093981099296, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
+    - {fileID: -876546973899608171, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
     name: Peanut
     movableTiles1DArray: 01000000010000000000000000000000000000000100000001
     potentialRange: 2

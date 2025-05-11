@@ -124,9 +124,6 @@ public class UnderlyingPiece : MonoBehaviour {
     List<GameObject> movableTiles = new();
     bool[][] previousFrame = new bool[1][];
     internal void Selected() {
-        if (previousFrame != thisPiece.moveableTiles) {
-            Debug.Log(gameObject);
-        }
         previousFrame = thisPiece.moveableTiles;
         if (mode == Mode.gaming) {
             if (selected && playersTeam) {
