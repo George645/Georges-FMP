@@ -11,6 +11,9 @@ public class PieceMovement {
     [SerializeField]
     public Material[] enemyTeamMaterial;
     public string name;
+    bool playersTeam;
+    public UnderlyingPiece thisObject;
+
     #region handled by custom editor
     [SerializeField]
     public bool[] movableTiles1DArray = new bool[9];
@@ -21,7 +24,9 @@ public class PieceMovement {
     public int currentRange = 8;
     #endregion
 
-    public PieceMovement(int position) {
+    public PieceMovement(int position, bool isPlayersTeam, UnderlyingPiece thisObject) {
+        playersTeam = isPlayersTeam;
+        this.thisObject = thisObject;
 
         PieceMovement piece = OverarchingPieceMovement.Instance.allPieceMovement[position];
         #region Assign all variables other than the 2D array
@@ -36,7 +41,6 @@ public class PieceMovement {
         currentRange = piece.currentRange;
         moveableTiles = new bool[(int)Mathf.Sqrt(movableTiles1DArray.Length)][];
         #endregion
-
         #region Generate the 2D array
         for (int i = 0; i < moveableTiles.Length; i++) {
             moveableTiles[i] = new bool[moveableTiles.Length];
@@ -47,7 +51,6 @@ public class PieceMovement {
             }
         }
         #endregion
-
         #region Make the infinitely scaling pieces start at a small range
         if (infinitelyScalingRange) {
             for (int i = 0; i < 7; i++) {
@@ -55,6 +58,13 @@ public class PieceMovement {
             }
         }
         #endregion
+
+        if (playersTeam) {
+            AI.ai.PlayersTeam.Add(this);
+        }
+        else {
+            AI.ai.AITeam.Add(this);
+        }
     }
 
     public bool PositionIsUnlocked(int x, int z) {

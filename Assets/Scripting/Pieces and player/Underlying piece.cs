@@ -14,9 +14,9 @@ public class UnderlyingPiece : MonoBehaviour {
     internal int level = 1;
     internal int previousLevel = 1;
     internal bool playersTeam = false;
-    public static GameObject instance;
     internal Mode mode = Mode.gaming;
     public Vector3 previousPosition;
+    public bool hasMoved = false;
     private void Awake() {
         playersTeam = Random.Range(0, 2) < 0.5f;
     }
@@ -28,21 +28,15 @@ public class UnderlyingPiece : MonoBehaviour {
         for (int i = 0; i < OverarchingPieceMovement.Instance.allPieceMovement.Count; i++) {
             PieceMovement piece = OverarchingPieceMovement.Instance.allPieceMovement[i];
             if (piece.name == name) {
-                thisPiece = new PieceMovement(i);
+                thisPiece = new PieceMovement(i, playersTeam, this);
                 return;
             }
         }
         int randomNumber = Random.Range(1, OverarchingPieceMovement.Instance.allPieceMovement.Count);
-        thisPiece = new PieceMovement(randomNumber);
+        thisPiece = new PieceMovement(randomNumber, playersTeam, this);
 
 
     }
-
-    #region Assign all neccessary values for this piece
-    void AssignAllValuesOfPieceMovement(PieceMovement piece) {
-
-    }
-    #endregion
 
     internal void IfNotLevellingReturn() {
         if (!thisPiece.CanLevelUp(level, capturedPieces)) {

@@ -158,11 +158,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &4915340
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -293,11 +295,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &8134072
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -428,11 +432,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &14602561
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -563,11 +569,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &27140524
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -698,11 +706,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &30958477
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -833,11 +843,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &41748949
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -968,11 +980,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &71863978
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1103,11 +1117,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &84685881
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1238,11 +1254,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &101756086
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1373,11 +1391,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &111379398
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1508,11 +1528,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &134042338
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1719,11 +1741,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &140647869
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1854,11 +1878,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &190808262
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2036,11 +2062,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &206747027
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2171,11 +2199,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &209389261
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2306,11 +2336,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &221475031
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2441,11 +2473,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &254416349
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2576,11 +2610,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &263689182
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2847,11 +2883,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &282494548
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2994,6 +3032,7 @@ MonoBehaviour:
     enemyTeamMaterial:
     - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
     name: Player
+    thisObject: {fileID: 0}
     movableTiles1DArray: 010101010001010101
     potentialRange: 1
     infinitelyScalingRange: 0
@@ -3008,6 +3047,7 @@ MonoBehaviour:
     - {fileID: -6478536213147159724, guid: 683adf2eaf6894649b67e9249ec7d913, type: 3}
     - {fileID: 1692818905984270835, guid: 683adf2eaf6894649b67e9249ec7d913, type: 3}
     name: Rook
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000100010001000100
     potentialRange: 1
     infinitelyScalingRange: 1
@@ -3022,6 +3062,7 @@ MonoBehaviour:
     - {fileID: -6478536213147159724, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
     - {fileID: -876546973899608171, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
     name: Bishop
+    thisObject: {fileID: 0}
     movableTiles1DArray: 010001000100010001
     potentialRange: 1
     infinitelyScalingRange: 1
@@ -3032,6 +3073,7 @@ MonoBehaviour:
     enemyTeamMaterial:
     - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
     name: Knight
+    thisObject: {fileID: 0}
     movableTiles1DArray: 00010001000100000001000000000001000000010001000100
     potentialRange: 2
     infinitelyScalingRange: 0
@@ -3044,6 +3086,7 @@ MonoBehaviour:
     - {fileID: -3846018093981099296, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
     - {fileID: -876546973899608171, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
     name: Queen
+    thisObject: {fileID: 0}
     movableTiles1DArray: 010101010001010101
     potentialRange: 1
     infinitelyScalingRange: 1
@@ -3058,6 +3101,7 @@ MonoBehaviour:
     - {fileID: -6478536213147159724, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
     - {fileID: -876546973899608171, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
     name: Pawn
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000100010001000100
     potentialRange: 1
     infinitelyScalingRange: 0
@@ -3068,6 +3112,7 @@ MonoBehaviour:
     enemyTeamMaterial:
     - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
     name: Wisp
+    thisObject: {fileID: 0}
     movableTiles1DArray: 01010101010100000001010000000101000000010101010101
     potentialRange: 2
     infinitelyScalingRange: 0
@@ -3078,6 +3123,7 @@ MonoBehaviour:
     enemyTeamMaterial:
     - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
     name: Elephant
+    thisObject: {fileID: 0}
     movableTiles1DArray: 00000100010000000000000000000100000000000100000000000000010000000000010000000000000000000100010000
     potentialRange: 3
     infinitelyScalingRange: 0
@@ -3092,6 +3138,7 @@ MonoBehaviour:
     - {fileID: -6478536213147159724, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
     - {fileID: -876546973899608171, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
     name: Pedestal
+    thisObject: {fileID: 0}
     movableTiles1DArray: 00000001000100000000000000000000000001000000000000
     potentialRange: 2
     infinitelyScalingRange: 0
@@ -3102,6 +3149,7 @@ MonoBehaviour:
     enemyTeamMaterial:
     - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
     name: Snail
+    thisObject: {fileID: 0}
     movableTiles1DArray: 010001000100010001
     potentialRange: 1
     infinitelyScalingRange: 0
@@ -3114,6 +3162,7 @@ MonoBehaviour:
     - {fileID: -3846018093981099296, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
     - {fileID: -876546973899608171, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
     name: Peanut
+    thisObject: {fileID: 0}
     movableTiles1DArray: 01000000010000000000000000000000000000000100000001
     potentialRange: 2
     infinitelyScalingRange: 0
@@ -3124,6 +3173,7 @@ MonoBehaviour:
     enemyTeamMaterial:
     - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
     name: Lightning bolt
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000100000000000100010000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000001000100000000000100
     potentialRange: 4
     infinitelyScalingRange: 0
@@ -3318,11 +3368,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &336559413
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3453,11 +3505,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &364819599
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3588,11 +3642,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &371939471
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3723,11 +3779,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &378895302
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3858,11 +3916,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &389893698
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3993,11 +4053,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &392514577
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4249,11 +4311,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &414224036
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4384,11 +4448,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &456546969
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4519,11 +4585,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &479499379
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4654,11 +4722,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &484859934
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4789,11 +4859,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &498336944
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4924,11 +4996,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &553320569
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5059,11 +5133,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &591475500
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5194,11 +5270,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &610440599
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5329,11 +5407,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &614229786
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5464,11 +5544,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &641748674
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5599,11 +5681,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &647674925
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5734,11 +5818,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &651542529
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5869,11 +5955,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &666811319
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6004,11 +6092,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &675089697
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6100,6 +6190,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &682562756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 682562758}
+  - component: {fileID: 682562757}
+  m_Layer: 0
+  m_Name: I AM THE AI!!1!1!!
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &682562757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682562756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd78e55e79ae0be41881d5fc44435b87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayersTeam: []
+  AITeam: []
+--- !u!4 &682562758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682562756}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &686761133
 GameObject:
   m_ObjectHideFlags: 0
@@ -6139,11 +6275,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &686761135
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6274,11 +6412,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &694909375
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6409,11 +6549,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &731473588
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6544,11 +6686,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &746209879
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6679,11 +6823,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &747124963
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6814,11 +6960,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &769581871
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6949,11 +7097,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &819840666
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7133,11 +7283,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &858083128
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7268,11 +7420,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &860644089
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7403,11 +7557,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &876170739
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7538,11 +7694,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &915830860
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7673,11 +7831,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &928768521
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7808,11 +7968,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &930505110
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7943,11 +8105,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &942017436
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8078,11 +8242,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &958449427
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8213,11 +8379,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &978967891
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8348,11 +8516,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &986377215
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8483,11 +8653,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &988947187
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8618,11 +8790,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1049114668
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8753,11 +8927,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1114761127
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8888,11 +9064,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1157560006
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9023,11 +9201,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1221338117
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9158,11 +9338,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1235716799
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9293,11 +9475,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1238543021
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9428,11 +9612,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1269478636
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9842,11 +10028,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1325223656
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10080,11 +10268,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1368901799
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10215,11 +10405,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1378827552
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10350,11 +10542,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1389198625
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10576,11 +10770,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!1 &1414662549
 GameObject:
   m_ObjectHideFlags: 0
@@ -10620,11 +10816,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1414662551
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10755,11 +10953,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1453970405
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10890,11 +11090,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1456045345
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11172,11 +11374,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1479755501
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11343,11 +11547,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1523195386
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11478,11 +11684,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1527631332
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11613,11 +11821,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1532276829
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11748,11 +11958,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1539650647
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11883,11 +12095,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1622267604
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12018,11 +12232,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1649346925
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12153,11 +12369,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1679961107
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12288,11 +12506,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1694667534
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12423,11 +12643,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1707110100
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12558,11 +12780,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1721402493
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12740,11 +12964,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1745089661
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12875,11 +13101,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1749733211
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13010,11 +13238,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1758687089
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13145,11 +13375,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1778008266
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13280,11 +13512,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1790817663
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13415,11 +13649,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1825117041
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13550,11 +13786,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1840638729
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13685,11 +13923,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1845493278
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13820,11 +14060,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1854125708
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13955,11 +14197,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1863778761
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14090,11 +14334,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1886422343
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14304,11 +14550,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1906751649
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14439,11 +14687,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1912563862
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14574,11 +14824,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1950658593
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14709,11 +14961,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1951593686
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14844,11 +15098,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &1955030846
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14979,11 +15235,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &2061137800
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15114,11 +15372,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &2093310073
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15249,11 +15509,13 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
     infinitelyScalingRange: 0
     currentRange: 8
   previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
 --- !u!136 &2107451369
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15557,3 +15819,4 @@ SceneRoots:
   - {fileID: 1742535883}
   - {fileID: 308920264}
   - {fileID: 201993996}
+  - {fileID: 682562758}
