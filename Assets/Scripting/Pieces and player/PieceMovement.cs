@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+
 [Serializable]
 //[CreateAssetMenu(fileName = "Piece", menuName = "Scriptable Objects/Piece")]
 public class PieceMovement {
@@ -19,6 +20,42 @@ public class PieceMovement {
     public bool infinitelyScalingRange = false;
     public int currentRange = 8;
     #endregion
+
+    public PieceMovement(int position) {
+
+        PieceMovement piece = OverarchingPieceMovement.Instance.allPieceMovement[position];
+        #region Assign all variables other than the 2D array
+        thisPiece = piece.thisPiece;
+        playerTeamMaterial = piece.playerTeamMaterial;
+        enemyTeamMaterial = piece.enemyTeamMaterial;
+        name = piece.name + ", " + UnityEngine.Random.Range(0, 1000);
+        movableTiles1DArray = piece.movableTiles1DArray;
+        moveableTiles = piece.moveableTiles;
+        potentialRange = piece.potentialRange;
+        infinitelyScalingRange = piece.infinitelyScalingRange;
+        currentRange = piece.currentRange;
+        moveableTiles = new bool[(int)Mathf.Sqrt(movableTiles1DArray.Length)][];
+        #endregion
+
+        #region Generate the 2D array
+        for (int i = 0; i < moveableTiles.Length; i++) {
+            moveableTiles[i] = new bool[moveableTiles.Length];
+        }
+        for (int y = 0; y < moveableTiles.Length; y++) {
+            for (int x = 0; x < moveableTiles.Length; x++) {
+                moveableTiles[y][x] = movableTiles1DArray[y * moveableTiles.Length + x];
+            }
+        }
+        #endregion
+
+        #region Make the infinitely scaling pieces start at a small range
+        if (infinitelyScalingRange) {
+            for (int i = 0; i < 7; i++) {
+                ExpandSize();
+            }
+        }
+        #endregion
+    }
 
     public bool PositionIsUnlocked(int x, int z) {
         try {

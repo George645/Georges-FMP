@@ -9,7 +9,7 @@ public class UnderlyingPiece : MonoBehaviour {
     [HideInInspector]
     public bool firstFrameSelected = true;
     [SerializeField]
-    internal PieceMovement thisPiece = new PieceMovement();
+    internal PieceMovement thisPiece;
     internal int capturedPieces = 3;
     internal int level = 1;
     internal int previousLevel = 1;
@@ -25,16 +25,15 @@ public class UnderlyingPiece : MonoBehaviour {
         ActualStart();
     }
     public void ActualStart() {
-        foreach (PieceMovement piece in OverarchingPieceMovement.Instance.allPieceMovement) {
+        for (int i = 0; i < OverarchingPieceMovement.Instance.allPieceMovement.Count; i++) {
+            PieceMovement piece = OverarchingPieceMovement.Instance.allPieceMovement[i];
             if (piece.name == name) {
-                thisPiece = new PieceMovement();
-                AssignAllValuesOfPieceMovement(piece);
+                thisPiece = new PieceMovement(i);
                 return;
             }
         }
-        thisPiece = new PieceMovement();
         int randomNumber = Random.Range(1, OverarchingPieceMovement.Instance.allPieceMovement.Count);
-        AssignAllValuesOfPieceMovement(OverarchingPieceMovement.Instance.allPieceMovement[randomNumber]);
+        thisPiece = new PieceMovement(randomNumber);
 
 
     }
@@ -42,37 +41,6 @@ public class UnderlyingPiece : MonoBehaviour {
     #region Assign all neccessary values for this piece
     void AssignAllValuesOfPieceMovement(PieceMovement piece) {
 
-        #region Assign all variables other than the 2D array
-        thisPiece.thisPiece = piece.thisPiece;
-        thisPiece.playerTeamMaterial = piece.playerTeamMaterial;
-        thisPiece.enemyTeamMaterial = piece.enemyTeamMaterial;
-        thisPiece.name = piece.name + ", " + Random.Range(0, 1000);
-        thisPiece.movableTiles1DArray = piece.movableTiles1DArray;
-        thisPiece.moveableTiles = piece.moveableTiles;
-        thisPiece.potentialRange = piece.potentialRange;
-        thisPiece.infinitelyScalingRange = piece.infinitelyScalingRange;
-        thisPiece.currentRange = piece.currentRange;
-        thisPiece.moveableTiles = new bool[(int)Mathf.Sqrt(thisPiece.movableTiles1DArray.Length)][];
-        #endregion
-
-        #region Generate the 2D array
-        for (int i = 0; i < thisPiece.moveableTiles.Length; i++) {
-            thisPiece.moveableTiles[i] = new bool[thisPiece.moveableTiles.Length];
-        }
-        for (int y = 0; y < thisPiece.moveableTiles.Length; y++) {
-            for (int x = 0; x < thisPiece.moveableTiles.Length; x++) {
-                thisPiece.moveableTiles[y][x] = thisPiece.movableTiles1DArray[y * thisPiece.moveableTiles.Length + x];
-            }
-        }
-        #endregion
-
-        #region Make the infinitely scaling pieces start at a small range
-        if (thisPiece.infinitelyScalingRange) {
-            for (int i = 0; i < 7; i++) {
-                thisPiece.ExpandSize();
-            }
-        }
-        #endregion
     }
     #endregion
 
