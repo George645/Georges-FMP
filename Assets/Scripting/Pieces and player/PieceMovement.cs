@@ -11,7 +11,7 @@ public class PieceMovement {
     [SerializeField]
     public Material[] enemyTeamMaterial;
     public string name;
-    bool playersTeam;
+    readonly bool playersTeam;
     public UnderlyingPiece thisObject;
 
     #region handled by custom editor
@@ -120,7 +120,7 @@ public class PieceMovement {
         try {
             LevelUpOriginCubeIdentifier.instance.GetComponent<OriginCube>().sizeNumber = (tempArray.Length - 1) / 2;
         }
-        catch (NullReferenceException){ }
+        catch (NullReferenceException) { }
         potentialRange += 1;
         moveableTiles = new bool[tempArray.Length][];
         for (int i = 0; i < moveableTiles.Length; i++) {

@@ -19,7 +19,7 @@ public class PieceMovementAttributes : PropertyDrawer {
             //gameobject
             height += FOLDOUT_HEIGHT;
             //Allied Material
-                height += FOLDOUT_HEIGHT;
+            height += FOLDOUT_HEIGHT;
             if (property.FindPropertyRelative("playerTeamMaterial").isExpanded) {
                 for (int i = 0; i <= property.FindPropertyRelative("playerTeamMaterial").arraySize; i++) {
                     height += 30;

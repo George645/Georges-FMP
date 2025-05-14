@@ -8,7 +8,7 @@ public class UpgradeCircles : MonoBehaviour {
         if (Input.GetMouseButtonDown(0)) {
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit Info)) {
                 if (Info.collider.gameObject == gameObject) {
-                    Debug.Log(OriginalObject.GetComponent<UnderlyingPiece>().thisPiece.name); 
+                    Debug.Log(OriginalObject.GetComponent<UnderlyingPiece>().thisPiece.name);
                     OriginalObject.GetComponent<UnderlyingPiece>().thisPiece.AddPositionToMovables(offset);
                     OriginalObject.GetComponent<UnderlyingPiece>().RemoveNumbersOfCapturedPieces();
                     OriginalObject.GetComponent<UnderlyingPiece>().level += 1;
