@@ -100,6 +100,7 @@ public class PieceMovementAttributes : PropertyDrawer {
                     rect = new(position.x + addX, position.y + addY, EditorGUI.GetPropertyHeight(property.FindPropertyRelative("movableTiles1DArray").GetArrayElementAtIndex(i)), EditorGUI.GetPropertyHeight(property.FindPropertyRelative("movableTiles1DArray").GetArrayElementAtIndex(i)));
                     addX += EditorGUI.GetPropertyHeight(property.FindPropertyRelative("movableTiles1DArray").GetArrayElementAtIndex(i));
                     if (i == j && j == property.FindPropertyRelative("potentialRange").intValue) {
+                        property.FindPropertyRelative("movableTiles1DArray").GetArrayElementAtIndex(i * (int)Math.Floor(Math.Sqrt(property.FindPropertyRelative("movableTiles1DArray").arraySize)) + j).boolValue = false;
                         rect.x += 2;
                         EditorGUI.PrefixLabel(rect, new GUIContent("X"));
                         rect.x -= 2;

@@ -12,6 +12,7 @@ public class MovementCircles : MonoBehaviour {
                     OriginalObject.GetComponent<UnderlyingPiece>().previousPosition = new Vector3(transform.position.x, transform.position.y + 0.9f, transform.position.z);
                     OriginalObject.GetComponent<UnderlyingPiece>().selected = false;
                     OriginalObject.GetComponent<UnderlyingPiece>().DeactivateVisibility();
+                    Player.player.GetComponent<Player>().numberOfMoves -= 1;
                 }
             }
         }
@@ -19,6 +20,7 @@ public class MovementCircles : MonoBehaviour {
     void CheckIfTaking() {
         if (OriginalObject.GetComponent<UnderlyingPiece>().PieceInDirection(offset.x, offset.y) != null) {
             OriginalObject.GetComponent<UnderlyingPiece>().capturedPieces += 1;
+            AI.ai.AITeam.Remove(OriginalObject.GetComponent<UnderlyingPiece>().thisPiece);
             Destroy(OriginalObject.GetComponent<UnderlyingPiece>().PieceInDirection(offset.x, offset.y));
         }
     }

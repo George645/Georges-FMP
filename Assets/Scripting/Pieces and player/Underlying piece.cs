@@ -17,6 +17,8 @@ public class UnderlyingPiece : MonoBehaviour {
     internal Mode mode = Mode.gaming;
     public Vector3 previousPosition;
     public bool hasMoved = false;
+
+    public const int pieceHeight = 2;
     private void Awake() {
         playersTeam = Random.Range(0, 2) < 0.5f;
     }

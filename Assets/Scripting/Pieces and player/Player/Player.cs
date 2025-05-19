@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Player : UnderlyingPiece {
     public static GameObject player;
+    public int numberOfMoves = 1;
 
     private void Awake() {
         if (player == null) {
@@ -16,6 +17,9 @@ public class Player : UnderlyingPiece {
     }
 
     void Update() {
+        if (numberOfMoves == 0) { 
+            AI.ai.BeginTurn();
+        }
         if (mode == Mode.levelling) {
             base.IfNotLevellingReturn();
             selected = true;
