@@ -7,6 +7,8 @@ using UnityEngine.UIElements;
 using UnityEngine.Analytics;
 using System.Threading;
 using System.Data;
+using NUnit.Framework.Internal.Filters;
+using System.Runtime.InteropServices;
 
 public class AI : MonoBehaviour {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,11 +17,32 @@ public class AI : MonoBehaviour {
     public List<PieceMovement> AITeam;
     bool isEnemysTurn = false;
     bool firstSplitSecondCheck = true;
+    bool firstFrame = true;
+    (UnderlyingPiece, Vector2Int) secondMove;
+    (UnderlyingPiece, Vector2Int) thirdMove;
 
     void Awake() {
         ai = this;
     }
 
+    void CheckAllPlayersAndAITeamsArePresentAndCorrect() {
+        List<PieceMovement> tempList = new();
+        foreach (PieceMovement movement in PlayersTeam.Where(piece => piece.thisObject.playersTeam == false)) {
+            tempList.Add(movement);
+        }
+        foreach (PieceMovement movement in tempList) {
+            PlayersTeam.Remove(movement);
+            AITeam.Add(movement);
+        }
+        tempList.Clear();
+        foreach (PieceMovement movement in AITeam.Where(piece => piece.thisObject.playersTeam)) {
+            tempList.Add(movement);
+        }
+        foreach (PieceMovement movement in tempList) {
+            AITeam.Remove(movement);
+            PlayersTeam.Add(movement);
+        }
+    }
 
     int Evaluation(List<PieceMovement> localPlayersTeam, List<PieceMovement> localAITeam) {
         int evaluation = 0;
@@ -33,115 +56,129 @@ public class AI : MonoBehaviour {
         return evaluation;
     }
 
-    (int, int, int, GameObject) Search(int depth, int startingDepth, List<PieceMovement> localPlayersTeam, List<PieceMovement> localAITeam) {
-        Vector2Int position = Vector2Int.zero;
-        int evaluation = Evaluation(localPlayersTeam, localAITeam);
-        GameObject returningPiece = null;
+    int bestSecondMoveEval;
+    (int, int, int, UnderlyingPiece) Search(int depth, float alpha, float beta, int startingDepth, List<PieceMovement> localPlayersTeam, List<PieceMovement> localAITeam) {
+        Vector2Int bestPosition = Vector2Int.zero;
         depth -= 1;
-        if (depth != 0) {
-            if ((startingDepth - depth) / 3 % 2 == 0) {
-                foreach (PieceMovement movement in localAITeam) {
-                    returningPiece = movement.thisObject.gameObject;
-                    bool breakAll = false;
-                    for (int j = 0; j < movement.moveableTiles.Length; j++) {
-                        if (breakAll) {
-                            break;
-                        }
-                        bool[] array = movement.moveableTiles[j];
-                        for (int k = 0; k < array.Length; k++) {
-                            bool boolean = array[k];
-                            if (boolean == false) {
-                                continue;
+        int bestEvaluation = ((startingDepth - depth) / 3 % 2 == 0) ? int.MinValue : int.MaxValue;
+        UnderlyingPiece bestPiece = null;
+        if (depth > 0) {
+            //one of the three AI turn moves
+            List<PieceMovement> usedMovement = (startingDepth - depth) / 3 % 2 == 0 ? localAITeam : localPlayersTeam;
+            foreach (PieceMovement movement in usedMovement) {
+                foreach (Vector2Int move in ValidMoves(movement)) {
+                    if (movement.infinitelyScalingRange) {
+                        //make a new thing in here to check each time it is scaled up
+                        for (int l = 0; l <= movement.currentRange; l++) {
+                            Vector2Int scalingMove = move * l;
+                            PieceMovement capturingPiece = ApplyMove(movement, scalingMove, (startingDepth - depth) / 3 % 2 == 1);
+                            if (capturingPiece == movement) {
+                                UndoMove(movement);
+                                break;
                             }
-                            if (movement.thisObject.PieceInDirection(j - movement.currentRange - 1, k - movement.currentRange - 1) != null) {
-                                if (movement.thisObject.PieceInDirection(j - movement.currentRange - 1, k - movement.currentRange - 1).GetComponent<UnderlyingPiece>().playersTeam) {
-                                    continue;
+                            List<PieceMovement> inputList = new List<PieceMovement>(localPlayersTeam);
+                            inputList.Remove(movement);
+                            var aSearch = Search(depth, alpha, beta, startingDepth, new List<PieceMovement>(localPlayersTeam), inputList);
+                            UndoMove(movement);
+                            if ((startingDepth - depth) / 3 % 2 == 0) {
+                                if (aSearch.Item1 < bestEvaluation) {
+                                    bestEvaluation = aSearch.Item1;
+                                    bestPiece = movement.thisObject;
+                                    bestPosition = scalingMove;
                                 }
+                                alpha = Math.Max(alpha, bestEvaluation);
                             }
-                            if (movement.infinitelyScalingRange) {
-                                bool continueVar = false;
-                                for (int l = 0; l < k; l++) {
-                                    if ((l == k && movement.thisObject.PieceInDirection(j - movement.currentRange - 1, k - movement.currentRange - 1).GetComponent<UnderlyingPiece>().playersTeam) || (movement.thisObject.PieceInDirection(j - movement.currentRange - 1, k - movement.currentRange - 1) == null)) {
-                                        continue;
-                                    }
-                                    continueVar = true;
-                                    continue;
+                            else {
+                                if (aSearch.Item1 > bestEvaluation) {
+                                    bestEvaluation = aSearch.Item1;
+                                    bestPiece = movement.thisObject;
+                                    bestPosition = scalingMove;
                                 }
-                                if (continueVar) {
-                                    continue;
-                                }
+                                beta = Math.Min(alpha, bestEvaluation);
                             }
-                            List<PieceMovement> inputList = localPlayersTeam;
-                            if (movement.thisObject.PieceInDirection(j - movement.currentRange - 1, k - movement.currentRange - 1) != null) {
-                                inputList.Remove(movement.thisObject.PieceInDirection(j - movement.currentRange - 1, k - movement.currentRange - 1).GetComponent<UnderlyingPiece>().thisPiece);
-                            }
-                            var thisSearch = Search(depth, startingDepth, inputList, localAITeam);
-                            if (thisSearch.Item1 > evaluation) {
-                                evaluation = thisSearch.Item1;
-                                position = new Vector2Int(j - movement.potentialRange - 1, k - movement.potentialRange - 1);
+                            if (beta <= alpha) {
+                                break;
                             }
                         }
                     }
-                }
-            }
-            else if ((startingDepth - depth) / 3 % 2 == 1) {
-                foreach (PieceMovement movement in localPlayersTeam) {
-                    returningPiece = movement.thisObject.gameObject;
-                    bool breakAll = false;
-
-                    for (int j = 0; j < movement.moveableTiles.Length; j++) {
-                        if (breakAll) {
-                            break;
+                    else {
+                        PieceMovement capturingPiece = ApplyMove(movement, move, (startingDepth - depth) / 3 % 2 == 1);
+                        if (capturingPiece == movement) {
+                            UndoMove(movement);
+                            continue;
                         }
-                        bool[] array = movement.moveableTiles[j];
-                        for (int k = 0; k < array.Length; k++) {
-                            bool boolean = array[k];
-                            if (boolean == false) {
-                                continue;
-                            }
-                            if (movement.thisObject.PieceInDirection(j - movement.currentRange - 1, k - movement.currentRange - 1) != null) {
-                                if (movement.thisObject.PieceInDirection(j - movement.currentRange - 1, k - movement.currentRange - 1).GetComponent<UnderlyingPiece>().playersTeam == false) {
-                                    continue;
+                        List<PieceMovement> inputList = new List<PieceMovement>(localPlayersTeam);
+                        inputList.Remove(movement);
+                        var aSearch = Search(depth, alpha, beta, startingDepth, new List<PieceMovement>(localPlayersTeam), inputList);
+                        UndoMove(movement);
+                        if ((startingDepth - depth) / 3 % 2 == 0) {
+                            if (aSearch.Item1 > bestEvaluation) {
+                                bestEvaluation = aSearch.Item1;
+                                bestPiece = movement.thisObject;
+                                bestPosition = move;
+                                if (depth == startingDepth) {
+                                    secondMove = (aSearch.Item4, new Vector2Int(aSearch.Item2, aSearch.Item3));
+                                }
+                                if (depth == startingDepth - 1 && bestSecondMoveEval < bestEvaluation) {
+                                    bestSecondMoveEval = bestEvaluation;
+                                    thirdMove = (bestPiece, new Vector2Int(aSearch.Item2, aSearch.Item3));
                                 }
                             }
-                            if (movement.infinitelyScalingRange) {
-                                bool continueVar = false;
-                                for (int l = 0; l < k; l++) {
-                                    if ((l == k && movement.thisObject.PieceInDirection(j - movement.currentRange - 1, k - movement.currentRange - 1).GetComponent<UnderlyingPiece>().playersTeam) || (movement.thisObject.PieceInDirection(j - movement.currentRange - 1, k - movement.currentRange - 1) == null)) {
-                                        continue;
-                                    }
-                                    continueVar = true;
-                                    continue;
-                                }
-                                if (continueVar) {
-                                    continue;
-                                }
+                            alpha = Math.Max(alpha, bestEvaluation);
+                        }
+                        else {
+                            if (aSearch.Item1 < bestEvaluation) {
+                                bestEvaluation = aSearch.Item1;
+                                bestPiece = movement.thisObject;
+                                bestPosition = move;
                             }
-                            List<PieceMovement> inputList = localAITeam;
-                            if (movement.thisObject.PieceInDirection(j - movement.currentRange - 1, k - movement.currentRange - 1) != null) {
-                                inputList.Remove(movement.thisObject.PieceInDirection(j - movement.currentRange - 1, k - movement.currentRange - 1).GetComponent<UnderlyingPiece>().thisPiece);
-                            }
-                            var thisSearch = Search(depth, startingDepth, localPlayersTeam, inputList);
-                            if (thisSearch.Item1 > evaluation) {
-                                evaluation = thisSearch.Item1;
-                                position = new Vector2Int(j - movement.potentialRange - 1, k - movement.potentialRange - 1);
-                            }
+                            beta = Math.Min(alpha, bestEvaluation);
+                        }
+                        if (beta <= alpha) {
+                            break;
                         }
                     }
                 }
-            }
-            else {
-                throw new ArithmeticException("figure out a different formula that takes in two numbers, subtracts one from the other and then divides that by three and then figures out if it is player's or enemie's turn");
+                if (beta <= alpha) {
+                    break;
+                }
             }
         }
         else {
-            evaluation = Evaluation(localPlayersTeam, localAITeam); 
+            bestEvaluation = Evaluation(localPlayersTeam, localAITeam);
         }
-            return (evaluation, position.x, position.y, returningPiece);
+        return (bestEvaluation, bestPosition.x, bestPosition.y, bestPiece);
     }
 
-    void FigureOutANameAndAReturnType() {
+    List<Vector2Int> ValidMoves(PieceMovement piece) {
+        List<Vector2Int> validMovePositions = new List<Vector2Int>();
 
+        for (int i = 0; i < piece.moveableTiles.Length; i++) {
+            for (int j = 0; j < piece.moveableTiles.Length; j++) {
+                if (piece.moveableTiles[i][j]) {
+                    validMovePositions.Add(new Vector2Int(i - piece.currentRange - 1, j - piece.currentRange - 1));
+                }
+            }
+        }
+
+        return validMovePositions;
+    }
+
+    PieceMovement ApplyMove(PieceMovement piece, Vector2Int relativePosition, bool playersTurn) {
+        PieceMovement returningPiece = null;
+        try {
+            returningPiece = piece.thisObject.PieceInDirection(relativePosition).GetComponent<UnderlyingPiece>().thisPiece;
+            if (returningPiece != null && returningPiece.thisObject.playersTeam == playersTurn) {
+                returningPiece = piece;
+            }
+            piece.thisObject.transform.position = new Vector3(piece.thisObject.transform.position.x + relativePosition.x, piece.thisObject.transform.position.y, piece.thisObject.transform.position.z + relativePosition.y);
+        }
+        catch { }
+        return returningPiece;
+    }
+
+    void UndoMove(PieceMovement piece) {
+        piece.thisObject.transform.position = piece.thisObject.previousPosition;
     }
 
     int GetAmountOfMaterial(PieceMovement movement) {
@@ -166,6 +203,10 @@ public class AI : MonoBehaviour {
 
     float StartTime;
     private void Update() {
+        if (firstFrame) {
+            CheckAllPlayersAndAITeamsArePresentAndCorrect();
+            firstFrame = false;
+        }
         if (isEnemysTurn) {
             if (firstSplitSecondCheck) {
                 StartTime = Time.time;
@@ -176,38 +217,80 @@ public class AI : MonoBehaviour {
     }
 
     public void BeginTurn() {
+        foreach (PieceMovement piece in AITeam.Where(piece => piece.thisObject.hasMoved)) {
+            piece.thisObject.thisPiece.thisObject.hasMoved = false;
+        }
 
         foreach (PieceMovement thing in AITeam.Where(thing => thing == null)) {
             AITeam.Remove(thing);
         }
-
+        bestSecondMoveEval = int.MinValue;
         List<PieceMovement> tempList = AITeam;
+        int searchDepth = 3;
         int numberOfMoves = 3;
-        for (int i = numberOfMoves; i > 1; i--) {
-            var evaluatedPieceAndMovement = Search(3 + i, 6, PlayersTeam, AITeam);
-            if (evaluatedPieceAndMovement.Item4.GetComponent<UnderlyingPiece>().playersTeam == false) {
-                if (evaluatedPieceAndMovement.Item4.GetComponent<UnderlyingPiece>().PieceInDirection(evaluatedPieceAndMovement.Item2, evaluatedPieceAndMovement.Item3) != null) {
-                    if (evaluatedPieceAndMovement.Item4.GetComponent<UnderlyingPiece>().PieceInDirection(evaluatedPieceAndMovement.Item2, evaluatedPieceAndMovement.Item3).GetComponent<UnderlyingPiece>().playersTeam) {
-                        PlayersTeam.Remove(evaluatedPieceAndMovement.Item4.GetComponent<UnderlyingPiece>().PieceInDirection(evaluatedPieceAndMovement.Item2, evaluatedPieceAndMovement.Item3).GetComponent<UnderlyingPiece>().thisPiece);
-                        Destroy(evaluatedPieceAndMovement.Item4.GetComponent<UnderlyingPiece>().PieceInDirection(evaluatedPieceAndMovement.Item2, evaluatedPieceAndMovement.Item3));
-                    }
-                    else {
-                        throw new Exception("tried to capture it's own piece, that will still be an error");
-                    }
+        //for (int i = numberOfMoves; i >= 1; i--) {
+        var evaluatedPieceAndMovement = Search(searchDepth + numberOfMoves, Mathf.NegativeInfinity, Mathf.Infinity, searchDepth + 2, new List<PieceMovement>(PlayersTeam), new List<PieceMovement>(AITeam));
+        if (evaluatedPieceAndMovement.Item4.playersTeam == false) {
+            if (evaluatedPieceAndMovement.Item4.PieceInDirection(evaluatedPieceAndMovement.Item2, evaluatedPieceAndMovement.Item3) != null) {
+                if (evaluatedPieceAndMovement.Item4.PieceInDirection(evaluatedPieceAndMovement.Item2, evaluatedPieceAndMovement.Item3).GetComponent<UnderlyingPiece>().playersTeam) {
+                    PlayersTeam.Remove(evaluatedPieceAndMovement.Item4.PieceInDirection(evaluatedPieceAndMovement.Item2, evaluatedPieceAndMovement.Item3).GetComponent<UnderlyingPiece>().thisPiece);
+                    Destroy(evaluatedPieceAndMovement.Item4.PieceInDirection(evaluatedPieceAndMovement.Item2, evaluatedPieceAndMovement.Item3));
                 }
-                evaluatedPieceAndMovement.Item4.GetComponent<UnderlyingPiece>().previousPosition = new Vector3(evaluatedPieceAndMovement.Item4.transform.position.x + evaluatedPieceAndMovement.Item2, UnderlyingPiece.pieceHeight, evaluatedPieceAndMovement.Item4.transform.position.z + evaluatedPieceAndMovement.Item3);
-                tempList.Remove(evaluatedPieceAndMovement.Item4.GetComponent<UnderlyingPiece>().thisPiece);
+                else {
+                    throw new Exception(evaluatedPieceAndMovement.Item4.thisPiece.name + "tried to capture it's own piece");
+                }
             }
-            else {
-                throw new Exception("tried to move one of the Player's pieces");
-            }
-            isEnemysTurn = false;
-            Player.player.GetComponent<Player>().numberOfMoves = 1;
+            evaluatedPieceAndMovement.Item4.GetComponent<UnderlyingPiece>().previousPosition = new Vector3(evaluatedPieceAndMovement.Item4.transform.position.x + evaluatedPieceAndMovement.Item2, UnderlyingPiece.pieceHeight, evaluatedPieceAndMovement.Item4.transform.position.z + evaluatedPieceAndMovement.Item3);
+            tempList.Remove(evaluatedPieceAndMovement.Item4.thisPiece);
+        }
+        else {
+            throw new Exception("tried to move one of the Player's pieces: " + evaluatedPieceAndMovement.Item4.thisPiece.name);
         }
 
 
+        if (secondMove.Item1.playersTeam == false) {
+            if (secondMove.Item1.PieceInDirection(secondMove.Item2.x, secondMove.Item2.y) != null) {
+                if (secondMove.Item1.PieceInDirection(secondMove.Item2.x, secondMove.Item2.y).GetComponent<UnderlyingPiece>().playersTeam) {
+                    PlayersTeam.Remove(secondMove.Item1.PieceInDirection(secondMove.Item2.x, secondMove.Item2.y).GetComponent<UnderlyingPiece>().thisPiece);
+                    Destroy(secondMove.Item1.PieceInDirection(secondMove.Item2.x, secondMove.Item2.y));
+                }
+                else {
+                    throw new Exception(secondMove.Item1.thisPiece.name + "tried to capture it's own piece");
+                }
+            }
+            secondMove.Item1.GetComponent<UnderlyingPiece>().previousPosition = new Vector3(secondMove.Item1.transform.position.x + secondMove.Item2.x, UnderlyingPiece.pieceHeight, secondMove.Item1.transform.position.z + secondMove.Item2.y);
+            tempList.Remove(secondMove.Item1.thisPiece);
+        }
+        else {
+            throw new Exception("tried to move one of the Player's pieces: " + secondMove.Item1.thisPiece.name);
+        }
+
+        if (thirdMove.Item1.playersTeam == false) {
+            if (thirdMove.Item1.PieceInDirection(thirdMove.Item2.x, thirdMove.Item2.y) != null) {
+                if (thirdMove.Item1.PieceInDirection(thirdMove.Item2.x, thirdMove.Item2.y).GetComponent<UnderlyingPiece>().playersTeam) {
+                    PlayersTeam.Remove(thirdMove.Item1.PieceInDirection(thirdMove.Item2.x, thirdMove.Item2.y).GetComponent<UnderlyingPiece>().thisPiece);
+                    Destroy(thirdMove.Item1.PieceInDirection(thirdMove.Item2.x, thirdMove.Item2.y));
+                }
+                else {
+                    throw new Exception(thirdMove.Item1.thisPiece.name + "tried to capture it's own piece");
+                }
+            }
+            thirdMove.Item1.GetComponent<UnderlyingPiece>().previousPosition = new Vector3(thirdMove.Item1.transform.position.x + thirdMove.Item2.x, UnderlyingPiece.pieceHeight, thirdMove.Item1.transform.position.z + thirdMove.Item2.y);
+            tempList.Remove(thirdMove.Item1.thisPiece);
+        }
+        else {
+            throw new Exception("tried to move one of the Player's pieces: " + thirdMove.Item1.thisPiece.name);
+        }
+
+        isEnemysTurn = false;
+        Player.player.GetComponent<Player>().numberOfMoves = 3;
+
+        foreach (PieceMovement piece in AITeam.Where(piece => piece.thisObject.hasMoved)) {
+            piece.thisObject.thisPiece.thisObject.hasMoved = false;
+        }
         foreach (PieceMovement piece in PlayersTeam.Where(piece => piece.thisObject.hasMoved)) {
             piece.thisObject.thisPiece.thisObject.hasMoved = false;
         }
+        Player.player.GetComponent<Player>().numberOfMoves = 3;
     }
 }

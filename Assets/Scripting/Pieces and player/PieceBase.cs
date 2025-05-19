@@ -4,7 +4,7 @@ public class PieceBase : UnderlyingPiece {
 
     void Start() {
         FindStartPosition();
-        base.ActualStart();
+        ActualStart();
         AssignMaterialAndMesh();
         FacePlayer();
     }

@@ -49,6 +49,15 @@ public class UnderlyingPiece : MonoBehaviour {
         }
     }
 
+    private void OnDestroy() {
+        if (playersTeam) {
+            AI.ai.AITeam.Remove(thisPiece);
+        }
+        else {
+            AI.ai.AITeam.Remove(thisPiece);
+        }
+    }
+
     public GameObject PieceInDirection(int x, int z) {
         GameObject objecta = null;
         if (Physics.Raycast(new Vector3(transform.position.x + x, 3.5f, transform.position.z + z), Vector3.down * 4, out RaycastHit hit, 2.25f)) {
@@ -56,6 +65,21 @@ public class UnderlyingPiece : MonoBehaviour {
         }
         return objecta;
     }
+    public GameObject PieceInDirection(Vector2 direction) {
+        GameObject objecta = null;
+        if (Physics.Raycast(new Vector3(transform.position.x + (int)direction.x, 3.5f, transform.position.z + (int)direction.x), Vector3.down * 4, out RaycastHit hit, 2.25f)) {
+            objecta = hit.collider.gameObject;
+        }
+        return objecta;
+    }
+    public GameObject PieceInDirection(Vector2Int direction) {
+        GameObject objecta = null;
+        if (Physics.Raycast(new Vector3(transform.position.x + direction.x, 3.5f, transform.position.z + direction.x), Vector3.down * 4, out RaycastHit hit, 2.25f)) {
+            objecta = hit.collider.gameObject;
+        }
+        return objecta;
+    }
+
     public void RunCoroutine() {
         StartCoroutine(SetAlternateSceneVariables());
     }

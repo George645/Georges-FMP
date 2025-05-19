@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Player : UnderlyingPiece {
     public static GameObject player;
-    public int numberOfMoves = 1;
+    public int numberOfMoves;
 
     private void Awake() {
         if (player == null) {
@@ -11,9 +11,9 @@ public class Player : UnderlyingPiece {
     }
 
     private void Start() {
-        base.previousPosition = new Vector3(0, 2, 0);
-        ActualStart();
+        previousPosition = new Vector3(0, 2, 0);
         playersTeam = true;
+        ActualStart();
     }
 
     void Update() {
@@ -21,10 +21,10 @@ public class Player : UnderlyingPiece {
             AI.ai.BeginTurn();
         }
         if (mode == Mode.levelling) {
-            base.IfNotLevellingReturn();
+            IfNotLevellingReturn();
             selected = true;
         }
-        base.Selected();
+        Selected();
         EnsureCorrectPositions();
     }
 }
