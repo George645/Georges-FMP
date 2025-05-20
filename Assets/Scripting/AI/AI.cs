@@ -2,13 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
-using UnityEditor;
-using UnityEngine.UIElements;
-using UnityEngine.Analytics;
-using System.Threading;
 using System.Data;
-using NUnit.Framework.Internal.Filters;
-using System.Runtime.InteropServices;
 
 public class AI : MonoBehaviour {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -58,6 +52,8 @@ public class AI : MonoBehaviour {
 
     int bestSecondMoveEval;
     (int, int, int, UnderlyingPiece) Search(int depth, float alpha, float beta, int startingDepth, List<PieceMovement> localPlayersTeam, List<PieceMovement> localAITeam) {
+        //create a new class where the gamestate can be saved - things like a 200 by 200 board state and a piece list for each team
+        throw new Exception("Read the comment above this");
         Vector2Int bestPosition = Vector2Int.zero;
         depth -= 1;
         int bestEvaluation = ((startingDepth - depth) / 3 % 2 == 0) ? int.MinValue : int.MaxValue;
@@ -132,7 +128,7 @@ public class AI : MonoBehaviour {
                                 bestPiece = movement.thisObject;
                                 bestPosition = move;
                             }
-                            beta = Math.Min(alpha, bestEvaluation);
+                            beta = Math.Min(beta, bestEvaluation);
                         }
                         if (beta <= alpha) {
                             break;
@@ -183,7 +179,7 @@ public class AI : MonoBehaviour {
 
     int GetAmountOfMaterial(PieceMovement movement) {
         string pieceName = movement.name[..movement.name.IndexOf(',')];
-        int returningInt = UnityEngine.Random.Range(0, 100) - 50;
+        int returningInt = 0;
         return pieceName switch {
             "Rook" => 500 + returningInt,
             "Bishop" => 300 + returningInt,
@@ -221,15 +217,17 @@ public class AI : MonoBehaviour {
             piece.thisObject.thisPiece.thisObject.hasMoved = false;
         }
 
-        foreach (PieceMovement thing in AITeam.Where(thing => thing == null)) {
-            AITeam.Remove(thing);
+        foreach (PieceMovement piece in AITeam.Where(piece => piece == null)) {
+            AITeam.Remove(piece);
         }
         bestSecondMoveEval = int.MinValue;
         List<PieceMovement> tempList = AITeam;
-        int searchDepth = 3;
+        int searchDepth = 1;
         int numberOfMoves = 3;
         //for (int i = numberOfMoves; i >= 1; i--) {
-        var evaluatedPieceAndMovement = Search(searchDepth + numberOfMoves, Mathf.NegativeInfinity, Mathf.Infinity, searchDepth + 2, new List<PieceMovement>(PlayersTeam), new List<PieceMovement>(AITeam));
+        Debug.Log(0);
+        var evaluatedPieceAndMovement = Search(searchDepth + numberOfMoves, Mathf.NegativeInfinity, Mathf.Infinity, searchDepth + numberOfMoves - 1, new List<PieceMovement>(PlayersTeam), new List<PieceMovement>(AITeam));
+        Debug.Log(1);
         if (evaluatedPieceAndMovement.Item4.playersTeam == false) {
             if (evaluatedPieceAndMovement.Item4.PieceInDirection(evaluatedPieceAndMovement.Item2, evaluatedPieceAndMovement.Item3) != null) {
                 if (evaluatedPieceAndMovement.Item4.PieceInDirection(evaluatedPieceAndMovement.Item2, evaluatedPieceAndMovement.Item3).GetComponent<UnderlyingPiece>().playersTeam) {
@@ -246,7 +244,6 @@ public class AI : MonoBehaviour {
         else {
             throw new Exception("tried to move one of the Player's pieces: " + evaluatedPieceAndMovement.Item4.thisPiece.name);
         }
-
 
         if (secondMove.Item1.playersTeam == false) {
             if (secondMove.Item1.PieceInDirection(secondMove.Item2.x, secondMove.Item2.y) != null) {
@@ -292,5 +289,6 @@ public class AI : MonoBehaviour {
             piece.thisObject.thisPiece.thisObject.hasMoved = false;
         }
         Player.player.GetComponent<Player>().numberOfMoves = 3;
+        Debug.Log("Enemy's turn over");
     }
 }
