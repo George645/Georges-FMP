@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class OriginCube : CubeBase {
+    public static GameObject originCube;
     public static GameObject cube;
     public GameObject cubetemp;
     public int sizeNumber = 1;
@@ -18,6 +19,9 @@ public class OriginCube : CubeBase {
     bool coroutineRunning = false;
 
     void Awake() {
+        if (originCube == null) {
+            originCube = gameObject;
+        }
         if (blackMaterial == null) {
             blackMaterial = temporaryList[0];
             whiteMaterial = temporaryList[1];
@@ -25,7 +29,6 @@ public class OriginCube : CubeBase {
         if (cube == null) {
             cube = cubetemp;
         }
-        if (cubetemp != null) cube = cubetemp;
         AlignToGridAndColour();
         if (mode == Mode.gaming) {
             GenerateLevel();

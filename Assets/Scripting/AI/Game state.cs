@@ -1,0 +1,44 @@
+using NUnit.Framework;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Gamestate{
+    public static bool[,] board;
+    readonly PieceMovement[,] piecesOnBoard = new PieceMovement[200, 200];
+    public List<PieceMovement> playersTeam;
+    public List<PieceMovement> AITeam;
+    
+    public Gamestate(List<PieceMovement> playersTeam, List<PieceMovement> AITeam) {
+        if (board == null) {
+            board = new bool[201, 201];
+            for (int i = -100; i <= 100; i++) {
+                for (int j = -100; j <= 100; j++) {
+                    if (OriginCube.GetSquareInDirection(i, j) != null) {
+                        board[i + 100, j + 100] = true;
+                    }
+                    else {
+                        board[i + 100, j + 100] = false;
+                    }
+                }
+            }
+        }
+        this.playersTeam = new List<PieceMovement>(playersTeam);
+        this.AITeam = new List<PieceMovement>(AITeam);
+        foreach (PieceMovement pieceMovement in AITeam) {
+            piecesOnBoard[pieceMovement.AIAccessiblePosition.x + 100, pieceMovement.AIAccessiblePosition.y + 100] = pieceMovement;
+        }
+        foreach (PieceMovement pieceMovement in playersTeam) {
+            piecesOnBoard[pieceMovement.AIAccessiblePosition.x + 100, pieceMovement.AIAccessiblePosition.y + 100] = pieceMovement;
+        }
+    }
+    public PieceMovement PieceInPosition(Vector2Int position) {
+        PieceMovement objecta = null;
+        if (piecesOnBoard[position.x + 100, position.y + 100] != null) {
+            objecta = piecesOnBoard[position.x + 100, position.y + 100];
+        }
+        return objecta;
+    }
+    public static bool DoesPositionExist(Vector2Int position) {
+        return board[position.x + 100, position.y + 100];
+    }
+}

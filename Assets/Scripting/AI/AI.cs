@@ -38,46 +38,61 @@ public class AI : MonoBehaviour {
         }
     }
 
-    int Evaluation(List<PieceMovement> localPlayersTeam, List<PieceMovement> localAITeam) {
+    int Evaluation(Gamestate gamestate) {
         int evaluation = 0;
-        foreach (PieceMovement piece in localPlayersTeam) {
+        foreach (PieceMovement piece in gamestate.playersTeam) {
             //WORK ON THIS
             evaluation -= GetAmountOfMaterial(piece);
         }
-        foreach (PieceMovement piece in localAITeam) {
+        foreach (PieceMovement piece in gamestate.AITeam) {
             evaluation += GetAmountOfMaterial(piece);
         }
         return evaluation;
     }
 
     int bestSecondMoveEval;
-    (int, int, int, UnderlyingPiece) Search(int depth, float alpha, float beta, int startingDepth, List<PieceMovement> localPlayersTeam, List<PieceMovement> localAITeam) {
+    (int, Vector2Int, UnderlyingPiece) Search(int depth, float alpha, float beta, int startingDepth, Gamestate gamestate) {
         //create a new class where the gamestate can be saved - things like a 200 by 200 board state and a piece list for each team
-        throw new Exception("Read the comment above this");
         Vector2Int bestPosition = Vector2Int.zero;
         depth -= 1;
-        int bestEvaluation = ((startingDepth - depth) / 3 % 2 == 0) ? int.MinValue : int.MaxValue;
+        bool AITurn = (startingDepth - depth) / 3 % 2 == 0;
+        int bestEvaluation = AITurn ? int.MinValue : int.MaxValue;
         UnderlyingPiece bestPiece = null;
+        if (numOfTimesValidMoveCacheRefreshed != (int)(startingDepth - depth) / 6) {
+            numOfTimesValidMoveCacheRefreshed++;
+            foreach (PieceMovement pieceMovement in AITeam) {
+                validMoveCache[pieceMovement] = ValidMoves(pieceMovement);
+            }
+            foreach (PieceMovement pieceMovement in PlayersTeam) {
+                validMoveCache[pieceMovement] = ValidMoves(pieceMovement);
+            }
+        }
         if (depth > 0) {
             //one of the three AI turn moves
-            List<PieceMovement> usedMovement = (startingDepth - depth) / 3 % 2 == 0 ? localAITeam : localPlayersTeam;
+            List<PieceMovement> usedMovement = AITurn ? gamestate.AITeam : gamestate.playersTeam;
             foreach (PieceMovement movement in usedMovement) {
-                foreach (Vector2Int move in ValidMoves(movement)) {
+                if (movement.hasMoved) {
+                    continue;
+                }
+                foreach (Vector2Int move in validMoveCache[movement].OrderByDescending(move => gamestate.PieceInPosition(movement.AIAccessiblePosition + move) != null ? GetAmountOfMaterial(gamestate.PieceInPosition(movement.AIAccessiblePosition + move)) : 0)) {
                     if (movement.infinitelyScalingRange) {
                         //make a new thing in here to check each time it is scaled up
                         for (int l = 0; l <= movement.currentRange; l++) {
                             Vector2Int scalingMove = move * l;
-                            PieceMovement capturingPiece = ApplyMove(movement, scalingMove, (startingDepth - depth) / 3 % 2 == 1);
+                            if (!Gamestate.DoesPositionExist(movement.AIAccessiblePosition + scalingMove)) {
+                                break;
+                            }
+                            PieceMovement capturingPiece = ApplyMove(movement, scalingMove, !AITurn, gamestate);
                             if (capturingPiece == movement) {
                                 UndoMove(movement);
                                 break;
                             }
-                            List<PieceMovement> inputList = new List<PieceMovement>(localPlayersTeam);
-                            inputList.Remove(movement);
-                            var aSearch = Search(depth, alpha, beta, startingDepth, new List<PieceMovement>(localPlayersTeam), inputList);
+                            movement.hasMoved = true;
+                            var aSearch = AITurn ? Search(depth, alpha, beta, startingDepth, gamestate) : Search(depth, alpha, beta, startingDepth, gamestate);
                             UndoMove(movement);
-                            if ((startingDepth - depth) / 3 % 2 == 0) {
-                                if (aSearch.Item1 < bestEvaluation) {
+                            movement.hasMoved = false;
+                            if (AITurn) {
+                                if (aSearch.Item1 > bestEvaluation) {
                                     bestEvaluation = aSearch.Item1;
                                     bestPiece = movement.thisObject;
                                     bestPosition = scalingMove;
@@ -85,7 +100,7 @@ public class AI : MonoBehaviour {
                                 alpha = Math.Max(alpha, bestEvaluation);
                             }
                             else {
-                                if (aSearch.Item1 > bestEvaluation) {
+                                if (aSearch.Item1 < bestEvaluation) {
                                     bestEvaluation = aSearch.Item1;
                                     bestPiece = movement.thisObject;
                                     bestPosition = scalingMove;
@@ -98,26 +113,29 @@ public class AI : MonoBehaviour {
                         }
                     }
                     else {
-                        PieceMovement capturingPiece = ApplyMove(movement, move, (startingDepth - depth) / 3 % 2 == 1);
+                        if (!Gamestate.DoesPositionExist(movement.AIAccessiblePosition + move)) {
+                            continue;
+                        }
+                        PieceMovement capturingPiece = ApplyMove(movement, move, !AITurn, gamestate);
                         if (capturingPiece == movement) {
                             UndoMove(movement);
                             continue;
                         }
-                        List<PieceMovement> inputList = new List<PieceMovement>(localPlayersTeam);
-                        inputList.Remove(movement);
-                        var aSearch = Search(depth, alpha, beta, startingDepth, new List<PieceMovement>(localPlayersTeam), inputList);
+                        movement.hasMoved = true;
+                        var aSearch = AITurn ? Search(depth, alpha, beta, startingDepth, gamestate) : Search(depth, alpha, beta, startingDepth, gamestate);
                         UndoMove(movement);
-                        if ((startingDepth - depth) / 3 % 2 == 0) {
+                        movement.hasMoved = false;
+                        if (AITurn) {
                             if (aSearch.Item1 > bestEvaluation) {
                                 bestEvaluation = aSearch.Item1;
                                 bestPiece = movement.thisObject;
                                 bestPosition = move;
                                 if (depth == startingDepth) {
-                                    secondMove = (aSearch.Item4, new Vector2Int(aSearch.Item2, aSearch.Item3));
+                                    secondMove = (aSearch.Item3, aSearch.Item2);
                                 }
                                 if (depth == startingDepth - 1 && bestSecondMoveEval < bestEvaluation) {
                                     bestSecondMoveEval = bestEvaluation;
-                                    thirdMove = (bestPiece, new Vector2Int(aSearch.Item2, aSearch.Item3));
+                                    thirdMove = (bestPiece, aSearch.Item2);
                                 }
                             }
                             alpha = Math.Max(alpha, bestEvaluation);
@@ -131,6 +149,7 @@ public class AI : MonoBehaviour {
                             beta = Math.Min(beta, bestEvaluation);
                         }
                         if (beta <= alpha) {
+                            //Debug.Log("alpha beta pruning success");
                             break;
                         }
                     }
@@ -141,40 +160,42 @@ public class AI : MonoBehaviour {
             }
         }
         else {
-            bestEvaluation = Evaluation(localPlayersTeam, localAITeam);
+            bestEvaluation = Evaluation(gamestate);
         }
-        return (bestEvaluation, bestPosition.x, bestPosition.y, bestPiece);
+        return (bestEvaluation, bestPosition, bestPiece);
     }
 
     List<Vector2Int> ValidMoves(PieceMovement piece) {
-        List<Vector2Int> validMovePositions = new List<Vector2Int>();
+        List<Vector2Int> validMovePositions = new();
 
         for (int i = 0; i < piece.moveableTiles.Length; i++) {
             for (int j = 0; j < piece.moveableTiles.Length; j++) {
                 if (piece.moveableTiles[i][j]) {
-                    validMovePositions.Add(new Vector2Int(i - piece.currentRange - 1, j - piece.currentRange - 1));
+                    Vector2Int move = new Vector2Int(i - piece.currentRange - 1, j - piece.currentRange - 1);
+                    if (Gamestate.DoesPositionExist(move + piece.AIAccessiblePosition)){
+                        validMovePositions.Add(move);
+                    }
                 }
             }
         }
-
         return validMovePositions;
     }
 
-    PieceMovement ApplyMove(PieceMovement piece, Vector2Int relativePosition, bool playersTurn) {
+    PieceMovement ApplyMove(PieceMovement piece, Vector2Int relativePosition, bool playersTurn, Gamestate gamestate) {
         PieceMovement returningPiece = null;
         try {
-            returningPiece = piece.thisObject.PieceInDirection(relativePosition).GetComponent<UnderlyingPiece>().thisPiece;
+            returningPiece = gamestate.PieceInPosition(piece.AIAccessiblePosition + relativePosition);
             if (returningPiece != null && returningPiece.thisObject.playersTeam == playersTurn) {
                 returningPiece = piece;
             }
-            piece.thisObject.transform.position = new Vector3(piece.thisObject.transform.position.x + relativePosition.x, piece.thisObject.transform.position.y, piece.thisObject.transform.position.z + relativePosition.y);
+            piece.AIAccessiblePosition = new Vector2Int(piece.AIAccessiblePosition.x + relativePosition.x, piece.AIAccessiblePosition.y + relativePosition.y);
         }
         catch { }
         return returningPiece;
     }
 
     void UndoMove(PieceMovement piece) {
-        piece.thisObject.transform.position = piece.thisObject.previousPosition;
+        piece.AIAccessiblePosition = new Vector2Int((int)piece.thisObject.previousPosition.x, (int)piece.thisObject.previousPosition.z);
     }
 
     int GetAmountOfMaterial(PieceMovement movement) {
@@ -199,6 +220,9 @@ public class AI : MonoBehaviour {
 
     float StartTime;
     private void Update() {
+        if (Gamestate.board == null) {
+            new Gamestate(PlayersTeam, AITeam);
+        }
         if (firstFrame) {
             CheckAllPlayersAndAITeamsArePresentAndCorrect();
             firstFrame = false;
@@ -212,7 +236,18 @@ public class AI : MonoBehaviour {
         }
     }
 
+    Dictionary<PieceMovement, List<Vector2Int>> validMoveCache;
+    int numOfTimesValidMoveCacheRefreshed;
+
     public void BeginTurn() {
+        validMoveCache = new();
+        numOfTimesValidMoveCacheRefreshed = 0;
+        foreach (PieceMovement pieceMovement in AITeam) {
+            validMoveCache[pieceMovement] = ValidMoves(pieceMovement);
+        }
+        foreach (PieceMovement pieceMovement in PlayersTeam) {
+            validMoveCache[pieceMovement] = ValidMoves(pieceMovement);
+        }
         foreach (PieceMovement piece in AITeam.Where(piece => piece.thisObject.hasMoved)) {
             piece.thisObject.thisPiece.thisObject.hasMoved = false;
         }
@@ -220,31 +255,29 @@ public class AI : MonoBehaviour {
         foreach (PieceMovement piece in AITeam.Where(piece => piece == null)) {
             AITeam.Remove(piece);
         }
+        Gamestate gamestate = new(PlayersTeam, AITeam);
         bestSecondMoveEval = int.MinValue;
-        List<PieceMovement> tempList = AITeam;
         int searchDepth = 1;
         int numberOfMoves = 3;
         //for (int i = numberOfMoves; i >= 1; i--) {
-        Debug.Log(0);
-        var evaluatedPieceAndMovement = Search(searchDepth + numberOfMoves, Mathf.NegativeInfinity, Mathf.Infinity, searchDepth + numberOfMoves - 1, new List<PieceMovement>(PlayersTeam), new List<PieceMovement>(AITeam));
-        Debug.Log(1);
-        if (evaluatedPieceAndMovement.Item4.playersTeam == false) {
-            if (evaluatedPieceAndMovement.Item4.PieceInDirection(evaluatedPieceAndMovement.Item2, evaluatedPieceAndMovement.Item3) != null) {
-                if (evaluatedPieceAndMovement.Item4.PieceInDirection(evaluatedPieceAndMovement.Item2, evaluatedPieceAndMovement.Item3).GetComponent<UnderlyingPiece>().playersTeam) {
-                    PlayersTeam.Remove(evaluatedPieceAndMovement.Item4.PieceInDirection(evaluatedPieceAndMovement.Item2, evaluatedPieceAndMovement.Item3).GetComponent<UnderlyingPiece>().thisPiece);
-                    Destroy(evaluatedPieceAndMovement.Item4.PieceInDirection(evaluatedPieceAndMovement.Item2, evaluatedPieceAndMovement.Item3));
+        var evaluatedPieceAndMovement = Search(searchDepth + numberOfMoves, Mathf.NegativeInfinity, Mathf.Infinity, searchDepth + numberOfMoves - 1, gamestate);
+        Debug.Log(evaluatedPieceAndMovement);
+        if (evaluatedPieceAndMovement.Item3.playersTeam == false) {
+            if (evaluatedPieceAndMovement.Item3.PieceInDirection(evaluatedPieceAndMovement.Item2) != null) {
+                if (evaluatedPieceAndMovement.Item3.PieceInDirection(evaluatedPieceAndMovement.Item2).GetComponent<UnderlyingPiece>().playersTeam) {
+                    PlayersTeam.Remove(evaluatedPieceAndMovement.Item3.PieceInDirection(evaluatedPieceAndMovement.Item2).GetComponent<UnderlyingPiece>().thisPiece);
+                    Destroy(evaluatedPieceAndMovement.Item3.PieceInDirection(evaluatedPieceAndMovement.Item2));
                 }
                 else {
-                    throw new Exception(evaluatedPieceAndMovement.Item4.thisPiece.name + "tried to capture it's own piece");
+                    throw new Exception(evaluatedPieceAndMovement.Item3.thisPiece.name + "tried to capture it's own piece");
                 }
             }
-            evaluatedPieceAndMovement.Item4.GetComponent<UnderlyingPiece>().previousPosition = new Vector3(evaluatedPieceAndMovement.Item4.transform.position.x + evaluatedPieceAndMovement.Item2, UnderlyingPiece.pieceHeight, evaluatedPieceAndMovement.Item4.transform.position.z + evaluatedPieceAndMovement.Item3);
-            tempList.Remove(evaluatedPieceAndMovement.Item4.thisPiece);
+            evaluatedPieceAndMovement.Item3.previousPosition = new Vector3(evaluatedPieceAndMovement.Item3.transform.position.x + evaluatedPieceAndMovement.Item2.x, UnderlyingPiece.pieceHeight, evaluatedPieceAndMovement.Item3.transform.position.z + evaluatedPieceAndMovement.Item2.y);
         }
         else {
-            throw new Exception("tried to move one of the Player's pieces: " + evaluatedPieceAndMovement.Item4.thisPiece.name);
+            throw new Exception("tried to move one of the Player's pieces: " + evaluatedPieceAndMovement.Item3.thisPiece.name);
         }
-
+        Debug.Log(secondMove);
         if (secondMove.Item1.playersTeam == false) {
             if (secondMove.Item1.PieceInDirection(secondMove.Item2.x, secondMove.Item2.y) != null) {
                 if (secondMove.Item1.PieceInDirection(secondMove.Item2.x, secondMove.Item2.y).GetComponent<UnderlyingPiece>().playersTeam) {
@@ -256,7 +289,6 @@ public class AI : MonoBehaviour {
                 }
             }
             secondMove.Item1.GetComponent<UnderlyingPiece>().previousPosition = new Vector3(secondMove.Item1.transform.position.x + secondMove.Item2.x, UnderlyingPiece.pieceHeight, secondMove.Item1.transform.position.z + secondMove.Item2.y);
-            tempList.Remove(secondMove.Item1.thisPiece);
         }
         else {
             throw new Exception("tried to move one of the Player's pieces: " + secondMove.Item1.thisPiece.name);
@@ -273,22 +305,18 @@ public class AI : MonoBehaviour {
                 }
             }
             thirdMove.Item1.GetComponent<UnderlyingPiece>().previousPosition = new Vector3(thirdMove.Item1.transform.position.x + thirdMove.Item2.x, UnderlyingPiece.pieceHeight, thirdMove.Item1.transform.position.z + thirdMove.Item2.y);
-            tempList.Remove(thirdMove.Item1.thisPiece);
         }
         else {
             throw new Exception("tried to move one of the Player's pieces: " + thirdMove.Item1.thisPiece.name);
         }
+        Debug.Log(thirdMove);
 
         isEnemysTurn = false;
         Player.player.GetComponent<Player>().numberOfMoves = 3;
 
-        foreach (PieceMovement piece in AITeam.Where(piece => piece.thisObject.hasMoved)) {
-            piece.thisObject.thisPiece.thisObject.hasMoved = false;
-        }
-        foreach (PieceMovement piece in PlayersTeam.Where(piece => piece.thisObject.hasMoved)) {
-            piece.thisObject.thisPiece.thisObject.hasMoved = false;
+        foreach (PieceMovement piece in AITeam.Where(piece => piece.hasMoved)) {
+            piece.thisObject.thisPiece.hasMoved = false;
         }
         Player.player.GetComponent<Player>().numberOfMoves = 3;
-        Debug.Log("Enemy's turn over");
     }
 }

@@ -11,6 +11,8 @@ public class PieceMovement {
     [SerializeField]
     public Material[] enemyTeamMaterial;
     public string name;
+    public Vector2Int AIAccessiblePosition;
+    public bool hasMoved = false;
     readonly bool playersTeam;
     public UnderlyingPiece thisObject;
 

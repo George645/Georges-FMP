@@ -93,6 +93,7 @@ public class UnderlyingPiece : MonoBehaviour {
     public void EnsureCorrectPositions() {
         if (mode == Mode.gaming) {
             transform.position = previousPosition;
+            thisPiece.AIAccessiblePosition = new Vector2Int((int)transform.position.x, (int)transform.position.z);
         }
         else {
             transform.position = new Vector3(500, 2f, 500);

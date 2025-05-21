@@ -13,6 +13,7 @@ public class MovementCircles : MonoBehaviour {
                     OriginalObject.GetComponent<UnderlyingPiece>().selected = false;
                     OriginalObject.GetComponent<UnderlyingPiece>().DeactivateVisibility();
                     Player.player.GetComponent<Player>().numberOfMoves -= 1;
+                    Debug.Log("movement cicle");
                 }
             }
         }
