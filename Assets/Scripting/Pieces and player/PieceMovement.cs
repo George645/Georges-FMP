@@ -15,7 +15,7 @@ public class PieceMovement {
     public bool hasMoved = false;
     readonly bool playersTeam;
     public UnderlyingPiece thisObject;
-
+    public PieceMovement inheritingPiece;
     #region handled by custom editor
     [SerializeField]
     public bool[] movableTiles1DArray = new bool[9];
@@ -30,17 +30,17 @@ public class PieceMovement {
         playersTeam = isPlayersTeam;
         this.thisObject = thisObject;
 
-        PieceMovement piece = OverarchingPieceMovement.Instance.allPieceMovement[position];
+        inheritingPiece = OverarchingPieceMovement.Instance.allPieceMovement[position];
         #region Assign all variables other than the 2D array
-        thisPiece = piece.thisPiece;
-        playerTeamMaterial = piece.playerTeamMaterial;
-        enemyTeamMaterial = piece.enemyTeamMaterial;
-        name = piece.name + ", " + UnityEngine.Random.Range(0, 1000);
-        movableTiles1DArray = piece.movableTiles1DArray;
-        moveableTiles = piece.moveableTiles;
-        potentialRange = piece.potentialRange;
-        infinitelyScalingRange = piece.infinitelyScalingRange;
-        currentRange = piece.currentRange;
+        thisPiece = inheritingPiece.thisPiece;
+        playerTeamMaterial = inheritingPiece.playerTeamMaterial;
+        enemyTeamMaterial = inheritingPiece.enemyTeamMaterial;
+        name = inheritingPiece.name + ", " + UnityEngine.Random.Range(0, 1000);
+        movableTiles1DArray = inheritingPiece.movableTiles1DArray;
+        moveableTiles = inheritingPiece.moveableTiles;
+        potentialRange = inheritingPiece.potentialRange;
+        infinitelyScalingRange = inheritingPiece.infinitelyScalingRange;
+        currentRange = inheritingPiece.currentRange;
         moveableTiles = new bool[(int)Mathf.Sqrt(movableTiles1DArray.Length)][];
         #endregion
         #region Generate the 2D array
