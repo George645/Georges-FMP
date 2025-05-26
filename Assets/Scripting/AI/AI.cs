@@ -269,7 +269,7 @@ public class AI : MonoBehaviour {
                         }
                     }
                     catch {
-                        UnityEngine.Debug.Log(move + ", " + piece.AIAccessiblePosition + ", " + (piece.AIAccessiblePosition.x <= 100) + ", " + (j + piece.AIAccessiblePosition.y <= 100));
+                        UnityEngine.Debug.Log(move + ", " + piece.AIAccessiblePosition + ", " + (i + piece.AIAccessiblePosition.x <= 100) + ", " + (j + piece.AIAccessiblePosition.y <= 100));
                     }
                 }
             }
