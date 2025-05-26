@@ -4,6 +4,7 @@ using UnityEngine;
 public class MoveableDisplays : MonoBehaviour {
     public static MoveableDisplays Instance;
     public static MoveableDisplays Instance2;
+    public static MoveableDisplays Instance3;
     public GameObject objectToPool;
     public List<GameObject> ObjectPool;
     [SerializeField]
@@ -16,6 +17,9 @@ public class MoveableDisplays : MonoBehaviour {
         }
         else if (name == "Upgrade circle pool") {
             Instance2 = this;
+        }
+        else if (name == "Capturing cylinder pool") {
+            Instance3 = this;
         }
         else {
             Destroy(gameObject);

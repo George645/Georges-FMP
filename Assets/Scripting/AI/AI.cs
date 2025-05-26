@@ -10,8 +10,6 @@ public class AI : MonoBehaviour {
     public static AI ai;
     public List<PieceMovement> PlayersTeam;
     public List<PieceMovement> AITeam;
-    bool isEnemysTurn = false;
-    bool firstSplitSecondCheck = true;
     bool firstFrame = true;
     (UnderlyingPiece, Vector2Int) secondMove;
     (UnderlyingPiece, Vector2Int) thirdMove;
@@ -262,7 +260,7 @@ public class AI : MonoBehaviour {
         for (int i = 0; i < piece.moveableTiles.Length; i++) {
             for (int j = 0; j < piece.moveableTiles.Length; j++) {
                 if (piece.moveableTiles[i][j] && i + piece.AIAccessiblePosition.x <= 200 && j + piece.AIAccessiblePosition.y <= 200) {
-                    Vector2Int move = new Vector2Int(i - piece.currentRange - 1, j - piece.currentRange - 1);
+                    Vector2Int move = new(i - piece.currentRange - 1, j - piece.currentRange - 1);
                     try {
                         if (Gamestate.DoesPositionExist(move + piece.AIAccessiblePosition)) {
                             validMovePositions.Add(move);
@@ -375,8 +373,6 @@ public class AI : MonoBehaviour {
         NeedsAName(evaluatedPieceAndMovement.Item3, evaluatedPieceAndMovement.Item2);
         NeedsAName(secondMove.Item1, secondMove.Item2);
         NeedsAName(thirdMove.Item1, thirdMove.Item2);
-
-        isEnemysTurn = false;
 
         foreach (PieceMovement piece in AITeam.Where(piece => piece.hasMoved)) {
             piece.thisObject.thisPiece.hasMoved = false;

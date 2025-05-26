@@ -133,8 +133,16 @@ public class UnderlyingPiece : MonoBehaviour {
                             for (int z = -1; z <= 1; z++) {
                                 if (thisPiece.PositionIsUnlocked(x, z)) {
                                     for (int i = 1; i < thisPiece.potentialRange; i++) {
-                                        if (CubeBase.GetSquareInDirection(transform.position, x * i, z * i) != null && (PieceInDirection(x * i, z * i) == null || PieceInDirection(x * i, z * i).GetComponent<UnderlyingPiece>().playersTeam == false)) {
+                                        if (CubeBase.GetSquareInDirection(transform.position, x * i, z * i) != null && PieceInDirection(x * i, z * i) == null) {
                                             movableTiles.Add(MoveableDisplays.Instance.GetObject());
+                                            movableTiles[count].SetActive(true);
+                                            movableTiles[count].GetComponent<MovementCircles>().OriginalObject = gameObject;
+                                            movableTiles[count].GetComponent<MovementCircles>().offset = new Vector2Int(x, z) * i;
+                                            movableTiles[count].transform.position = new Vector3(transform.position.x + x * i, 1.1f, transform.position.z + z * i);
+                                            count++;
+                                        }
+                                        else if (CubeBase.GetSquareInDirection(transform.position, x * i, z * i) != null && PieceInDirection(x * i, z * i).GetComponent<UnderlyingPiece>().playersTeam == false) {
+                                            movableTiles.Add(MoveableDisplays.Instance3.GetObject());
                                             movableTiles[count].SetActive(true);
                                             movableTiles[count].GetComponent<MovementCircles>().OriginalObject = gameObject;
                                             movableTiles[count].GetComponent<MovementCircles>().offset = new Vector2Int(x, z) * i;
@@ -161,14 +169,22 @@ public class UnderlyingPiece : MonoBehaviour {
                                 Debug.Log(thisPiece.moveableTiles[i][j] + ", " + (i - thisPiece.potentialRange) + ", " + (j - thisPiece.potentialRange));
                             }
                         }*/
-                        for (int i = -thisPiece.potentialRange; i <= thisPiece.potentialRange; i++) {
-                            for (int j = -thisPiece.potentialRange; j <= thisPiece.potentialRange; j++) {
-                                if (thisPiece.PositionIsUnlocked(i, j)) {
+                        for (int x = -thisPiece.potentialRange; x <= thisPiece.potentialRange; x++) {
+                            for (int z = -thisPiece.potentialRange; z <= thisPiece.potentialRange; z++) {
+                                if (thisPiece.PositionIsUnlocked(x, z) && PieceInDirection(x, z) == null) {
                                     movableTiles.Add(MoveableDisplays.Instance.GetObject());
                                     movableTiles[count].SetActive(true);
                                     movableTiles[count].GetComponent<MovementCircles>().OriginalObject = gameObject;
-                                    movableTiles[count].GetComponent<MovementCircles>().offset = new Vector2Int(i, j);
-                                    movableTiles[count].transform.position = new Vector3(transform.position.x + i, 1.1f, transform.position.z + j);
+                                    movableTiles[count].GetComponent<MovementCircles>().offset = new Vector2Int(x, z);
+                                    movableTiles[count].transform.position = new Vector3(transform.position.x + x, 1.1f, transform.position.z + z);
+                                    count++;
+                                }
+                                else if (thisPiece.PositionIsUnlocked(x, z) && !PieceInDirection(x, z).GetComponent<UnderlyingPiece>().playersTeam) {
+                                    movableTiles.Add(MoveableDisplays.Instance3.GetObject());
+                                    movableTiles[count].SetActive(true);
+                                    movableTiles[count].GetComponent<MovementCircles>().OriginalObject = gameObject;
+                                    movableTiles[count].GetComponent<MovementCircles>().offset = new Vector2Int(x, z);
+                                    movableTiles[count].transform.position = new Vector3(transform.position.x + x, 1.1f, transform.position.z + z);
                                     count++;
                                 }
                             }

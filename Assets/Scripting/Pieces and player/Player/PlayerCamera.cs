@@ -2,6 +2,7 @@ using System;
 using Unity.Mathematics;
 using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerCamera : MonoBehaviour {
     GameObject player;
@@ -16,11 +17,19 @@ public class PlayerCamera : MonoBehaviour {
     void Update() {
         if (mode == Mode.gaming) {
             FaceCamera(player.transform.position);
-            WhileRightButtonPressed(player.transform.position);
+            if (Input.GetMouseButton(1)) {
+                WhileRightButtonPressed();
+            }
+            gameObject.transform.position = Vector3.Lerp(transform.position, player.transform.position + new Vector3(relativeCameraPosition.x * zoomInScale, Math.Clamp(relativeCameraPosition.y * zoomInScale, -.5f, 200), relativeCameraPosition.z * zoomInScale), 0.1f);
+            previousFrameMousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         }
         else {
             FaceCamera(new Vector3(500, 0.5f, 500));
-            WhileRightButtonPressed(new Vector3(500, 0.5f, 500));
+            if (Input.GetMouseButton(1)) {
+                WhileRightButtonPressed();
+            }
+            gameObject.transform.position = Vector3.Lerp(transform.position, new Vector3(500, 0.5f, 500) + new Vector3(relativeCameraPosition.x * zoomInScale, Math.Clamp(relativeCameraPosition.y * zoomInScale, -.5f, 200), relativeCameraPosition.z * zoomInScale), 0.1f);
+            previousFrameMousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         }
         Zoom();
         SelectingPieces();
@@ -56,33 +65,27 @@ public class PlayerCamera : MonoBehaviour {
     float distanceSpun = 0;
     [Range(-20, 180)]
     float tilt = 20;
-    Vector2 previousFrameMousePos = Vector2.zero;
-    Vector2 relativeMousePos = Vector2.zero;
+    Vector2 previousFrameMousePos = Vector2.one;
+    Vector2 relativeMousePos = Vector2.one;
     float newRotationXNormalised = 0;
     float newRotationZNormalised = 0;
     Vector2 rotation;
-    Vector3 relativeCameraPosition;
-    void WhileRightButtonPressed(Vector3 rotateAround) {
-        if (Input.GetMouseButton(1)) {
-            relativeMousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - previousFrameMousePos;
-            distanceSpun += (float)relativeMousePos.x / 500 * PlayerPrefs.GetInt("Sensitivity", 70);
-            if (distanceSpun < -180) distanceSpun += 360;
-            else if (distanceSpun > 180) distanceSpun -= 360;
-            tilt += -relativeMousePos.y / 500 * PlayerPrefs.GetInt("Sensitivity", 70);
-            tilt = math.clamp(tilt, -5, 90);
-            //calculate the rotation around the player
-            newRotationXNormalised = Mathf.Cos(Mathf.Deg2Rad * distanceSpun);
-            newRotationZNormalised = Mathf.Sin(Mathf.Deg2Rad * distanceSpun);
-            rotation = new Vector2(newRotationXNormalised, newRotationZNormalised);
+    Vector3 relativeCameraPosition = new Vector3(0.939801f, 0.3421142f, 0);
+    void WhileRightButtonPressed() {
+        relativeMousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - previousFrameMousePos;
+        distanceSpun += (float)relativeMousePos.x / 500 * PlayerPrefs.GetInt("Sensitivity", 70);
+        if (distanceSpun < -180) distanceSpun += 360;
+        else if (distanceSpun > 180) distanceSpun -= 360;
+        tilt += -relativeMousePos.y / 500 * PlayerPrefs.GetInt("Sensitivity", 70);
+        tilt = math.clamp(tilt, -5, 90);
+        //calculate the rotation around the player
+        newRotationXNormalised = Mathf.Cos(Mathf.Deg2Rad * distanceSpun);
+        newRotationZNormalised = Mathf.Sin(Mathf.Deg2Rad * distanceSpun);
+        rotation = new Vector2(newRotationXNormalised, newRotationZNormalised);
 
-            //calculate the height that the player should be at
-            rotation *= Mathf.Cos(Mathf.Deg2Rad * tilt);
-            relativeCameraPosition = new Vector3(rotation.x, Mathf.Sin(Mathf.Deg2Rad * tilt), rotation.y);
-        }
-
-
-        gameObject.transform.position = Vector3.Lerp(transform.position, rotateAround + new Vector3(relativeCameraPosition.x * zoomInScale, Math.Clamp(relativeCameraPosition.y * zoomInScale, -.5f, 200), relativeCameraPosition.z * zoomInScale), 0.1f);
-        previousFrameMousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        //calculate the height that the player should be at
+        rotation *= Mathf.Cos(Mathf.Deg2Rad * tilt);
+        relativeCameraPosition = new Vector3(rotation.x, Mathf.Sin(Mathf.Deg2Rad * tilt), rotation.y);
     }
     #endregion
 
