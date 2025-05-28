@@ -70,7 +70,7 @@ public class PlayerCamera : MonoBehaviour {
     float newRotationXNormalised = 0;
     float newRotationZNormalised = 0;
     Vector2 rotation;
-    Vector3 relativeCameraPosition = new Vector3(0.939801f, 0.3421142f, 0);
+    Vector3 relativeCameraPosition = new(0.939801f, 0.3421142f, 0);
     void WhileRightButtonPressed() {
         relativeMousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - previousFrameMousePos;
         distanceSpun += (float)relativeMousePos.x / 500 * PlayerPrefs.GetInt("Sensitivity", 70);

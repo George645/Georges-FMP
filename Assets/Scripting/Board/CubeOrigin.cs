@@ -31,7 +31,25 @@ public class OriginCube : CubeBase {
         }
         AlignToGridAndColour();
         if (mode == Mode.gaming) {
-            GenerateLevel();
+            if (MenuHandling.boardState == null) {
+                GenerateLevel();
+            }
+            else {
+                RegenerateLevel();
+            }
+        }
+    }
+    private void RegenerateLevel() {
+        for (int i = 0; i <= 200; i++) {
+            for (int j = 0; j <= 200; j++) {
+                if (i == 100 && j == 100) continue;
+                if (Gamestate.DoesPositionExist(new Vector2Int(i - 100, j - 100))) {
+                    Instantiate(cube, new Vector3(i - 100, 0.5f, j - 100), Quaternion.identity, transform);
+                }/*
+                if (MenuHandling.boardState.PieceInPosition(new Vector2Int(i, j)) != null){
+                    Instantiate(MenuHandling.boardState.PieceInPosition(new Vector2Int(i, j)).thisObject.gameObject);
+                }*/
+            }
         }
     }
     private void Start() {

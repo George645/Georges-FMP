@@ -11,6 +11,7 @@ public class MovementCircles : MonoBehaviour {
                     CheckIfTaking();
                     OriginalObject.GetComponent<UnderlyingPiece>().previousPosition = new Vector3(transform.position.x, transform.position.y + 0.9f, transform.position.z);
                     OriginalObject.GetComponent<UnderlyingPiece>().selected = false;
+                    OriginalObject.GetComponent<UnderlyingPiece>().hasMoved = true;
                     OriginalObject.GetComponent<UnderlyingPiece>().DeactivateVisibility();
                     Player.player.GetComponent<Player>().numberOfMoves -= 1;
                 }

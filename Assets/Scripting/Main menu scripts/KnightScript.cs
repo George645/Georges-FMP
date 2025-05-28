@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -61,7 +62,7 @@ public class KnightScript : MonoBehaviour {
     bool variable;
     void SetAllPositions() {
         transform.position = new Vector3(UnityEngine.Random.Range(-4, 3), 1.05f, UnityEngine.Random.Range(-4, 3));
-        foreach (GameObject text in TextScript.textList) {
+        foreach (GameObject text in TextScript.textList.Where(text => text != null)) {
             do {
                 variable = false;
                 text.transform.position = new Vector3(UnityEngine.Random.Range(-4, 3) + 0.15f, 1.01f, UnityEngine.Random.Range(-3, 2) + 0.05f);

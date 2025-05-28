@@ -1,12 +1,17 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuHandling : MonoBehaviour {
+    public static Gamestate boardState;
     [SerializeField]
     GameObject alternateMenuToSwapTo;
     public void ChangeScene(string scene) {
+        if (scene == "Intro scene") {
+            boardState = null;
+        }
         SceneManager.LoadScene(scene);
     }
     public void QuitApplication() {
@@ -43,6 +48,6 @@ public class MenuHandling : MonoBehaviour {
         PlayerPrefs.SetInt("Sensitivity", input);
     }
     public void Continue() {
-        Debug.LogError("NotImplementedYet");
+        SceneManager.LoadScene("Main gameplay scene");
     }
 }

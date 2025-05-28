@@ -4,6 +4,7 @@ using System.Linq;
 using System;
 using System.Data;
 using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
 
 public class AI : MonoBehaviour {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -158,7 +159,7 @@ public class AI : MonoBehaviour {
                 }
             });
         }
-        else if (depth > 0){ 
+        else if (depth > 0) {
             foreach (PieceMovement movement in usedMovement) {
                 if (movement.hasMoved) {
                     continue;
@@ -261,13 +262,8 @@ public class AI : MonoBehaviour {
             for (int j = 0; j < piece.moveableTiles.Length; j++) {
                 if (piece.moveableTiles[i][j] && i + piece.AIAccessiblePosition.x <= 200 && j + piece.AIAccessiblePosition.y <= 200) {
                     Vector2Int move = new(i - piece.currentRange - 1, j - piece.currentRange - 1);
-                    try {
-                        if (Gamestate.DoesPositionExist(move + piece.AIAccessiblePosition)) {
-                            validMovePositions.Add(move);
-                        }
-                    }
-                    catch {
-                        UnityEngine.Debug.Log(move + ", " + piece.AIAccessiblePosition + ", " + (i + piece.AIAccessiblePosition.x <= 100) + ", " + (j + piece.AIAccessiblePosition.y <= 100));
+                    if (Gamestate.DoesPositionExist(move + piece.AIAccessiblePosition)) {
+                        validMovePositions.Add(move);
                     }
                 }
             }
@@ -324,6 +320,9 @@ public class AI : MonoBehaviour {
             CheckAllPlayersAndAITeamsArePresentAndCorrect();
             firstFrame = false;
         }
+        if (AITeam.Count < 5) {
+            SceneManager.LoadScene("You win");
+        }
     }
 
     void NeedsAName(UnderlyingPiece piece, Vector2Int destination) {
@@ -358,7 +357,7 @@ public class AI : MonoBehaviour {
             validMoveCache[pieceMovement] = ValidMoves(pieceMovement);
         }
         foreach (PieceMovement piece in AITeam.Where(piece => piece.thisObject.hasMoved)) {
-            piece.thisObject.thisPiece.thisObject.hasMoved = false;
+            piece.thisObject.hasMoved = false;
         }
 
         foreach (PieceMovement piece in AITeam.Where(piece => piece == null)) {
@@ -374,8 +373,8 @@ public class AI : MonoBehaviour {
         NeedsAName(secondMove.Item1, secondMove.Item2);
         NeedsAName(thirdMove.Item1, thirdMove.Item2);
 
-        foreach (PieceMovement piece in AITeam.Where(piece => piece.hasMoved)) {
-            piece.thisObject.thisPiece.hasMoved = false;
+        foreach (PieceMovement piece in PlayersTeam.Where(piece => piece.thisObject.hasMoved)) {
+            piece.thisObject.hasMoved = false;
         }
         Player.player.GetComponent<Player>().numberOfMoves = 3;
     }

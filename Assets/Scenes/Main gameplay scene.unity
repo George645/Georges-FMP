@@ -158,6 +158,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -310,6 +312,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -447,6 +451,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -584,6 +590,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -721,6 +729,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -858,6 +868,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -980,6 +992,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -1132,6 +1146,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -1254,6 +1270,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -1482,6 +1500,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -1619,6 +1639,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -1756,6 +1778,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -1925,6 +1949,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -2077,6 +2103,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -2214,6 +2242,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -2351,6 +2381,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -2624,6 +2656,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -2761,6 +2795,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -2889,12 +2925,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allPieceMovement:
-  - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  - thisPiece: {fileID: -7386861914577863177, guid: 82325a4afa88bf544833a2d6c9ce578b, type: 3}
     playerTeamMaterial:
-    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    - {fileID: 2100000, guid: 00b4427a675a1c74781e4f33d89a21cf, type: 2}
+    - {fileID: 2100000, guid: cde850dccefb4e54db34ce2e5a7a15d6, type: 2}
+    - {fileID: 2100000, guid: c1008887f8ff5d4478b4b3c39d623e2e, type: 2}
+    - {fileID: 2100000, guid: b44cbbe9c18ec1f42b8636e5e705743c, type: 2}
+    - {fileID: 2100000, guid: ae215eca1f76dae47af6b592f386aca0, type: 2}
+    - {fileID: 2100000, guid: 95a04476b8b5c8f41beb8afcacef10f8, type: 2}
+    - {fileID: 2100000, guid: 4145d6f7c1cc24840b63590fb5ec5cbd, type: 2}
+    - {fileID: 2100000, guid: f945b6748cea8014c93ef6d9315f069c, type: 2}
+    - {fileID: 2100000, guid: a65049abe4efd8c4088c8f74fcd8e590, type: 2}
+    - {fileID: 2100000, guid: 8f6b8e78ad397854a9894d4c5afc3e83, type: 2}
+    - {fileID: 2100000, guid: bfe0983283383074e896691d57c36d08, type: 2}
     enemyTeamMaterial:
-    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    - {fileID: 2100000, guid: ea9157c8db6921644be07793bd146448, type: 2}
+    - {fileID: 2100000, guid: 584abacfa4e32e24799fe949097a68e4, type: 2}
+    - {fileID: 2100000, guid: 4a81f39c3209538458870f38a664b622, type: 2}
     name: Player
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 010101010001010101
     potentialRange: 1
@@ -2902,14 +2952,16 @@ MonoBehaviour:
     currentRange: 8
   - thisPiece: {fileID: 2534964839176971238, guid: 683adf2eaf6894649b67e9249ec7d913, type: 3}
     playerTeamMaterial:
-    - {fileID: 2974492615009998173, guid: 2bad9e2b9d552b04491523bd10b2872a, type: 3}
-    - {fileID: -3846018093981099296, guid: 2bad9e2b9d552b04491523bd10b2872a, type: 3}
-    - {fileID: 8163168557425998208, guid: 2bad9e2b9d552b04491523bd10b2872a, type: 3}
+    - {fileID: 2100000, guid: 8f6b8e78ad397854a9894d4c5afc3e83, type: 2}
+    - {fileID: 2100000, guid: bfe0983283383074e896691d57c36d08, type: 2}
+    - {fileID: 2100000, guid: 2272189e868ea88449b23b4e2f1134d6, type: 2}
     enemyTeamMaterial:
-    - {fileID: -3323769186618514494, guid: 683adf2eaf6894649b67e9249ec7d913, type: 3}
-    - {fileID: -6478536213147159724, guid: 683adf2eaf6894649b67e9249ec7d913, type: 3}
-    - {fileID: 1692818905984270835, guid: 683adf2eaf6894649b67e9249ec7d913, type: 3}
+    - {fileID: 2100000, guid: ea9157c8db6921644be07793bd146448, type: 2}
+    - {fileID: 2100000, guid: 584abacfa4e32e24799fe949097a68e4, type: 2}
+    - {fileID: 2100000, guid: 4a81f39c3209538458870f38a664b622, type: 2}
     name: Rook
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000100010001000100
     potentialRange: 1
@@ -2917,25 +2969,35 @@ MonoBehaviour:
     currentRange: 8
   - thisPiece: {fileID: -7387706064836869012, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
     playerTeamMaterial:
-    - {fileID: 2974492615009998173, guid: 2bad9e2b9d552b04491523bd10b2872a, type: 3}
-    - {fileID: 8163168557425998208, guid: 2bad9e2b9d552b04491523bd10b2872a, type: 3}
-    - {fileID: -3846018093981099296, guid: 2bad9e2b9d552b04491523bd10b2872a, type: 3}
+    - {fileID: 2100000, guid: 8f6b8e78ad397854a9894d4c5afc3e83, type: 2}
+    - {fileID: 2100000, guid: bfe0983283383074e896691d57c36d08, type: 2}
+    - {fileID: 2100000, guid: 2272189e868ea88449b23b4e2f1134d6, type: 2}
     enemyTeamMaterial:
-    - {fileID: -3846018093981099296, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
-    - {fileID: -6478536213147159724, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
-    - {fileID: -876546973899608171, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
+    - {fileID: 2100000, guid: ea9157c8db6921644be07793bd146448, type: 2}
+    - {fileID: 2100000, guid: 584abacfa4e32e24799fe949097a68e4, type: 2}
+    - {fileID: 2100000, guid: 4a81f39c3209538458870f38a664b622, type: 2}
     name: Bishop
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 010001000000010001
     potentialRange: 1
     infinitelyScalingRange: 1
     currentRange: 8
-  - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  - thisPiece: {fileID: -7387706064836869012, guid: 9344014c9469f3f4286f666fbacf7f69, type: 3}
     playerTeamMaterial:
-    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    - {fileID: 2100000, guid: 8f6b8e78ad397854a9894d4c5afc3e83, type: 2}
+    - {fileID: 2100000, guid: bfe0983283383074e896691d57c36d08, type: 2}
+    - {fileID: 2100000, guid: 2272189e868ea88449b23b4e2f1134d6, type: 2}
+    - {fileID: 2100000, guid: 2272189e868ea88449b23b4e2f1134d6, type: 2}
     enemyTeamMaterial:
-    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    - {fileID: 2100000, guid: ea9157c8db6921644be07793bd146448, type: 2}
+    - {fileID: 2100000, guid: 584abacfa4e32e24799fe949097a68e4, type: 2}
+    - {fileID: 2100000, guid: 4a81f39c3209538458870f38a664b622, type: 2}
+    - {fileID: 2100000, guid: 4a81f39c3209538458870f38a664b622, type: 2}
     name: Knight
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 00010001000100000001000000000001000000010001000100
     potentialRange: 2
@@ -2943,12 +3005,16 @@ MonoBehaviour:
     currentRange: 8
   - thisPiece: {fileID: -7387706064836869012, guid: 03536b3073c6de848add24ecdcf1b6f8, type: 3}
     playerTeamMaterial:
-    - {fileID: 2974492615009998173, guid: 03536b3073c6de848add24ecdcf1b6f8, type: 3}
-    - {fileID: 6072125505953278879, guid: 03536b3073c6de848add24ecdcf1b6f8, type: 3}
+    - {fileID: 2100000, guid: 8f6b8e78ad397854a9894d4c5afc3e83, type: 2}
+    - {fileID: 2100000, guid: bfe0983283383074e896691d57c36d08, type: 2}
+    - {fileID: 2100000, guid: 2272189e868ea88449b23b4e2f1134d6, type: 2}
     enemyTeamMaterial:
-    - {fileID: -3846018093981099296, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
-    - {fileID: -876546973899608171, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
+    - {fileID: 2100000, guid: ea9157c8db6921644be07793bd146448, type: 2}
+    - {fileID: 2100000, guid: 584abacfa4e32e24799fe949097a68e4, type: 2}
+    - {fileID: 2100000, guid: 4a81f39c3209538458870f38a664b622, type: 2}
     name: Queen
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 010101010001010101
     potentialRange: 1
@@ -2956,36 +3022,33 @@ MonoBehaviour:
     currentRange: 8
   - thisPiece: {fileID: -7387706064836869012, guid: f9808e55a83509e4d9c2f01fd486d6e6, type: 3}
     playerTeamMaterial:
-    - {fileID: 2974492615009998173, guid: f9808e55a83509e4d9c2f01fd486d6e6, type: 3}
-    - {fileID: 8163168557425998208, guid: f9808e55a83509e4d9c2f01fd486d6e6, type: 3}
-    - {fileID: 6072125505953278879, guid: f9808e55a83509e4d9c2f01fd486d6e6, type: 3}
+    - {fileID: 2100000, guid: 8f6b8e78ad397854a9894d4c5afc3e83, type: 2}
+    - {fileID: 2100000, guid: bfe0983283383074e896691d57c36d08, type: 2}
+    - {fileID: 2100000, guid: 2272189e868ea88449b23b4e2f1134d6, type: 2}
     enemyTeamMaterial:
-    - {fileID: -3846018093981099296, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
-    - {fileID: -6478536213147159724, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
-    - {fileID: -876546973899608171, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
+    - {fileID: 2100000, guid: ea9157c8db6921644be07793bd146448, type: 2}
+    - {fileID: 2100000, guid: 584abacfa4e32e24799fe949097a68e4, type: 2}
+    - {fileID: 2100000, guid: 4a81f39c3209538458870f38a664b622, type: 2}
     name: Pawn
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000100010001000100
     potentialRange: 1
     infinitelyScalingRange: 0
     currentRange: 8
-  - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  - thisPiece: {fileID: -7387706064836869012, guid: c9a25383944db084ebf249e728b04e7f, type: 3}
     playerTeamMaterial:
-    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    - {fileID: 2100000, guid: 8f6b8e78ad397854a9894d4c5afc3e83, type: 2}
+    - {fileID: 2100000, guid: bfe0983283383074e896691d57c36d08, type: 2}
+    - {fileID: 2100000, guid: 2272189e868ea88449b23b4e2f1134d6, type: 2}
     enemyTeamMaterial:
-    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
-    name: Wisp
-    thisObject: {fileID: 0}
-    movableTiles1DArray: 01010101010100000001010000000101000000010101010101
-    potentialRange: 2
-    infinitelyScalingRange: 0
-    currentRange: 8
-  - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
-    playerTeamMaterial:
-    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
-    enemyTeamMaterial:
-    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    - {fileID: 2100000, guid: ea9157c8db6921644be07793bd146448, type: 2}
+    - {fileID: 2100000, guid: 584abacfa4e32e24799fe949097a68e4, type: 2}
+    - {fileID: 2100000, guid: 4a81f39c3209538458870f38a664b622, type: 2}
     name: Elephant
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 00000100010000000000000000000100000000000100000000000000010000000000010000000000000000000100010000
     potentialRange: 3
@@ -2993,25 +3056,33 @@ MonoBehaviour:
     currentRange: 8
   - thisPiece: {fileID: -462981019419857548, guid: dbad6c4b5055c1442aa7a475931ecd92, type: 3}
     playerTeamMaterial:
-    - {fileID: 2100000, guid: b3e89405d12adbd4c872ee3a1f203328, type: 2}
-    - {fileID: 8163168557425998208, guid: dbad6c4b5055c1442aa7a475931ecd92, type: 3}
-    - {fileID: 6072125505953278879, guid: dbad6c4b5055c1442aa7a475931ecd92, type: 3}
+    - {fileID: 2100000, guid: 8f6b8e78ad397854a9894d4c5afc3e83, type: 2}
+    - {fileID: 2100000, guid: bfe0983283383074e896691d57c36d08, type: 2}
+    - {fileID: 2100000, guid: 2272189e868ea88449b23b4e2f1134d6, type: 2}
     enemyTeamMaterial:
-    - {fileID: -3846018093981099296, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
-    - {fileID: -6478536213147159724, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
-    - {fileID: -876546973899608171, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
+    - {fileID: 2100000, guid: ea9157c8db6921644be07793bd146448, type: 2}
+    - {fileID: 2100000, guid: 584abacfa4e32e24799fe949097a68e4, type: 2}
+    - {fileID: 2100000, guid: 4a81f39c3209538458870f38a664b622, type: 2}
     name: Pedestal
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 00000001000100000000000000000000000001000000000000
     potentialRange: 2
     infinitelyScalingRange: 0
     currentRange: 8
-  - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  - thisPiece: {fileID: -7387706064836869012, guid: 2b26e5aff153e574693e3edc63dd7f4a, type: 3}
     playerTeamMaterial:
-    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    - {fileID: 2100000, guid: 8f6b8e78ad397854a9894d4c5afc3e83, type: 2}
+    - {fileID: 2100000, guid: bfe0983283383074e896691d57c36d08, type: 2}
+    - {fileID: 2100000, guid: 2272189e868ea88449b23b4e2f1134d6, type: 2}
     enemyTeamMaterial:
-    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    - {fileID: 2100000, guid: ea9157c8db6921644be07793bd146448, type: 2}
+    - {fileID: 2100000, guid: 584abacfa4e32e24799fe949097a68e4, type: 2}
+    - {fileID: 2100000, guid: 4a81f39c3209538458870f38a664b622, type: 2}
     name: Snail
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 010001000000010001
     potentialRange: 1
@@ -3019,23 +3090,33 @@ MonoBehaviour:
     currentRange: 8
   - thisPiece: {fileID: 4711208715938537054, guid: a8e17c8b08a6c824ba9b3ad2ca51442e, type: 3}
     playerTeamMaterial:
-    - {fileID: 2974492615009998173, guid: a8e17c8b08a6c824ba9b3ad2ca51442e, type: 3}
-    - {fileID: 6072125505953278879, guid: a8e17c8b08a6c824ba9b3ad2ca51442e, type: 3}
+    - {fileID: 2100000, guid: 8f6b8e78ad397854a9894d4c5afc3e83, type: 2}
+    - {fileID: 2100000, guid: bfe0983283383074e896691d57c36d08, type: 2}
+    - {fileID: 2100000, guid: 2272189e868ea88449b23b4e2f1134d6, type: 2}
     enemyTeamMaterial:
-    - {fileID: -3846018093981099296, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
-    - {fileID: -876546973899608171, guid: 6512a2c4f151de14dbe15fa61137a82f, type: 3}
+    - {fileID: 2100000, guid: ea9157c8db6921644be07793bd146448, type: 2}
+    - {fileID: 2100000, guid: 584abacfa4e32e24799fe949097a68e4, type: 2}
+    - {fileID: 2100000, guid: 4a81f39c3209538458870f38a664b622, type: 2}
     name: Peanut
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 01000000010000000000000000000000000000000100000001
     potentialRange: 2
     infinitelyScalingRange: 0
     currentRange: 8
-  - thisPiece: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  - thisPiece: {fileID: -5495902117074765545, guid: 1f480dc3a69559446a37155cc73494b7, type: 3}
     playerTeamMaterial:
-    - {fileID: 2100000, guid: d3610a7277cf87d49b268927673193d7, type: 2}
+    - {fileID: 2100000, guid: 95791417dac2b474d9727d96bd495ab5, type: 2}
+    - {fileID: 2100000, guid: 8f6b8e78ad397854a9894d4c5afc3e83, type: 2}
+    - {fileID: 2100000, guid: bfe0983283383074e896691d57c36d08, type: 2}
     enemyTeamMaterial:
-    - {fileID: 2100000, guid: e892e2359be38664dbc6df00fcc76e5f, type: 2}
+    - {fileID: 2100000, guid: b6acac3f21487234ca70edf4cb7d6f18, type: 2}
+    - {fileID: 2100000, guid: ea9157c8db6921644be07793bd146448, type: 2}
+    - {fileID: 2100000, guid: 584abacfa4e32e24799fe949097a68e4, type: 2}
     name: Lightning bolt
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000100000000000100010000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000001000100000000000100
     potentialRange: 4
@@ -3095,6 +3176,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -3232,6 +3315,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -3520,6 +3605,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -3657,6 +3744,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -3779,6 +3868,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -3998,6 +4089,58 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!114 &462822365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149617731210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db47b192deef74459084dd0545b8083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selected: 0
+  firstFrameSelected: 0
+  thisPiece:
+    thisPiece: {fileID: 0}
+    playerTeamMaterial: []
+    enemyTeamMaterial: []
+    name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
+    thisObject: {fileID: 0}
+    movableTiles1DArray: 000000000000000000
+    potentialRange: 0
+    infinitelyScalingRange: 0
+    currentRange: 8
+  previousPosition: {x: 0, y: 0, z: 0}
+  hasMoved: 0
+  numberOfMoves: 3
+--- !u!136 &462822366
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149617731210}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 1, z: -0.00000008940697}
 --- !u!1 &498170661
 GameObject:
   m_ObjectHideFlags: 0
@@ -4052,6 +4195,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -4189,6 +4334,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -4311,6 +4458,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -4463,6 +4612,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -4600,6 +4751,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -4722,6 +4875,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -4874,6 +5029,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -4996,6 +5153,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -5148,6 +5307,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -5316,6 +5477,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -5468,6 +5631,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -5605,6 +5770,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -5742,6 +5909,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -5879,6 +6048,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -6016,6 +6187,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -6138,6 +6311,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -6339,6 +6514,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -6476,6 +6653,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -6598,6 +6777,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -6696,6 +6877,84 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &874074398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 874074399}
+  - component: {fileID: 874074401}
+  - component: {fileID: 874074400}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &874074399
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874074398}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1297233944}
+  - {fileID: 1425052631}
+  - {fileID: 1645797634}
+  m_Father: {fileID: 1379542419}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &874074400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874074398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6862745}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &874074401
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874074398}
+  m_CullTransparentMesh: 1
 --- !u!1 &888664865
 GameObject:
   m_ObjectHideFlags: 0
@@ -6750,6 +7009,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -6887,6 +7148,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -7024,6 +7287,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -7161,6 +7426,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -7298,6 +7565,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -7435,6 +7704,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -7572,6 +7843,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -7709,6 +7982,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -7846,6 +8121,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -7983,6 +8260,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -8120,6 +8399,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -8257,6 +8538,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -8379,6 +8662,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -8516,6 +8801,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -8668,6 +8955,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -8805,6 +9094,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -8942,6 +9233,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -9064,6 +9357,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -9216,6 +9511,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -9578,6 +9875,152 @@ Transform:
   - {fileID: 601444964}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1297233943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1297233944}
+  - component: {fileID: 1297233948}
+  - component: {fileID: 1297233947}
+  - component: {fileID: 1297233946}
+  - component: {fileID: 1297233945}
+  m_Layer: 5
+  m_Name: Return to game
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1297233944
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297233943}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1751633140}
+  m_Father: {fileID: 874074399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 200}
+  m_SizeDelta: {x: 200, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1297233945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297233943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea969df4ea693b848943eb1ac8f1ee99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1297233946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297233943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1297233947}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1297233945}
+        m_TargetAssemblyTypeName: Returntogame, Assembly-CSharp
+        m_MethodName: ReturnToGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+--- !u!114 &1297233947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297233943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1297233948
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297233943}
+  m_CullTransparentMesh: 1
 --- !u!1 &1309953985
 GameObject:
   m_ObjectHideFlags: 0
@@ -9632,6 +10075,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -9728,7 +10173,7 @@ GameObject:
   - component: {fileID: 1360438443}
   - component: {fileID: 1360438442}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Level up system
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9857,6 +10302,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -9955,6 +10402,121 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1379542414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1379542419}
+  - component: {fileID: 1379542418}
+  - component: {fileID: 1379542417}
+  - component: {fileID: 1379542416}
+  - component: {fileID: 1379542415}
+  m_Layer: 5
+  m_Name: Pause menu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1379542415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379542414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 019a077b400d47d4e8de426228566eb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1379542416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379542414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1379542417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379542414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1379542418
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379542414}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1379542419
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379542414}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 874074399}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1389198623
 GameObject:
   m_ObjectHideFlags: 0
@@ -9994,6 +10556,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -10092,144 +10656,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1398053896
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1398053900}
-  - component: {fileID: 1398053899}
-  - component: {fileID: 1398053898}
-  - component: {fileID: 1398053897}
-  - component: {fileID: 1398053901}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!136 &1398053897
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398053896}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!23 &1398053898
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398053896}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1398053899
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398053896}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1398053900
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398053896}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1398053901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398053896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3db47b192deef74459084dd0545b8083, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selected: 0
-  firstFrameSelected: 0
-  thisPiece:
-    thisPiece: {fileID: 0}
-    playerTeamMaterial: []
-    enemyTeamMaterial: []
-    name: 
-    thisObject: {fileID: 0}
-    movableTiles1DArray: 000000000000000000
-    potentialRange: 0
-    infinitelyScalingRange: 0
-    currentRange: 8
-  previousPosition: {x: 0, y: 0, z: 0}
-  hasMoved: 0
-  numberOfMoves: 3
 --- !u!1 &1400328900
 GameObject:
   m_ObjectHideFlags: 0
@@ -10284,6 +10710,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -10421,6 +10849,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -10558,6 +10988,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -10695,6 +11127,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -10778,6 +11212,152 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424256171}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1425052630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1425052631}
+  - component: {fileID: 1425052634}
+  - component: {fileID: 1425052633}
+  - component: {fileID: 1425052632}
+  - component: {fileID: 1425052635}
+  m_Layer: 5
+  m_Name: Return to menu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1425052631
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425052630}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1474681586}
+  m_Father: {fileID: 874074399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1425052632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425052630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1425052633}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1425052635}
+        m_TargetAssemblyTypeName: Returntomenu, Assembly-CSharp
+        m_MethodName: ReturnToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1425052633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425052630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1425052634
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425052630}
+  m_CullTransparentMesh: 1
+--- !u!114 &1425052635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425052630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed81531a947ccff4e8ef2710e446c23a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1431122405
 GameObject:
   m_ObjectHideFlags: 0
@@ -10832,6 +11412,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -11062,6 +11644,142 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradingObject: {fileID: 0}
+--- !u!1 &1474681585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1474681586}
+  - component: {fileID: 1474681588}
+  - component: {fileID: 1474681587}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1474681586
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474681585}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1425052631}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1474681587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474681585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Return to menu
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1474681588
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474681585}
+  m_CullTransparentMesh: 1
 --- !u!1 &1476019764
 GameObject:
   m_ObjectHideFlags: 0
@@ -11116,6 +11834,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -11289,6 +12009,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -11426,6 +12148,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -11563,6 +12287,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -11700,6 +12426,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -11837,6 +12565,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -11974,6 +12704,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -12057,6 +12789,152 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638935960}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1645797633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1645797634}
+  - component: {fileID: 1645797637}
+  - component: {fileID: 1645797636}
+  - component: {fileID: 1645797635}
+  - component: {fileID: 1645797638}
+  m_Layer: 5
+  m_Name: Quit game
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1645797634
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645797633}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1914295878}
+  m_Father: {fileID: 874074399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -200}
+  m_SizeDelta: {x: 200, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1645797635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645797633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1645797636}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1645797638}
+        m_TargetAssemblyTypeName: Quitgame, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1645797636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645797633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1645797637
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645797633}
+  m_CullTransparentMesh: 1
+--- !u!114 &1645797638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645797633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42635fb8b461491419a7189cc2fc7c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1672215148
 GameObject:
   m_ObjectHideFlags: 0
@@ -12111,6 +12989,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -12248,6 +13128,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -12385,6 +13267,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -12522,6 +13406,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -12659,6 +13545,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -12796,6 +13684,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -12933,6 +13823,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -13102,6 +13994,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -13200,6 +14094,189 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296698549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1751633139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1751633140}
+  - component: {fileID: 1751633142}
+  - component: {fileID: 1751633141}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1751633140
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751633139}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1297233944}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1751633141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751633139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Return to game
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1751633142
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751633139}
+  m_CullTransparentMesh: 1
+--- !u!1 &1764165284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1764165286}
+  - component: {fileID: 1764165285}
+  m_Layer: 0
+  m_Name: Capturing cylinder pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1764165285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764165284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 065b8df5aa36f24429deaadf244c83a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToPool: {fileID: 2206787849582160425, guid: 0bc5522b2cb4fbf488ef4654cd37442d, type: 3}
+  ObjectPool: []
+  amountToPool: 40
+--- !u!4 &1764165286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764165284}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -70.21853, y: 9.162101, z: -36.636044}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1837026353
 GameObject:
   m_ObjectHideFlags: 0
@@ -13254,6 +14331,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -13391,6 +14470,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -13513,6 +14594,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -13665,6 +14748,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -13787,6 +14872,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -13939,6 +15026,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -14061,6 +15150,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -14292,6 +15383,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -14429,6 +15522,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -14512,6 +15607,142 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909814382}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1914295877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1914295878}
+  - component: {fileID: 1914295880}
+  - component: {fileID: 1914295879}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1914295878
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914295877}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1645797634}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1914295879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914295877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Quit game
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1914295880
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914295877}
+  m_CullTransparentMesh: 1
 --- !u!1 &1917582042
 GameObject:
   m_ObjectHideFlags: 0
@@ -14566,6 +15797,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -14703,6 +15936,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -14840,6 +16075,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -14962,6 +16199,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -15114,6 +16353,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -15251,6 +16492,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -15388,6 +16631,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -15525,6 +16770,8 @@ MonoBehaviour:
     playerTeamMaterial: []
     enemyTeamMaterial: []
     name: 
+    AIAccessiblePosition: {x: 0, y: 0}
+    hasMoved: 0
     thisObject: {fileID: 0}
     movableTiles1DArray: 000000000000000000
     potentialRange: 0
@@ -15608,6 +16855,104 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138634131}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &543450653270965296
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149617731210}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7071067, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.02, y: 1.06, z: 0.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &919132149617731210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 543450653270965296}
+  - component: {fileID: 3469287837120361365}
+  - component: {fileID: 1711813855475435359}
+  - component: {fileID: 462822366}
+  - component: {fileID: 462822365}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1711813855475435359
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149617731210}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 00b4427a675a1c74781e4f33d89a21cf, type: 2}
+  - {fileID: 2100000, guid: cde850dccefb4e54db34ce2e5a7a15d6, type: 2}
+  - {fileID: 2100000, guid: c1008887f8ff5d4478b4b3c39d623e2e, type: 2}
+  - {fileID: 2100000, guid: b44cbbe9c18ec1f42b8636e5e705743c, type: 2}
+  - {fileID: 2100000, guid: ae215eca1f76dae47af6b592f386aca0, type: 2}
+  - {fileID: 2100000, guid: 95a04476b8b5c8f41beb8afcacef10f8, type: 2}
+  - {fileID: 2100000, guid: 4145d6f7c1cc24840b63590fb5ec5cbd, type: 2}
+  - {fileID: 2100000, guid: f945b6748cea8014c93ef6d9315f069c, type: 2}
+  - {fileID: 2100000, guid: a65049abe4efd8c4088c8f74fcd8e590, type: 2}
+  - {fileID: 2100000, guid: 8f6b8e78ad397854a9894d4c5afc3e83, type: 2}
+  - {fileID: 2100000, guid: bfe0983283383074e896691d57c36d08, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &3469287837120361365
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149617731210}
+  m_Mesh: {fileID: -7386861914577863177, guid: 82325a4afa88bf544833a2d6c9ce578b, type: 3}
 --- !u!1001 &8990830490832551128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15812,12 +17157,14 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 8990830490832551128}
-  - {fileID: 1398053900}
+  - {fileID: 543450653270965296}
   - {fileID: 330585546}
   - {fileID: 1360438445}
   - {fileID: 1893940431}
   - {fileID: 1296698549}
-  - {fileID: 1742535883}
   - {fileID: 308920264}
+  - {fileID: 1742535883}
   - {fileID: 201993996}
+  - {fileID: 1764165286}
   - {fileID: 682562758}
+  - {fileID: 1379542419}

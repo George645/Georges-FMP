@@ -10,7 +10,7 @@ public class UnderlyingPiece : MonoBehaviour {
     public bool firstFrameSelected = true;
     [SerializeField]
     internal PieceMovement thisPiece;
-    internal int capturedPieces = 3;
+    internal int capturedPieces = 0;
     internal int level = 1;
     internal int previousLevel = 1;
     internal bool playersTeam = false;
@@ -115,7 +115,7 @@ public class UnderlyingPiece : MonoBehaviour {
     internal void Selected() {
         previousFrame = thisPiece.moveableTiles;
         if (mode == Mode.gaming) {
-            if (selected && playersTeam) {
+            if (selected && playersTeam && !hasMoved) {
                 if (thisPiece.CanLevelUp(level, capturedPieces)) {
                     LevelUpButton.levelUpButton.SetActive(true);
                     LevelUpButton.levelUpButton.GetComponent<LevelUpButton>().levelingUpObject = gameObject;

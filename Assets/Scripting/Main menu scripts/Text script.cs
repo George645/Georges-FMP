@@ -29,7 +29,7 @@ public class TextScript : MonoBehaviour {
                 }
             }
             else {
-                knightIsAbove = true;
+                knightIsAbove = false;
             }
         }
         else {

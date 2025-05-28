@@ -33,12 +33,17 @@ public class Gamestate{
     }
     public PieceMovement PieceInPosition(Vector2Int position) {
         PieceMovement objecta = null;
-        if (piecesOnBoard[position.x + 100, position.y + 100] != null) {
-            objecta = piecesOnBoard[position.x + 100, position.y + 100];
+        if (position.x < 101 && position.y < 101 && position.x > -101 && position.y > -101) {
+            if (piecesOnBoard[position.x + 100, position.y + 100] != null) {
+                objecta = piecesOnBoard[position.x + 100, position.y + 100];
+            }
         }
         return objecta;
     }
     public static bool DoesPositionExist(Vector2Int position) {
-        return board[position.x + 100, position.y + 100];
+        try {
+            return board[position.x + 100, position.y + 100];
+        }
+        catch { return false; }
     }
 }

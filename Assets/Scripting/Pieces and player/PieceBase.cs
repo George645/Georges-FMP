@@ -11,7 +11,7 @@ public class PieceBase : UnderlyingPiece {
 
     void FacePlayer() {
         Quaternion a = new();
-        a.SetLookRotation(transform.position - Player.player.transform.position);
+        a.SetLookRotation(transform.position - Player.player.transform.position + new Vector3(0, -1, 0));
         transform.rotation = a;
     }
 
@@ -52,12 +52,12 @@ public class PieceBase : UnderlyingPiece {
         base.previousPosition = new Vector3(newX, 2, newZ);
     }
 
-    void Update() {
+    void LateUpdate() {
         if (mode == Mode.levelling) {
             base.IfNotLevellingReturn();
             selected = true;
         }
-        if (CubeBase.GetSquareInDirection(transform.position, 0, 0) == null) {
+        if (CubeBase.GetSquareInDirection(transform.position, 0, 0) == null && MenuHandling.boardState == null) {
             FindStartPosition();
         }
         Selected();
