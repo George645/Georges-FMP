@@ -30,18 +30,19 @@ public class MenuHandling : MonoBehaviour {
         }
     }
     IEnumerator MoveCamera(Vector3 position, bool setActiveTo) {
-        for (float i = 1; i <= 100; i++) {
+        /*for (float i = 1; i <= 100; i++) {
             Debug.Log(i);
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, position, i / 100);
             yield return new WaitForSeconds(0.05f);
         }
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.01f);*/
         alternateMenuToSwapTo.SetActive(setActiveTo);
+        transform.parent.gameObject.SetActive(false);
 
-        yield break;
+        yield return null;
     }
     public void Return() {
-        StartCoroutine(MoveCamera(new Vector3(0.5f, 8, -0.5f), false));
+        StartCoroutine(MoveCamera(new Vector3(0.5f, 8, -0.5f), true));
     }
     public void AdjustSensitivity() {
         int input = (int)transform.GetComponent<Slider>().value;

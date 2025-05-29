@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,14 +23,17 @@ public class Gamestate{
                 }
             }
         }
-        this.playersTeam = new List<PieceMovement>(playersTeam);
-        this.AITeam = new List<PieceMovement>(AITeam);
-        foreach (PieceMovement pieceMovement in AITeam) {
-            piecesOnBoard[pieceMovement.AIAccessiblePosition.x + 100, pieceMovement.AIAccessiblePosition.y + 100] = pieceMovement;
+        try {
+            this.playersTeam = new List<PieceMovement>(playersTeam);
+            this.AITeam = new List<PieceMovement>(AITeam);
+            foreach (PieceMovement pieceMovement in AITeam) {
+                piecesOnBoard[pieceMovement.AIAccessiblePosition.x + 100, pieceMovement.AIAccessiblePosition.y + 100] = pieceMovement;
+            }
+            foreach (PieceMovement pieceMovement in playersTeam) {
+                piecesOnBoard[pieceMovement.AIAccessiblePosition.x + 100, pieceMovement.AIAccessiblePosition.y + 100] = pieceMovement;
+            }
         }
-        foreach (PieceMovement pieceMovement in playersTeam) {
-            piecesOnBoard[pieceMovement.AIAccessiblePosition.x + 100, pieceMovement.AIAccessiblePosition.y + 100] = pieceMovement;
-        }
+        catch (ArgumentNullException) { }
     }
     public PieceMovement PieceInPosition(Vector2Int position) {
         PieceMovement objecta = null;

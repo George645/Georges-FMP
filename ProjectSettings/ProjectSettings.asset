@@ -855,11 +855,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: George-s-FMP-Game
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 80c4914d90efdc01
   metroApplicationDescription: George-s-FMP-Game
   wsaImages: {}
   metroTileShortName: 

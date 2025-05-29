@@ -1,8 +1,7 @@
 using System;
+using System.Linq;
 using Unity.Mathematics;
-using UnityEditor.Rendering;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerCamera : MonoBehaviour {
     GameObject player;
@@ -47,7 +46,7 @@ public class PlayerCamera : MonoBehaviour {
             catch (NullReferenceException) { }
             catch (MissingReferenceException) { objectaObject = null; }
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out objecta)) {
-                if (!objecta.collider.gameObject.name[0..1].ContainsAny("1", "2", "3", "4", "5", "6", "7", "8", "9", "0")) {
+                if (!objecta.collider.gameObject.name[0..1].Contains("1") || !objecta.collider.gameObject.name[0..1].Contains("2") || !objecta.collider.gameObject.name[0..1].Contains("3") || !objecta.collider.gameObject.name[0..1].Contains("4") || !objecta.collider.gameObject.name[0..1].Contains("5") || !objecta.collider.gameObject.name[0..1].Contains("6") || !objecta.collider.gameObject.name[0..1].Contains("7") || !objecta.collider.gameObject.name[0..1].Contains("8") || !objecta.collider.gameObject.name[0..1].Contains("9") || !objecta.collider.gameObject.name[0..1].Contains("0")) {
                     objectaObject = objecta.collider.gameObject;
                     try {
                         objectaObject.GetComponent<UnderlyingPiece>().selected = true;

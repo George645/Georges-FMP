@@ -364,7 +364,7 @@ public class AI : MonoBehaviour {
             AITeam.Remove(piece);
         }
         bestSecondMoveEval = int.MinValue;
-        int searchDepth = 3;
+        int searchDepth = 1;
         int numberOfMoves = 3;
         //for (int i = numberOfMoves; i >= 1; i--) {
         var evaluatedPieceAndMovement = Search(searchDepth + numberOfMoves, Mathf.NegativeInfinity, Mathf.Infinity, searchDepth + numberOfMoves - 1, gamestate);

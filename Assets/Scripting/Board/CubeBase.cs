@@ -1,15 +1,19 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CubeBase : MonoBehaviour {
     public List<Material> temporaryList = new();
     public static Material blackMaterial;
     public static Material whiteMaterial;
+    [HideInInspector]
     public bool connectsToCenter = false;
     [SerializeField]
     protected Mode mode = Mode.gaming;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Awake() {
+        connectsToCenter = false;
+    }
     void Start() {
         try {
             blackMaterial = temporaryList[0];
@@ -20,6 +24,11 @@ public class CubeBase : MonoBehaviour {
         /*if (connectsToCenter == false && mode == Mode.gaming) {
             Destroy(this.gameObject);
         }*/
+    }
+    private void Update() {
+        if (!connectsToCenter && SceneManager.GetActiveScene().name == "Main gameplay scene") {
+            Destroy(gameObject);
+        }
     }
 
     public void AlignToGridAndColour() {
@@ -46,51 +55,58 @@ public class CubeBase : MonoBehaviour {
             returningGameObject = hitInfo.collider.gameObject;
         }
         return (returningGameObject);
-
+    }
+    public static GameObject GetSquareInDirection(Vector2Int input) {
+        GameObject returningGameObject = null;
+        Ray newRay = new(new Vector3(input.x, -0.2f, input.y), new Vector3(0, 1, 0));
+        if (Physics.Raycast(newRay, out RaycastHit hitInfo, 1)) {
+            returningGameObject = hitInfo.collider.gameObject;
+        }
+        return (returningGameObject);
     }
     public void ConnectsToCenter() {
         connectsToCenter = true;
         if (transform.position.x >= 0 && Math.Abs(transform.position.x) >= Math.Abs(transform.position.z)) {
-            if (GetSquareInDirection(transform.position, 1, 0) != null) {
+            if (Gamestate.DoesPositionExist(new Vector2Int((int)transform.position.x + 1, (int)transform.position.z + 0))) {
                 GetSquareInDirection(transform.position, 1, 0).GetComponent<CubeBase>().ConnectsToCenter();
             }
-            if (GetSquareInDirection(transform.position, 0, 1) != null && GetSquareInDirection(transform.position, 0, 1).GetComponent<CubeBase>().connectsToCenter == false) {
+            if (Gamestate.DoesPositionExist(new Vector2Int((int)transform.position.x + 0, (int)transform.position.z + 1)) && GetSquareInDirection(new Vector2Int((int)transform.position.x + 0, (int)transform.position.z + 1)).GetComponent<CubeBase>().connectsToCenter == false) {
                 GetSquareInDirection(transform.position, 0, 1).GetComponent<CubeBase>().ConnectsToCenter();
             }
-            if (GetSquareInDirection(transform.position, 0, -1) != null && GetSquareInDirection(transform.position, 0, -1).GetComponent<CubeBase>().connectsToCenter == false) {
+            if (Gamestate.DoesPositionExist(new Vector2Int((int)transform.position.x + 0, (int)transform.position.z + -1)) && GetSquareInDirection(new Vector2Int((int)transform.position.x + 0, (int)transform.position.z + -1)).GetComponent<CubeBase>().connectsToCenter == false) {
                 GetSquareInDirection(transform.position, 0, -1).GetComponent<CubeBase>().ConnectsToCenter();
             }
         }
         if (transform.position.x <= 0 && Math.Abs(transform.position.x) >= Math.Abs(transform.position.z)) {
-            if (GetSquareInDirection(transform.position, -1, 0) != null) {
+            if (Gamestate.DoesPositionExist(new Vector2Int((int)transform.position.x + -1, (int)transform.position.z + 0))) {
                 GetSquareInDirection(transform.position, -1, 0).GetComponent<CubeBase>().ConnectsToCenter();
             }
-            if (GetSquareInDirection(transform.position, 0, 1) != null && GetSquareInDirection(transform.position, 0, 1).GetComponent<CubeBase>().connectsToCenter == false) {
+            if (Gamestate.DoesPositionExist(new Vector2Int((int)transform.position.x + 0, (int)transform.position.z + 1)) && GetSquareInDirection(new Vector2Int((int)transform.position.x + 0, (int)transform.position.z + 1)).GetComponent<CubeBase>().connectsToCenter == false) {
                 GetSquareInDirection(transform.position, 0, 1).GetComponent<CubeBase>().ConnectsToCenter();
             }
-            if (GetSquareInDirection(transform.position, 0, -1) != null && GetSquareInDirection(transform.position, 0, -1).GetComponent<CubeBase>().connectsToCenter == false) {
+            if (Gamestate.DoesPositionExist(new Vector2Int((int)transform.position.x + 0, (int)transform.position.z + -1)) && GetSquareInDirection(new Vector2Int((int)transform.position.x + 0, (int)transform.position.z + -1)).GetComponent<CubeBase>().connectsToCenter == false) {
                 GetSquareInDirection(transform.position, 0, -1).GetComponent<CubeBase>().ConnectsToCenter();
             }
         }
         if (transform.position.z >= 0 && Math.Abs(transform.position.z) > Math.Abs(transform.position.x)) {
-            if (GetSquareInDirection(transform.position, 0, 1) != null) {
+            if (Gamestate.DoesPositionExist(new Vector2Int((int)transform.position.x + 0, (int)transform.position.z + 1))) {
                 GetSquareInDirection(transform.position, 0, 1).GetComponent<CubeBase>().ConnectsToCenter();
             }
-            if (GetSquareInDirection(transform.position, 1, 0) != null && GetSquareInDirection(transform.position, 1, 0).GetComponent<CubeBase>().connectsToCenter == false) {
+            if (Gamestate.DoesPositionExist(new Vector2Int((int)transform.position.x + 1, (int)transform.position.z + 0)) && GetSquareInDirection(new Vector2Int((int)transform.position.x + 1, (int)transform.position.z + 0)).GetComponent<CubeBase>().connectsToCenter == false) {
                 GetSquareInDirection(transform.position, 1, 0).GetComponent<CubeBase>().ConnectsToCenter();
             }
-            if (GetSquareInDirection(transform.position, -1, 0) != null && GetSquareInDirection(transform.position, -1, 0).GetComponent<CubeBase>().connectsToCenter == false) {
+            if (Gamestate.DoesPositionExist(new Vector2Int((int)transform.position.x + -1, (int)transform.position.z + 0)) && GetSquareInDirection(new Vector2Int((int)transform.position.x + -1, (int)transform.position.z + 0)).GetComponent<CubeBase>().connectsToCenter == false) {
                 GetSquareInDirection(transform.position, -1, 0).GetComponent<CubeBase>().ConnectsToCenter();
             }
         }
         if (transform.position.z <= 0 && Math.Abs(transform.position.z) > Math.Abs(transform.position.x)) {
-            if (GetSquareInDirection(transform.position, 0, -1) != null) {
+            if (Gamestate.DoesPositionExist(new Vector2Int((int)transform.position.x + 0, (int)transform.position.z + -1))) {
                 GetSquareInDirection(transform.position, 0, -1).GetComponent<CubeBase>().ConnectsToCenter();
             }
-            if (GetSquareInDirection(transform.position, 1, 0) != null && GetSquareInDirection(transform.position, 1, 0).GetComponent<CubeBase>().connectsToCenter == false) {
+            if (Gamestate.DoesPositionExist(new Vector2Int((int)transform.position.x + 1, (int)transform.position.z + 0)) && GetSquareInDirection(new Vector2Int((int)transform.position.x + 1, (int)transform.position.z + 0)).GetComponent<CubeBase>().connectsToCenter == false) {
                 GetSquareInDirection(transform.position, 1, 0).GetComponent<CubeBase>().ConnectsToCenter();
             }
-            if (GetSquareInDirection(transform.position, -1, 0) != null && GetSquareInDirection(transform.position, -1, 0).GetComponent<CubeBase>().connectsToCenter == false) {
+            if (Gamestate.DoesPositionExist(new Vector2Int((int)transform.position.x + -1, (int)transform.position.z + 0)) && GetSquareInDirection(new Vector2Int((int)transform.position.x + -1, (int)transform.position.z + 0)).GetComponent<CubeBase>().connectsToCenter == false) {
                 GetSquareInDirection(transform.position, -1, 0).GetComponent<CubeBase>().ConnectsToCenter();
             }
         }

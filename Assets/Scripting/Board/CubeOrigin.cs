@@ -133,12 +133,11 @@ public class OriginCube : CubeBase {
                 allTheSquares.LastOrDefault().name = System.Convert.ToString(Mathf.RoundToInt(Random.Range(0, 1000000)));
             }
         }
+        new Gamestate(null, null);
         //get each square starting from this one to check itself and its neighbours to ensure that they are all directly connected back to the starting one
         ConnectsToCenter();
-        for (int i = 0; i < transform.childCount; i++) {
-            if (transform.GetChild(i).GetComponent<CubeBase>().connectsToCenter == false) {
-                Destroy(transform.GetChild(i).gameObject);
-            }
+        foreach (GameObject child in allTheSquares.Where(child => child.GetComponent<CubeBase>().connectsToCenter == false)) {
+            Destroy(child);
         }
     }
 

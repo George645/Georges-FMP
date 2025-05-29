@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class introscript : MonoBehaviour{
+public class IntroScript : MonoBehaviour{
     void Start(){
         StartCoroutine(Wait7Seconds());
     }

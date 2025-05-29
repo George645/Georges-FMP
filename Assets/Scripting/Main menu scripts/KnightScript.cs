@@ -65,11 +65,11 @@ public class KnightScript : MonoBehaviour {
         foreach (GameObject text in TextScript.textList.Where(text => text != null)) {
             do {
                 variable = false;
-                text.transform.position = new Vector3(UnityEngine.Random.Range(-4, 3) + 0.15f, 1.01f, UnityEngine.Random.Range(-3, 2) + 0.05f);
+                text.transform.position = new Vector3(UnityEngine.Random.Range(-4, 3) + 0.15f, 1.125f, UnityEngine.Random.Range(-3, 2) + 0.05f);
                 if (Mathf.Floor(text.transform.position.x) == Mathf.Floor(transform.position.x) && Mathf.Floor(text.transform.position.z) == Mathf.Floor(transform.position.z)) {
                     variable = true;
                 }
-                foreach (GameObject text1 in TextScript.textList) {
+                foreach (GameObject text1 in TextScript.textList.Where(text => text != null)) {
                     if (text1 == text) {
                         break;
                     }
