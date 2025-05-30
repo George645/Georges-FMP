@@ -37,8 +37,9 @@ public class MenuHandling : MonoBehaviour {
         }
         yield return new WaitForSeconds(0.01f);*/
         alternateMenuToSwapTo.SetActive(setActiveTo);
-        transform.parent.gameObject.SetActive(false);
-
+        if (gameObject.name != "Options") {
+            transform.parent.gameObject.SetActive(false);
+        }
         yield return null;
     }
     public void Return() {

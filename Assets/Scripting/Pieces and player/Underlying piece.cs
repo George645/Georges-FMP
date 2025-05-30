@@ -10,9 +10,10 @@ public class UnderlyingPiece : MonoBehaviour {
     public bool firstFrameSelected = true;
     [SerializeField]
     internal PieceMovement thisPiece;
+    [SerializeField]
     internal int capturedPieces = 0;
+    [SerializeField]
     internal int level = 1;
-    internal int previousLevel = 1;
     internal bool playersTeam = false;
     internal Mode mode = Mode.gaming;
     public Vector3 previousPosition;
