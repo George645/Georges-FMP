@@ -19,7 +19,7 @@ public class TextScript : MonoBehaviour {
         }
     }
 
-    void Update() {
+    void FixedUpdate() {
         Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), Vector3.down, Color.red, 10);
         if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), Vector3.down, out RaycastHit Info)) {
             if (Info.collider.gameObject.name.Contains("Knight")) {

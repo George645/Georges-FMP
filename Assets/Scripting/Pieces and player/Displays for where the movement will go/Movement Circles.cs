@@ -4,7 +4,7 @@ public class MovementCircles : MonoBehaviour {
     public GameObject OriginalObject;
     public Vector2Int offset;
 
-    void Update() {
+    void FixedUpdate() {
         if (Input.GetMouseButtonDown(0)) {
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit Info)) {
                 if (Info.collider.gameObject == gameObject) {

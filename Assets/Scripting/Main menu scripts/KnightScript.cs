@@ -13,7 +13,7 @@ public class KnightScript : MonoBehaviour {
         SetAllPositions();
     }
 
-    void Update() {
+    void FixedUpdate() {
         CheckIfSelected();
         ShowMovablePositions();
     }

@@ -12,6 +12,7 @@ public class PieceBase : UnderlyingPiece {
     void FacePlayer() {
         Quaternion a = new();
         a.SetLookRotation(transform.position - Player.player.transform.position + new Vector3(0, -1, 0));
+        a = new Quaternion(0, a.y, 0, a.w);
         transform.rotation = a;
     }
 

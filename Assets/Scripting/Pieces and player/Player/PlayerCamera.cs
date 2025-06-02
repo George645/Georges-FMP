@@ -13,7 +13,7 @@ public class PlayerCamera : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
+    void FixedUpdate() {
         if (mode == Mode.gaming) {
             FaceCamera(player.transform.position);
             if (Input.GetMouseButton(1)) {

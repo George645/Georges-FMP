@@ -10,16 +10,16 @@ public class Player : UnderlyingPiece {
         }
     }
     private void LateUpdate() {
-        transform.position = new Vector3(transform.position.x, transform.position.y / 2, transform.position.z);
+        transform.position = new Vector3(transform.position.x, 1, transform.position.z);
     }
 
     private void Start() {
-        previousPosition = new Vector3(0, 2, 0);
+        previousPosition = new Vector3(0, 1, 0);
         playersTeam = true;
         ActualStart();
     }
 
-    void Update() {
+    void FixedUpdate() {
         if (numberOfMoves == 0) { 
             AI.ai.BeginTurn();
         }

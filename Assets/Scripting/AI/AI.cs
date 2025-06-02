@@ -5,6 +5,7 @@ using System;
 using System.Data;
 using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.UI;
 
 public class AI : MonoBehaviour {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -51,6 +52,7 @@ public class AI : MonoBehaviour {
     }
 
     int bestSecondMoveEval;
+    int counter2 = 0;
     (int, Vector2Int, UnderlyingPiece) Search(int depth, float alpha, float beta, int startingDepth, Gamestate gamestate) {
         //create a new class where the gamestate can be saved - things like a 200 by 200 board state and a piece list for each team
         Vector2Int bestPosition = Vector2Int.zero;
@@ -67,8 +69,10 @@ public class AI : MonoBehaviour {
                 validMoveCache[pieceMovement] = ValidMoves(pieceMovement);
             }
         }
+        int count = 0;
         List<PieceMovement> usedMovement = AITurn ? gamestate.AITeam : gamestate.playersTeam;
         if (depth - startingDepth == 0) {
+            Debug.Log(Evaluation(gamestate));
             //one of the three AI turn moves
             Parallel.ForEach(usedMovement, (movement, parallelLoopsState) => {
                 if (movement.hasMoved) {
@@ -107,7 +111,7 @@ public class AI : MonoBehaviour {
                                 }
                                 beta = Math.Min(beta, bestEvaluation);
                             }
-                            if (beta <= alpha) {
+                            if (beta < alpha) {
                                 break;
                             }
                         }
@@ -134,6 +138,7 @@ public class AI : MonoBehaviour {
                                     secondMove = (aSearch.Item3, aSearch.Item2);
                                 }
                                 if (depth == startingDepth - 1 && bestSecondMoveEval < bestEvaluation) {
+                                    Debug.Log(bestEvaluation);
                                     bestSecondMoveEval = bestEvaluation;
                                     thirdMove = (bestPiece, aSearch.Item2);
                                 }
@@ -148,13 +153,14 @@ public class AI : MonoBehaviour {
                             }
                             beta = Math.Min(beta, bestEvaluation);
                         }
-                        if (beta <= alpha) {
-                            //Debug.Log("alpha beta pruning success");
+                        if (beta < alpha) {
+                            Debug.Log("alpha beta pruning success");
                             break;
                         }
                     }
                 }
-                if (beta <= alpha) {
+                if (beta < alpha) {
+                    Debug.Log("alpha beta pruning success");
                     parallelLoopsState.Stop();
                 }
             });
@@ -164,6 +170,7 @@ public class AI : MonoBehaviour {
                 if (movement.hasMoved) {
                     continue;
                 }
+            count = 0;
                 foreach (Vector2Int move in validMoveCache[movement].OrderByDescending(move => gamestate.PieceInPosition(movement.AIAccessiblePosition + move) != null ? GetAmountOfMaterial(gamestate.PieceInPosition(movement.AIAccessiblePosition + move)) : 0)) {
                     if (movement.infinitelyScalingRange) {
                         //make a new thing in here to check each time it is scaled up
@@ -197,7 +204,7 @@ public class AI : MonoBehaviour {
                                 }
                                 beta = Math.Min(beta, bestEvaluation);
                             }
-                            if (beta <= alpha) {
+                            if (beta < alpha) {
                                 break;
                             }
                         }
@@ -217,6 +224,7 @@ public class AI : MonoBehaviour {
                         movement.hasMoved = false;
                         if (AITurn) {
                             if (aSearch.Item1 > bestEvaluation) {
+                                //Debug.Log(aSearch.Item1 + ", " + bestEvaluation + ", " + "AIturn");
                                 bestEvaluation = aSearch.Item1;
                                 bestPiece = movement.thisObject;
                                 bestPosition = move;
@@ -232,19 +240,29 @@ public class AI : MonoBehaviour {
                         }
                         else {
                             if (aSearch.Item1 < bestEvaluation) {
+                                //Debug.Log(aSearch.Item1 + ", " + bestEvaluation + ", " + "Playerturn");
                                 bestEvaluation = aSearch.Item1;
                                 bestPiece = movement.thisObject;
                                 bestPosition = move;
                             }
                             beta = Math.Min(beta, bestEvaluation);
                         }
-                        if (beta <= alpha) {
-                            //Debug.Log("alpha beta pruning success");
+                        //Debug.Log(movement.name + ", " + movement.thisObject.name);
+                        if (beta < alpha) {
+                            Debug.Log("alpha beta pruning success" + beta + ", " + alpha);
                             break;
                         }
+                        count++;
                     }
                 }
-                if (beta <= alpha) {
+                if (count == 0) {
+                    counter2++;
+                }
+                else {
+                    Debug.Log(count + ", " + depth);
+                }
+                if (beta < alpha) {
+                    Debug.Log("alpha beta pruning success" + beta + ", " + alpha);
                     break;
                 }
             }
@@ -254,14 +272,13 @@ public class AI : MonoBehaviour {
         }
         return (bestEvaluation, bestPosition, bestPiece);
     }
-
-    List<Vector2Int> ValidMoves(PieceMovement piece) {
+    public static List<Vector2Int> ValidMoves(PieceMovement piece) {
         List<Vector2Int> validMovePositions = new();
 
         for (int i = 0; i < piece.moveableTiles.Length; i++) {
             for (int j = 0; j < piece.moveableTiles.Length; j++) {
-                if (piece.moveableTiles[i][j] && i + piece.AIAccessiblePosition.x <= 200 && j + piece.AIAccessiblePosition.y <= 200) {
-                    Vector2Int move = new(i - piece.currentRange - 1, j - piece.currentRange - 1);
+                if (i + piece.AIAccessiblePosition.x <= 100 && j + piece.AIAccessiblePosition.y <= 100 && i + piece.AIAccessiblePosition.x >= -100 && j + piece.AIAccessiblePosition.y >= -100 && piece.moveableTiles[i][j]) {
+                    Vector2Int move = new(i - piece.potentialRange, j - piece.potentialRange);
                     if (Gamestate.DoesPositionExist(move + piece.AIAccessiblePosition)) {
                         validMovePositions.Add(move);
                     }
@@ -312,10 +329,7 @@ public class AI : MonoBehaviour {
         };
     }
 
-    private void Update() {
-        if (Gamestate.board == null) {
-            new Gamestate(PlayersTeam, AITeam);
-        }
+    private void FixedUpdate() {
         if (firstFrame) {
             CheckAllPlayersAndAITeamsArePresentAndCorrect();
             firstFrame = false;
@@ -325,7 +339,8 @@ public class AI : MonoBehaviour {
         }
     }
 
-    void NeedsAName(UnderlyingPiece piece, Vector2Int destination) {
+    void ExecuteMove(UnderlyingPiece piece, Vector2Int destination) {
+        Debug.Log(piece + ", " + destination);
         if (piece.playersTeam == false) {
             if (piece.PieceInDirection(destination) != null) {
                 if (piece.PieceInDirection(destination).GetComponent<UnderlyingPiece>().playersTeam) {
@@ -364,14 +379,14 @@ public class AI : MonoBehaviour {
             AITeam.Remove(piece);
         }
         bestSecondMoveEval = int.MinValue;
-        int searchDepth = 1;
+        int searchDepth = 2;
         int numberOfMoves = 3;
         //for (int i = numberOfMoves; i >= 1; i--) {
         var evaluatedPieceAndMovement = Search(searchDepth + numberOfMoves, Mathf.NegativeInfinity, Mathf.Infinity, searchDepth + numberOfMoves - 1, gamestate);
-
-        NeedsAName(evaluatedPieceAndMovement.Item3, evaluatedPieceAndMovement.Item2);
-        NeedsAName(secondMove.Item1, secondMove.Item2);
-        NeedsAName(thirdMove.Item1, thirdMove.Item2);
+        Debug.Log(evaluatedPieceAndMovement.Item1);
+        ExecuteMove(evaluatedPieceAndMovement.Item3, evaluatedPieceAndMovement.Item2);
+        ExecuteMove(secondMove.Item1, secondMove.Item2);
+        ExecuteMove(thirdMove.Item1, thirdMove.Item2);
 
         foreach (PieceMovement piece in PlayersTeam.Where(piece => piece.thisObject.hasMoved)) {
             piece.thisObject.hasMoved = false;

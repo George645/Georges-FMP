@@ -26,8 +26,12 @@ public class CubeBase : MonoBehaviour {
         }*/
     }
     private void Update() {
-        if (!connectsToCenter && SceneManager.GetActiveScene().name == "Main gameplay scene") {
-            Destroy(gameObject);
+        try {
+            if (connectsToCenter && SceneManager.GetActiveScene().name == "Main gameplay scene" && Gamestate.DoesPositionExist(new Vector2Int())) Gamestate.board[(int)transform.position.x + 100, (int)transform.position.z + 100] = true;
+            else Destroy(gameObject);
+        }
+        catch (IndexOutOfRangeException) {
+            throw new IndexOutOfRangeException(transform.position + "was the position that was out of range when adding 100 to both x and z");
         }
     }
 

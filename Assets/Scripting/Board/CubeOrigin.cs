@@ -1,8 +1,9 @@
-using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
+using UnityEngine.UI;
+using static UnityEditor.Progress;
 
 public class OriginCube : CubeBase {
     public static GameObject originCube;
@@ -37,7 +38,12 @@ public class OriginCube : CubeBase {
             else {
                 RegenerateLevel();
             }
+            Gamestate.board = new bool[200, 200];
+            Gamestate.board[100, 100] = true;
         }
+    }
+    void Hjhgskuguyg() {
+
     }
     private void RegenerateLevel() {
         for (int i = 0; i <= 200; i++) {
