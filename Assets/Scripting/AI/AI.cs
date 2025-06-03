@@ -6,6 +6,7 @@ using System.Data;
 using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
 using UnityEngine.Rendering.UI;
+using System.Threading;
 
 public class AI : MonoBehaviour {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -70,7 +71,7 @@ public class AI : MonoBehaviour {
             }
         }
         int count = 0;
-        List<PieceMovement> usedMovement = AITurn ? gamestate.AITeam : gamestate.playersTeam;
+        IEnumerable<PieceMovement> usedMovement = AITurn ? gamestate.AITeam.Where(piece => piece.hasMoved == false) : gamestate.playersTeam;
         if (depth - startingDepth == 0) {
             Debug.Log(Evaluation(gamestate));
             //one of the three AI turn moves
@@ -300,7 +301,7 @@ public class AI : MonoBehaviour {
                 gamestate.AITeam.Remove(returningPiece);
             }
             else {
-                Debug.Log(gamestate.playersTeam.Count + ", " + returningPiece.name + ", " /*+ returningPiece.thisObject.name*/);
+                Debug.Log(gamestate.playersTeam.Count + ", " + returningPiece.name + ", " + Thread.CurrentThread.Name /*+ returningPiece.thisObject.name*/);
                 gamestate.playersTeam.Remove(returningPiece);
             }
         }
@@ -310,11 +311,19 @@ public class AI : MonoBehaviour {
     }
 
     void UndoMove(PieceMovement piece, PieceMovement capturingPiece, ref Gamestate gamestate, bool AITurn) {
-        if (AITurn) {
-            gamestate.playersTeam.Add(capturingPiece);
-        }
-        else {
-            gamestate.AITeam.Add(capturingPiece);
+        if (capturingPiece != null) {
+            if (AITurn) {
+                gamestate.playersTeam.Add(capturingPiece);
+                if (gamestate.playersTeam.Contains(capturingPiece)) {
+                    Debug.Log(gamestate.playersTeam.Count + ", " + capturingPiece.name + " was duplicated");
+                }
+            }
+            else {
+                gamestate.AITeam.Add(capturingPiece);
+                if (gamestate.AITeam.Contains(capturingPiece)) {
+                    Debug.Log(gamestate.playersTeam.Count + ", " + capturingPiece.name + " was duplicated");
+                }
+            }
         }
         piece.AIAccessiblePosition = new Vector2Int((int)piece.thisObject.previousPosition.x, (int)piece.thisObject.previousPosition.z);
     }

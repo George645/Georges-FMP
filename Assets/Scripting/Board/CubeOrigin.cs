@@ -38,7 +38,7 @@ public class OriginCube : CubeBase {
             else {
                 RegenerateLevel();
             }
-            Gamestate.board = new bool[200, 200];
+            Gamestate.board = new bool[201, 201];
             Gamestate.board[100, 100] = true;
         }
     }
