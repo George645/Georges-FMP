@@ -86,14 +86,15 @@ public class AI : MonoBehaviour {
                             if (!Gamestate.DoesPositionExist(movement.AIAccessiblePosition + scalingMove)) {
                                 break;
                             }
-                            PieceMovement capturingPiece = ApplyMove(movement, scalingMove, !AITurn, gamestate);
+                            PieceMovement capturingPiece = ApplyCapture(movement, scalingMove, !AITurn, ref gamestate);
+                            movement.AIAccessiblePosition = ApplyMovement(movement, move);
                             if (capturingPiece == movement) {
-                                UndoMove(movement);
+                                UndoMove(movement, capturingPiece, ref gamestate, AITurn);
                                 break;
                             }
                             movement.hasMoved = true;
                             var aSearch = AITurn ? Search(depth, alpha, beta, startingDepth, gamestate) : Search(depth, alpha, beta, startingDepth, gamestate);
-                            UndoMove(movement);
+                            UndoMove(movement, capturingPiece, ref gamestate, AITurn);
                             movement.hasMoved = false;
                             if (AITurn) {
                                 if (aSearch.Item1 > bestEvaluation) {
@@ -120,14 +121,15 @@ public class AI : MonoBehaviour {
                         if (!Gamestate.DoesPositionExist(movement.AIAccessiblePosition + move)) {
                             continue;
                         }
-                        PieceMovement capturingPiece = ApplyMove(movement, move, !AITurn, gamestate);
+                        PieceMovement capturingPiece = ApplyCapture(movement, move, !AITurn, ref gamestate);
+                        movement.AIAccessiblePosition = ApplyMovement(movement, move);
                         if (capturingPiece == movement) {
-                            UndoMove(movement);
+                            UndoMove(movement, capturingPiece, ref gamestate, AITurn);
                             continue;
                         }
                         movement.hasMoved = true;
                         var aSearch = AITurn ? Search(depth, alpha, beta, startingDepth, gamestate) : Search(depth, alpha, beta, startingDepth, gamestate);
-                        UndoMove(movement);
+                        UndoMove(movement, capturingPiece, ref gamestate, AITurn);
                         movement.hasMoved = false;
                         if (AITurn) {
                             if (aSearch.Item1 > bestEvaluation) {
@@ -170,7 +172,7 @@ public class AI : MonoBehaviour {
                 if (movement.hasMoved) {
                     continue;
                 }
-            count = 0;
+                count = 0;
                 foreach (Vector2Int move in validMoveCache[movement].OrderByDescending(move => gamestate.PieceInPosition(movement.AIAccessiblePosition + move) != null ? GetAmountOfMaterial(gamestate.PieceInPosition(movement.AIAccessiblePosition + move)) : 0)) {
                     if (movement.infinitelyScalingRange) {
                         //make a new thing in here to check each time it is scaled up
@@ -179,14 +181,15 @@ public class AI : MonoBehaviour {
                             if (!Gamestate.DoesPositionExist(movement.AIAccessiblePosition + scalingMove)) {
                                 break;
                             }
-                            PieceMovement capturingPiece = ApplyMove(movement, scalingMove, !AITurn, gamestate);
+                            PieceMovement capturingPiece = ApplyCapture(movement, scalingMove, !AITurn, ref gamestate);
+                            movement.AIAccessiblePosition = ApplyMovement(movement, move);
                             if (capturingPiece == movement) {
-                                UndoMove(movement);
+                                UndoMove(movement, capturingPiece, ref gamestate, AITurn);
                                 break;
                             }
                             movement.hasMoved = true;
                             var aSearch = AITurn ? Search(depth, alpha, beta, startingDepth, gamestate) : Search(depth, alpha, beta, startingDepth, gamestate);
-                            UndoMove(movement);
+                            UndoMove(movement, capturingPiece, ref gamestate, AITurn);
                             movement.hasMoved = false;
                             if (AITurn) {
                                 if (aSearch.Item1 > bestEvaluation) {
@@ -213,14 +216,15 @@ public class AI : MonoBehaviour {
                         if (!Gamestate.DoesPositionExist(movement.AIAccessiblePosition + move)) {
                             continue;
                         }
-                        PieceMovement capturingPiece = ApplyMove(movement, move, !AITurn, gamestate);
+                        PieceMovement capturingPiece = ApplyCapture(movement, move, !AITurn, ref gamestate);
+                        movement.AIAccessiblePosition = ApplyMovement(movement, move);
                         if (capturingPiece == movement) {
-                            UndoMove(movement);
+                            UndoMove(movement, capturingPiece, ref gamestate, AITurn);
                             continue;
                         }
                         movement.hasMoved = true;
                         var aSearch = AITurn ? Search(depth, alpha, beta, startingDepth, gamestate) : Search(depth, alpha, beta, startingDepth, gamestate);
-                        UndoMove(movement);
+                        UndoMove(movement, capturingPiece, ref gamestate, AITurn);
                         movement.hasMoved = false;
                         if (AITurn) {
                             if (aSearch.Item1 > bestEvaluation) {
@@ -255,12 +259,6 @@ public class AI : MonoBehaviour {
                         count++;
                     }
                 }
-                if (count == 0) {
-                    counter2++;
-                }
-                else {
-                    Debug.Log(count + ", " + depth);
-                }
                 if (beta < alpha) {
                     Debug.Log("alpha beta pruning success" + beta + ", " + alpha);
                     break;
@@ -288,20 +286,36 @@ public class AI : MonoBehaviour {
         return validMovePositions;
     }
 
-    PieceMovement ApplyMove(PieceMovement piece, Vector2Int relativePosition, bool playersTurn, Gamestate gamestate) {
+    Vector2Int ApplyMovement(PieceMovement piece, Vector2Int relativePosition) {
+        return piece.AIAccessiblePosition + relativePosition;
+    }
+
+    PieceMovement ApplyCapture(PieceMovement piece, Vector2Int relativePosition, bool playersTurn, ref Gamestate gamestate) {
         PieceMovement returningPiece = null;
-        try {
-            returningPiece = gamestate.PieceInPosition(piece.AIAccessiblePosition + relativePosition);
-            if (returningPiece != null && returningPiece.thisObject.playersTeam == playersTurn) {
-                returningPiece = piece;
+        //try {
+        returningPiece = gamestate.PieceInPosition(piece.AIAccessiblePosition + relativePosition);
+        if (returningPiece != null && returningPiece.thisObject.playersTeam == playersTurn) {
+            returningPiece = piece;
+            if (playersTurn) {
+                gamestate.AITeam.Remove(returningPiece);
             }
-            piece.AIAccessiblePosition = new Vector2Int(piece.AIAccessiblePosition.x + relativePosition.x, piece.AIAccessiblePosition.y + relativePosition.y);
+            else {
+                Debug.Log(gamestate.playersTeam.Count + ", " + returningPiece.name + ", " /*+ returningPiece.thisObject.name*/);
+                gamestate.playersTeam.Remove(returningPiece);
+            }
         }
-        catch { }
+        //}
+        //catch { }
         return returningPiece;
     }
 
-    void UndoMove(PieceMovement piece) {
+    void UndoMove(PieceMovement piece, PieceMovement capturingPiece, ref Gamestate gamestate, bool AITurn) {
+        if (AITurn) {
+            gamestate.playersTeam.Add(capturingPiece);
+        }
+        else {
+            gamestate.AITeam.Add(capturingPiece);
+        }
         piece.AIAccessiblePosition = new Vector2Int((int)piece.thisObject.previousPosition.x, (int)piece.thisObject.previousPosition.z);
     }
 
