@@ -29,11 +29,8 @@ namespace TC{
                 IfNotLevellingReturn();
                 selected = true;
             }
-            Debug.Log(transform.position);
             Selected();
-            Debug.Log(transform.position);
             EnsureCorrectPositions("Hi, little easter egg here for you");
-            Debug.Log(transform.position);
         }
     }
 }
