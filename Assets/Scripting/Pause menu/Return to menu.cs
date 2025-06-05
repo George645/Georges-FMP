@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Returntomenu : MonoBehaviour{
-    public void ReturnToMenu() {
-        MenuHandling.boardState = new Gamestate(AI.ai.PlayersTeam, AI.ai.AITeam);
-        SceneManager.LoadScene("main menu");
+namespace TC_PauseMenu {
+    public class Returntomenu : MonoBehaviour {
+        public void ReturnToMenu() {
+            TC_Menu.MenuHandling.boardState = new TC.Gamestate(TC.AI.ai.PlayersTeam, TC.AI.ai.AITeam);
+            SceneManager.LoadScene("main menu");
+        }
     }
 }

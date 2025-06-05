@@ -2,7 +2,7 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
-[CustomPropertyDrawer(typeof(PieceMovement))]
+[CustomPropertyDrawer(typeof(TC.PieceMovement))]
 public class PieceMovementAttributes : PropertyDrawer {
     int previousBoardSize;
 

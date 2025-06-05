@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public class Returntogame : MonoBehaviour{
-    public void ReturnToGame() {
-        transform.parent.gameObject.SetActive(false);
+namespace TC_PauseMenu{
+    public class Returntogame : MonoBehaviour {
+        public void ReturnToGame() {
+            transform.parent.gameObject.SetActive(false);
+        }
     }
 }

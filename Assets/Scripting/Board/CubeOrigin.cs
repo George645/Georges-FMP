@@ -5,217 +5,219 @@ using UnityEngine;
 using UnityEngine.UI;
 using static UnityEditor.Progress;
 
-public class OriginCube : CubeBase {
-    public static GameObject originCube;
-    public static GameObject cube;
-    public GameObject cubetemp;
-    public int sizeNumber = 1;
-    int currentSizeOfBoard = 1;
-    private bool running;
-    int maxValue = 10;
-    [SerializeField]
-    AnimationCurve animationCurve;
-    GameObject newCube;
-    bool firstFrame = true;
-    bool coroutineRunning = false;
+namespace TC{
+    public class OriginCube : CubeBase {
+        public static GameObject originCube;
+        public static GameObject cube;
+        public GameObject cubetemp;
+        public int sizeNumber = 1;
+        int currentSizeOfBoard = 1;
+        private bool running;
+        int maxValue = 10;
+        [SerializeField]
+        AnimationCurve animationCurve;
+        GameObject newCube;
+        bool firstFrame = true;
+        bool coroutineRunning = false;
 
-    void Awake() {
-        if (originCube == null) {
-            originCube = gameObject;
-        }
-        if (blackMaterial == null) {
-            blackMaterial = temporaryList[0];
-            whiteMaterial = temporaryList[1];
-        }
-        if (cube == null) {
-            cube = cubetemp;
-        }
-        AlignToGridAndColour();
-        if (mode == Mode.gaming) {
-            if (MenuHandling.boardState == null) {
-                GenerateLevel();
+        void Awake() {
+            if (originCube == null) {
+                originCube = gameObject;
             }
-            else {
-                RegenerateLevel();
+            if (blackMaterial == null) {
+                blackMaterial = temporaryList[0];
+                whiteMaterial = temporaryList[1];
             }
-            Gamestate.board = new bool[201, 201];
-            Gamestate.board[100, 100] = true;
+            if (cube == null) {
+                cube = cubetemp;
+            }
+            AlignToGridAndColour();
+            if (mode == Mode.gaming) {
+                if (TC_Menu.MenuHandling.boardState == null) {
+                    GenerateLevel();
+                }
+                else {
+                    RegenerateLevel();
+                }
+                Gamestate.board = new bool[201, 201];
+                Gamestate.board[100, 100] = true;
+            }
         }
-    }
-    void Hjhgskuguyg() {
+        void Hjhgskuguyg() {
 
-    }
-    private void RegenerateLevel() {
-        for (int i = 0; i <= 200; i++) {
-            for (int j = 0; j <= 200; j++) {
-                if (i == 100 && j == 100) continue;
-                if (Gamestate.DoesPositionExist(new Vector2Int(i - 100, j - 100))) {
-                    Instantiate(cube, new Vector3(i - 100, 0.5f, j - 100), Quaternion.identity, transform);
-                }/*
+        }
+        private void RegenerateLevel() {
+            for (int i = 0; i <= 200; i++) {
+                for (int j = 0; j <= 200; j++) {
+                    if (i == 100 && j == 100) continue;
+                    if (Gamestate.DoesPositionExist(new Vector2Int(i - 100, j - 100))) {
+                        Instantiate(cube, new Vector3(i - 100, 0.5f, j - 100), Quaternion.identity, transform);
+                    }/*
                 if (MenuHandling.boardState.PieceInPosition(new Vector2Int(i, j)) != null){
                     Instantiate(MenuHandling.boardState.PieceInPosition(new Vector2Int(i, j)).thisObject.gameObject);
                 }*/
-            }
-        }
-    }
-    private void Start() {
-        if (mode == Mode.levelling) {
-            StartCoroutine(SpawnSurrounding());
-            currentSizeOfBoard = sizeNumber;
-        }
-    }
-    void Update() {
-        if (mode == Mode.levelling && currentSizeOfBoard != sizeNumber && !coroutineRunning) {
-            currentSizeOfBoard = sizeNumber;
-            StartCoroutine(SpawnSurrounding());
-        }
-        if (firstFrame) {
-            BoundaryFill();
-            firstFrame = false;
-        }
-    }
-
-    void BoundaryFill() {
-        for (int x = -100; x < 100; x++) {
-            for (int z = -100; z < 100; z++) {
-                Vector3 suggestedPosition = new(x, 0.5f, z);
-                if (GetSquareInDirection(x, z) == null && CubeInDirection(suggestedPosition, new Vector3(10, 0.5f, 0)) && CubeInDirection(suggestedPosition, new Vector3(-10, 0.5f, 0)) && CubeInDirection(suggestedPosition, new Vector3(0, 0.5f, 10)) && CubeInDirection(suggestedPosition, new Vector3(0, 0.5f, -10))) {
-                    newCube = Instantiate(cube, new Vector3(x, 0, z), Quaternion.identity, transform);
-                    newCube.name = System.Convert.ToString(Random.Range(0, 1000000));
-                    newCube.GetComponent<CubeBase>().connectsToCenter = true;
                 }
             }
         }
-    }
-
-    void GenerateLevel() {
-        List<GameObject> allTheSquares = new();
-
-        float offset = 0.5f;
-
-        for (int x = 1; x <= 100; x++) {
-            for (int y = 0; y <= 100; y++) {
-                //Animation curve 200 * x = combined distance to the square, subtract 0.4 from the animation curve, add plus or minus 0.5
-                if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - offset + Random.Range(-0.5f, 0.5f) < 0) {
-                    continue;
-                }
-
-                //add each square to a list when they are created
-                allTheSquares.Add(Instantiate(cube, new Vector3(x, 0.5f, y), Quaternion.identity, transform));
-                allTheSquares.LastOrDefault().name = System.Convert.ToString(Mathf.RoundToInt(Random.Range(0, 1000000)));
+        private void Start() {
+            if (mode == Mode.levelling) {
+                StartCoroutine(SpawnSurrounding());
+                currentSizeOfBoard = sizeNumber;
             }
         }
-        //repeat 4 times, one for each quadrant away from this
-        for (int x = -1; x >= -100; x--) {
-            for (int y = 0; y >= -100; y--) {
-                if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - offset + Random.Range(-0.5f, 0.5f) < 0) {
-                    continue;
-                }
-
-                //add each square to a list when they are created
-                allTheSquares.Add(Instantiate(cube, new Vector3(x, 0.5f, y), Quaternion.identity, transform));
-                allTheSquares.LastOrDefault().name = System.Convert.ToString(Mathf.RoundToInt(Random.Range(0, 1000000)));
+        void Update() {
+            if (mode == Mode.levelling && currentSizeOfBoard != sizeNumber && !coroutineRunning) {
+                currentSizeOfBoard = sizeNumber;
+                StartCoroutine(SpawnSurrounding());
+            }
+            if (firstFrame) {
+                BoundaryFill();
+                firstFrame = false;
             }
         }
-        for (int y = 1; y <= 100; y++) {
-            for (int x = 0; x >= -100; x--) {
-                if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - offset + Random.Range(-0.5f, 0.5f) < 0) {
-                    continue;
-                }
 
-                //add each square to a list when they are created
-                allTheSquares.Add(Instantiate(cube, new Vector3(x, 0.5f, y), Quaternion.identity, transform));
-                allTheSquares.LastOrDefault().name = System.Convert.ToString(Mathf.RoundToInt(Random.Range(0, 1000000)));
-            }
-        }
-        for (int y = -1; y >= -100; y--) {
-            for (int x = 0; x <= 100; x++) {
-                if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - offset + Random.Range(-0.5f, 0.5f) < 0) {
-                    continue;
-                }
-
-                //add each square to a list when they are created
-                allTheSquares.Add(Instantiate(cube, new Vector3(x, 0.5f, y), Quaternion.identity, transform));
-                allTheSquares.LastOrDefault().name = System.Convert.ToString(Mathf.RoundToInt(Random.Range(0, 1000000)));
-            }
-        }
-        new Gamestate(null, null);
-        //get each square starting from this one to check itself and its neighbours to ensure that they are all directly connected back to the starting one
-        ConnectsToCenter();
-        foreach (GameObject child in allTheSquares.Where(child => child.GetComponent<CubeBase>().connectsToCenter == false)) {
-            Destroy(child);
-        }
-    }
-
-    public void SetSizeOfBoard(Slider slider) {
-        sizeNumber = (int)slider.value;
-        maxValue = (int)slider.maxValue;
-        if (false == running) {
-            StartCoroutine(SpawnSurrounding());
-        }
-    }
-
-    bool CubeInDirection(Vector3 origin, Vector3 dir) {
-        if (Physics.Raycast(origin, dir, 100)) {
-            return true;
-        }
-
-        return false;
-    }
-
-    IEnumerator SpawnSurrounding() {
-        coroutineRunning = true;
-        if (mode == Mode.levelling) {
-            StartCoroutine(RemoveSurrounding());
-            running = true;
-            for (int i = 0; i <= sizeNumber; i++) {
-                for (int j = -i; j <= i - 1; j++) {
-                    for (int k = -i + 1; k <= i; k++) {
-                        if ((j == 0 && k == 0) || GetSquareInDirection(transform.position, j, k) != null) {
-                            continue;
-                        }
-                        Instantiate(cube, new Vector3(transform.position.x + j, transform.position.y, transform.position.z + k), Quaternion.identity, transform);
-                        //yield return new WaitForSeconds(0.02f);
-                    }
-                }
-                for (int k = i; k >= -i; k--) {
-                    for (int j = i; j >= -i; j--) {
-                        if ((j == 0 && k == 0) || GetSquareInDirection(transform.position, j, k) != null) {
-                            continue;
-                        }
-                        Instantiate(cube, new Vector3(transform.position.x + j, transform.position.y, transform.position.z + k), Quaternion.identity, transform);
-                        //yield return new WaitForSeconds(0.02f);
+        void BoundaryFill() {
+            for (int x = -100; x < 100; x++) {
+                for (int z = -100; z < 100; z++) {
+                    Vector3 suggestedPosition = new(x, 0.5f, z);
+                    if (GetSquareInDirection(x, z) == null && CubeInDirection(suggestedPosition, new Vector3(10, 0.5f, 0)) && CubeInDirection(suggestedPosition, new Vector3(-10, 0.5f, 0)) && CubeInDirection(suggestedPosition, new Vector3(0, 0.5f, 10)) && CubeInDirection(suggestedPosition, new Vector3(0, 0.5f, -10))) {
+                        newCube = Instantiate(cube, new Vector3(x, 0, z), Quaternion.identity, transform);
+                        newCube.name = System.Convert.ToString(Random.Range(0, 1000000));
+                        newCube.GetComponent<CubeBase>().connectsToCenter = true;
                     }
                 }
             }
-            running = false;
-            coroutineRunning = false;
-            yield return null;
         }
-        else {
-            yield return null;
-        }
-        ConnectsToCenter();
-    }
-    IEnumerator RemoveSurrounding() {
-        for (int i = maxValue * 2; i >= 0; i--) {
-            for (int x = maxValue; x >= 0; x--) {
-                int z = i - x;
-                if (z > maxValue) {
-                    break;
-                }
-                if (Mathf.Abs(z) <= sizeNumber && Mathf.Abs(x) <= sizeNumber || GetSquareInDirection(transform.position, z, x) == null && GetSquareInDirection(transform.position, z, -x) == null && GetSquareInDirection(transform.position, -z, x) == null && GetSquareInDirection(transform.position, -z, -x) == null) {
-                    continue;
-                }
 
-                Destroy(GetSquareInDirection(transform.position, z, x));
-                Destroy(GetSquareInDirection(transform.position, z, -x));
-                Destroy(GetSquareInDirection(transform.position, -z, x));
-                Destroy(GetSquareInDirection(transform.position, -z, -x));
+        void GenerateLevel() {
+            List<GameObject> allTheSquares = new();
+
+            float offset = 0.5f;
+
+            for (int x = 1; x <= 100; x++) {
+                for (int y = 0; y <= 100; y++) {
+                    //Animation curve 200 * x = combined distance to the square, subtract 0.4 from the animation curve, add plus or minus 0.5
+                    if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - offset + Random.Range(-0.5f, 0.5f) < 0) {
+                        continue;
+                    }
+
+                    //add each square to a list when they are created
+                    allTheSquares.Add(Instantiate(cube, new Vector3(x, 0.5f, y), Quaternion.identity, transform));
+                    allTheSquares.LastOrDefault().name = System.Convert.ToString(Mathf.RoundToInt(Random.Range(0, 1000000)));
+                }
             }
-            yield return new WaitForSeconds(0.1f);
+            //repeat 4 times, one for each quadrant away from this
+            for (int x = -1; x >= -100; x--) {
+                for (int y = 0; y >= -100; y--) {
+                    if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - offset + Random.Range(-0.5f, 0.5f) < 0) {
+                        continue;
+                    }
+
+                    //add each square to a list when they are created
+                    allTheSquares.Add(Instantiate(cube, new Vector3(x, 0.5f, y), Quaternion.identity, transform));
+                    allTheSquares.LastOrDefault().name = System.Convert.ToString(Mathf.RoundToInt(Random.Range(0, 1000000)));
+                }
+            }
+            for (int y = 1; y <= 100; y++) {
+                for (int x = 0; x >= -100; x--) {
+                    if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - offset + Random.Range(-0.5f, 0.5f) < 0) {
+                        continue;
+                    }
+
+                    //add each square to a list when they are created
+                    allTheSquares.Add(Instantiate(cube, new Vector3(x, 0.5f, y), Quaternion.identity, transform));
+                    allTheSquares.LastOrDefault().name = System.Convert.ToString(Mathf.RoundToInt(Random.Range(0, 1000000)));
+                }
+            }
+            for (int y = -1; y >= -100; y--) {
+                for (int x = 0; x <= 100; x++) {
+                    if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - offset + Random.Range(-0.5f, 0.5f) < 0) {
+                        continue;
+                    }
+
+                    //add each square to a list when they are created
+                    allTheSquares.Add(Instantiate(cube, new Vector3(x, 0.5f, y), Quaternion.identity, transform));
+                    allTheSquares.LastOrDefault().name = System.Convert.ToString(Mathf.RoundToInt(Random.Range(0, 1000000)));
+                }
+            }
+            new Gamestate(null, null);
+            //get each square starting from this one to check itself and its neighbours to ensure that they are all directly connected back to the starting one
+            ConnectsToCenter();
+            foreach (GameObject child in allTheSquares.Where(child => child.GetComponent<CubeBase>().connectsToCenter == false)) {
+                Destroy(child);
+            }
         }
-        yield return null;
+
+        public void SetSizeOfBoard(Slider slider) {
+            sizeNumber = (int)slider.value;
+            maxValue = (int)slider.maxValue;
+            if (false == running) {
+                StartCoroutine(SpawnSurrounding());
+            }
+        }
+
+        bool CubeInDirection(Vector3 origin, Vector3 dir) {
+            if (Physics.Raycast(origin, dir, 100)) {
+                return true;
+            }
+
+            return false;
+        }
+
+        IEnumerator SpawnSurrounding() {
+            coroutineRunning = true;
+            if (mode == Mode.levelling) {
+                StartCoroutine(RemoveSurrounding());
+                running = true;
+                for (int i = 0; i <= sizeNumber; i++) {
+                    for (int j = -i; j <= i - 1; j++) {
+                        for (int k = -i + 1; k <= i; k++) {
+                            if ((j == 0 && k == 0) || GetSquareInDirection(transform.position, j, k) != null) {
+                                continue;
+                            }
+                            Instantiate(cube, new Vector3(transform.position.x + j, transform.position.y, transform.position.z + k), Quaternion.identity, transform);
+                            //yield return new WaitForSeconds(0.02f);
+                        }
+                    }
+                    for (int k = i; k >= -i; k--) {
+                        for (int j = i; j >= -i; j--) {
+                            if ((j == 0 && k == 0) || GetSquareInDirection(transform.position, j, k) != null) {
+                                continue;
+                            }
+                            Instantiate(cube, new Vector3(transform.position.x + j, transform.position.y, transform.position.z + k), Quaternion.identity, transform);
+                            //yield return new WaitForSeconds(0.02f);
+                        }
+                    }
+                }
+                running = false;
+                coroutineRunning = false;
+                yield return null;
+            }
+            else {
+                yield return null;
+            }
+            ConnectsToCenter();
+        }
+        IEnumerator RemoveSurrounding() {
+            for (int i = maxValue * 2; i >= 0; i--) {
+                for (int x = maxValue; x >= 0; x--) {
+                    int z = i - x;
+                    if (z > maxValue) {
+                        break;
+                    }
+                    if (Mathf.Abs(z) <= sizeNumber && Mathf.Abs(x) <= sizeNumber || GetSquareInDirection(transform.position, z, x) == null && GetSquareInDirection(transform.position, z, -x) == null && GetSquareInDirection(transform.position, -z, x) == null && GetSquareInDirection(transform.position, -z, -x) == null) {
+                        continue;
+                    }
+
+                    Destroy(GetSquareInDirection(transform.position, z, x));
+                    Destroy(GetSquareInDirection(transform.position, z, -x));
+                    Destroy(GetSquareInDirection(transform.position, -z, x));
+                    Destroy(GetSquareInDirection(transform.position, -z, -x));
+                }
+                yield return new WaitForSeconds(0.1f);
+            }
+            yield return null;
+        }
     }
 }
 
