@@ -84,7 +84,7 @@ namespace TC {
                     foreach (Vector2Int move in validMoveCache[movement.name].OrderByDescending(move => usedGamestate.PieceInPosition(movement.AIAccessiblePosition + move) != null ? GetAmountOfMaterial(usedGamestate.PieceInPosition(movement.AIAccessiblePosition + move)) : 0)) {
                         if (movement.infinitelyScalingRange) {
                             //make a new thing in here to check each time it is scaled up
-                            for (int l = 0; l <= movement.currentRange; l++) {
+                            for (int l = 1; l <= movement.currentRange; l++) {
                                 Vector2Int scalingMove = move * l;
                                 if (!Gamestate.DoesPositionExist(movement.AIAccessiblePosition + scalingMove)) {
                                     break;
@@ -179,7 +179,7 @@ namespace TC {
                     foreach (Vector2Int move in validMoveCache[movement.name].OrderByDescending(move => gamestate.PieceInPosition(movement.AIAccessiblePosition + move) != null ? GetAmountOfMaterial(gamestate.PieceInPosition(movement.AIAccessiblePosition + move)) : 0)) {
                         if (movement.infinitelyScalingRange) {
                             //make a new thing in here to check each time it is scaled up
-                            for (int l = 0; l <= movement.currentRange; l++) {
+                            for (int l = 1; l <= movement.currentRange; l++) {
                                 Vector2Int scalingMove = move * l;
                                 if (!Gamestate.DoesPositionExist(movement.AIAccessiblePosition + scalingMove)) {
                                     break;

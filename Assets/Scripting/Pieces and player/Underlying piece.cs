@@ -98,7 +98,25 @@ namespace TC{
                 thisPiece.AIAccessiblePosition = new Vector2Int((int)transform.position.x, (int)transform.position.z);
             }
             else {
-                transform.position = new Vector3(500, 2f, 500);
+                if (name != "Player") {
+                    transform.position = new Vector3(500, 2f, 500);
+                }
+                else {
+                    transform.position = new Vector3(500, 1f, 500);
+                }
+            }
+        }
+
+        public void EnsureCorrectPositions(string hi) {
+            if (mode == Mode.gaming) {
+                if (previousPosition.y != 1) {
+                    previousPosition = new Vector3(previousPosition.x, 1, previousPosition.z);
+                }
+                transform.position = previousPosition;
+                thisPiece.AIAccessiblePosition = new Vector2Int((int)transform.position.x, (int)transform.position.z);
+            }
+            else {
+                transform.position = new Vector3(500, 1f, 500);
             }
         }
 

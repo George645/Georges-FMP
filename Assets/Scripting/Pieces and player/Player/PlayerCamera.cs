@@ -22,7 +22,7 @@ namespace TC{
                 if (Input.GetMouseButton(1)) {
                     WhileRightButtonPressed();
                 }
-                gameObject.transform.position = Vector3.Lerp(transform.position, player.transform.position + new Vector3(relativeCameraPosition.x * zoomInScale, Math.Clamp(relativeCameraPosition.y * zoomInScale, -.5f, 200), relativeCameraPosition.z * zoomInScale), 0.1f);
+                gameObject.transform.position = Vector3.Lerp(transform.position, player.transform.position + new Vector3(relativeCameraPosition.x * zoomInScale, Math.Clamp(relativeCameraPosition.y * zoomInScale, 1f, 200), relativeCameraPosition.z * zoomInScale), 0.1f);
                 previousFrameMousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
             }
             else {
