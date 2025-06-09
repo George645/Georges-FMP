@@ -19,7 +19,7 @@ namespace TC{
         GameObject newCube;
         bool firstFrame = true;
         bool coroutineRunning = false;
-        public readonly static int MaxSizeOfBoard = 10;
+        public readonly static int MaxSizeOfBoard = 100;
 
         void Awake() {
             if (originCube == null) {
