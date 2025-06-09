@@ -278,7 +278,7 @@ namespace TC {
 
             for (int i = 0; i < piece.moveableTiles.Length; i++) {
                 for (int j = 0; j < piece.moveableTiles.Length; j++) {
-                    if (i + piece.AIAccessiblePosition.x <= 100 && j + piece.AIAccessiblePosition.y <= 100 && i + piece.AIAccessiblePosition.x >= -100 && j + piece.AIAccessiblePosition.y >= -100 && piece.moveableTiles[i][j]) {
+                    if (i + piece.AIAccessiblePosition.x <= OriginCube.MaxSizeOfBoard && j + piece.AIAccessiblePosition.y <= OriginCube.MaxSizeOfBoard && i + piece.AIAccessiblePosition.x >= -OriginCube.MaxSizeOfBoard && j + piece.AIAccessiblePosition.y >= -OriginCube.MaxSizeOfBoard && piece.moveableTiles[i][j]) {
                         Vector2Int move = new(i - piece.potentialRange, j - piece.potentialRange);
                         if (Gamestate.DoesPositionExist(move + piece.AIAccessiblePosition)) {
                             validMovePositions.Add(move);

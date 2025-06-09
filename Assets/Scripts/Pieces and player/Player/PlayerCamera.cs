@@ -5,24 +5,21 @@ using UnityEngine;
 
 namespace TC{
     public class PlayerCamera : MonoBehaviour {
-        GameObject player;
         public Mode mode = Mode.gaming;
         [SerializeField]
+        GameObject followTarget;
         
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start() {
-            player = Player.player;
-        }
 
         // Update is called once per frame
         void FixedUpdate() {
             if (mode == Mode.gaming) {
-                FaceCamera(player.transform.position);
+                FaceCamera(followTarget.transform.position);
                 if (Input.GetMouseButton(1)) {
                     WhileRightButtonPressed();
                 }
-                gameObject.transform.position = Vector3.Lerp(transform.position, player.transform.position + new Vector3(relativeCameraPosition.x * zoomInScale, Math.Clamp(relativeCameraPosition.y * zoomInScale, 1f, 200), relativeCameraPosition.z * zoomInScale), 0.1f);
+                gameObject.transform.position = Vector3.Lerp(transform.position, followTarget.transform.position + new Vector3(relativeCameraPosition.x * zoomInScale, Math.Clamp(relativeCameraPosition.y * zoomInScale, 1f, OriginCube.MaxSizeOfBoard * 2), relativeCameraPosition.z * zoomInScale), 0.1f);
                 previousFrameMousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
             }
             else {
@@ -30,7 +27,7 @@ namespace TC{
                 if (Input.GetMouseButton(1)) {
                     WhileRightButtonPressed();
                 }
-                gameObject.transform.position = Vector3.Lerp(transform.position, new Vector3(500, 0.5f, 500) + new Vector3(relativeCameraPosition.x * zoomInScale, Math.Clamp(relativeCameraPosition.y * zoomInScale, -.5f, 200), relativeCameraPosition.z * zoomInScale), 0.1f);
+                gameObject.transform.position = Vector3.Lerp(transform.position, new Vector3(500, 0.5f, 500) + new Vector3(relativeCameraPosition.x * zoomInScale, Math.Clamp(relativeCameraPosition.y * zoomInScale, -.5f, OriginCube.MaxSizeOfBoard * 2), relativeCameraPosition.z * zoomInScale), 0.1f);
                 previousFrameMousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
             }
             Zoom();
@@ -74,11 +71,11 @@ namespace TC{
         Vector2 rotation;
         Vector3 relativeCameraPosition = new(0.939801f, 0.3421142f, 0);
         void WhileRightButtonPressed() {
-            relativeMousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - previousFrameMousePos;
+            relativeMousePos = -(new Vector2(Input.mousePosition.x, Input.mousePosition.y) - previousFrameMousePos);
             distanceSpun += (float)relativeMousePos.x / 500 * PlayerPrefs.GetInt("Sensitivity", 70);
             if (distanceSpun < -180) distanceSpun += 360;
             else if (distanceSpun > 180) distanceSpun -= 360;
-            tilt += -relativeMousePos.y / 500 * PlayerPrefs.GetInt("Sensitivity", 70);
+            tilt += relativeMousePos.y / 500 * PlayerPrefs.GetInt("Sensitivity", 70);
             tilt = math.clamp(tilt, -5, 90);
             //calculate the rotation around the player
             newRotationXNormalised = Mathf.Cos(Mathf.Deg2Rad * distanceSpun);
@@ -99,7 +96,7 @@ namespace TC{
 
         float zoomInScale = 10;
         void Zoom() {
-            zoomInScale = math.clamp(zoomInScale + Input.mouseScrollDelta.y, 3, 200);
+            zoomInScale = math.clamp(zoomInScale + Input.mouseScrollDelta.y, 3, OriginCube.MaxSizeOfBoard * 2);
         }
     }
 }

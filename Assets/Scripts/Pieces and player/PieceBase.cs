@@ -28,16 +28,16 @@ namespace TC{
         }
 
         void FindStartPosition() {
-            transform.position = new Vector3(101, 0, 101);
-            int newX = 101;
-            int newZ = 101;
+            transform.position = new Vector3(OriginCube.MaxSizeOfBoard + 1, 0, OriginCube.MaxSizeOfBoard + 1);
+            int newX = OriginCube.MaxSizeOfBoard + 1;
+            int newZ = OriginCube.MaxSizeOfBoard + 1;
             int count = 0;
             System.Random random;
             bool whileLoopVariable = true;
             while (whileLoopVariable && count < 10) {
                 random = new System.Random();
-                newX = random.Next(-100, 100);
-                newZ = random.Next(-100, 100);
+                newX = random.Next(-OriginCube.MaxSizeOfBoard, OriginCube.MaxSizeOfBoard);
+                newZ = random.Next(-OriginCube.MaxSizeOfBoard, OriginCube.MaxSizeOfBoard);
                 if (Physics.Raycast(new Vector3(newX, 3.2f, newZ), new Vector3(0, -1, 0), 1) == true) {
                     newX = 101;
                 }
@@ -59,7 +59,7 @@ namespace TC{
                 base.IfNotLevellingReturn();
                 selected = true;
             }
-            if (CubeBase.GetSquareInDirection(transform.position, 0, 0) == null && TC_Menu.MenuHandling.boardState == null) {
+            if (CubeBase.GetSquareInDirection(transform.position, 0, 0) == null/* && TC_Menu.MenuHandling.boardState == null//*/) {
                 FindStartPosition();
             }
             Selected();

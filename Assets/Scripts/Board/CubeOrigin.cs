@@ -19,6 +19,7 @@ namespace TC{
         GameObject newCube;
         bool firstFrame = true;
         bool coroutineRunning = false;
+        public readonly static int MaxSizeOfBoard = 10;
 
         void Awake() {
             if (originCube == null) {
@@ -33,25 +34,22 @@ namespace TC{
             }
             AlignToGridAndColour();
             if (mode == Mode.gaming) {
-                if (TC_Menu.MenuHandling.boardState == null) {
-                    GenerateLevel();
-                }
-                else {
-                    RegenerateLevel();
-                }
-                Gamestate.board = new bool[201, 201];
-                Gamestate.board[100, 100] = true;
+                //if (TC_Menu.MenuHandling.boardState == null) {
+                GenerateLevel();
+                //}//*/
+                //else {
+                //RegenerateLevel();
+                //}
+                Gamestate.board = new bool[MaxSizeOfBoard * 2 + 1, MaxSizeOfBoard * 2 + 1];
+                Gamestate.board[MaxSizeOfBoard, MaxSizeOfBoard] = true;
             }
         }
-        void Hjhgskuguyg() {
-
-        }
         private void RegenerateLevel() {
-            for (int i = 0; i <= 200; i++) {
-                for (int j = 0; j <= 200; j++) {
-                    if (i == 100 && j == 100) continue;
-                    if (Gamestate.DoesPositionExist(new Vector2Int(i - 100, j - 100))) {
-                        Instantiate(cube, new Vector3(i - 100, 0.5f, j - 100), Quaternion.identity, transform);
+            for (int i = 0; i <= MaxSizeOfBoard * 2; i++) {
+                for (int j = 0; j <= MaxSizeOfBoard * 2; j++) {
+                    if (i == MaxSizeOfBoard && j == MaxSizeOfBoard) continue;
+                    if (Gamestate.DoesPositionExist(new Vector2Int(i - MaxSizeOfBoard, j - MaxSizeOfBoard))) {
+                        Instantiate(cube, new Vector3(i - MaxSizeOfBoard, 0.5f, j - MaxSizeOfBoard), Quaternion.identity, transform);
                     }/*
                 if (MenuHandling.boardState.PieceInPosition(new Vector2Int(i, j)) != null){
                     Instantiate(MenuHandling.boardState.PieceInPosition(new Vector2Int(i, j)).thisObject.gameObject);
@@ -77,8 +75,8 @@ namespace TC{
         }
 
         void BoundaryFill() {
-            for (int x = -100; x < 100; x++) {
-                for (int z = -100; z < 100; z++) {
+            for (int x = -MaxSizeOfBoard; x < MaxSizeOfBoard; x++) {
+                for (int z = -MaxSizeOfBoard; z < MaxSizeOfBoard; z++) {
                     Vector3 suggestedPosition = new(x, 0.5f, z);
                     if (GetSquareInDirection(x, z) == null && CubeInDirection(suggestedPosition, new Vector3(10, 0.5f, 0)) && CubeInDirection(suggestedPosition, new Vector3(-10, 0.5f, 0)) && CubeInDirection(suggestedPosition, new Vector3(0, 0.5f, 10)) && CubeInDirection(suggestedPosition, new Vector3(0, 0.5f, -10))) {
                         newCube = Instantiate(cube, new Vector3(x, 0, z), Quaternion.identity, transform);
@@ -94,10 +92,10 @@ namespace TC{
 
             float offset = 0.5f;
 
-            for (int x = 1; x <= 100; x++) {
-                for (int y = 0; y <= 100; y++) {
+            for (int x = 1; x <= MaxSizeOfBoard; x++) {
+                for (int y = 0; y <= MaxSizeOfBoard; y++) {
                     //Animation curve 200 * x = combined distance to the square, subtract 0.4 from the animation curve, add plus or minus 0.5
-                    if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - offset + Random.Range(-0.5f, 0.5f) < 0) {
+                    if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / (MaxSizeOfBoard * 2)) - offset + Random.Range(-0.5f, 0.5f) < 0) {
                         continue;
                     }
 
@@ -107,9 +105,9 @@ namespace TC{
                 }
             }
             //repeat 4 times, one for each quadrant away from this
-            for (int x = -1; x >= -100; x--) {
-                for (int y = 0; y >= -100; y--) {
-                    if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - offset + Random.Range(-0.5f, 0.5f) < 0) {
+            for (int x = -1; x >= -MaxSizeOfBoard; x--) {
+                for (int y = 0; y >= -MaxSizeOfBoard; y--) {
+                    if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / (MaxSizeOfBoard * 2)) - offset + Random.Range(-0.5f, 0.5f) < 0) {
                         continue;
                     }
 
@@ -118,9 +116,9 @@ namespace TC{
                     allTheSquares.LastOrDefault().name = System.Convert.ToString(Mathf.RoundToInt(Random.Range(0, 1000000)));
                 }
             }
-            for (int y = 1; y <= 100; y++) {
-                for (int x = 0; x >= -100; x--) {
-                    if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - offset + Random.Range(-0.5f, 0.5f) < 0) {
+            for (int y = 1; y <= MaxSizeOfBoard; y++) {
+                for (int x = 0; x >= -MaxSizeOfBoard; x--) {
+                    if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / (MaxSizeOfBoard * 2)) - offset + Random.Range(-0.5f, 0.5f) < 0) {
                         continue;
                     }
 
@@ -129,9 +127,9 @@ namespace TC{
                     allTheSquares.LastOrDefault().name = System.Convert.ToString(Mathf.RoundToInt(Random.Range(0, 1000000)));
                 }
             }
-            for (int y = -1; y >= -100; y--) {
-                for (int x = 0; x <= 100; x++) {
-                    if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / 200) - offset + Random.Range(-0.5f, 0.5f) < 0) {
+            for (int y = -1; y >= -MaxSizeOfBoard; y--) {
+                for (int x = 0; x <= MaxSizeOfBoard; x++) {
+                    if (animationCurve.Evaluate((float)(Mathf.Abs(x) + Mathf.Abs(y)) / (MaxSizeOfBoard * 2)) - offset + Random.Range(-0.5f, 0.5f) < 0) {
                         continue;
                     }
 

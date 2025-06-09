@@ -4,8 +4,9 @@ namespace TC {
         public GameObject OriginalObject;
         public Vector2Int offset;
 
-        void FixedUpdate() {
+        void Update() {
             if (Input.GetMouseButtonDown(0)) {
+                Debug.DrawRay(Camera.main.ScreenPointToRay(Input.mousePosition).origin, Camera.main.ScreenPointToRay(Input.mousePosition).direction * OriginCube.MaxSizeOfBoard * 4, Color.red, 5);
                 if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit Info)) {
                     if (Info.collider.gameObject == gameObject) {
                         CheckIfTaking();
