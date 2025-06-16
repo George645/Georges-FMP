@@ -3142,7 +3142,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: 1
-  followTarget: {fileID: 1854417751}
 --- !u!1 &337656735
 GameObject:
   m_ObjectHideFlags: 0
