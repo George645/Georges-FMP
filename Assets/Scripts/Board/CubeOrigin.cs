@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
 
-namespace TC{
+namespace TC {
     public class OriginCube : CubeBase {
         public static GameObject originCube;
         public static GameObject cube;
@@ -40,8 +40,6 @@ namespace TC{
                 //else {
                 //RegenerateLevel();
                 //}
-                Gamestate.board = new bool[MaxSizeOfBoard * 2 + 1, MaxSizeOfBoard * 2 + 1];
-                Gamestate.board[MaxSizeOfBoard, MaxSizeOfBoard] = true;
             }
         }
         private void RegenerateLevel() {
@@ -68,10 +66,6 @@ namespace TC{
                 currentSizeOfBoard = sizeNumber;
                 StartCoroutine(SpawnSurrounding());
             }
-            if (firstFrame) {
-                BoundaryFill();
-                firstFrame = false;
-            }
         }
 
         void BoundaryFill() {
@@ -91,7 +85,8 @@ namespace TC{
             List<GameObject> allTheSquares = new();
 
             float offset = 0.5f;
-
+            Gamestate.board = new bool[MaxSizeOfBoard * 2 + 1, MaxSizeOfBoard * 2 + 1];
+            Gamestate.board[MaxSizeOfBoard, MaxSizeOfBoard] = true;
             for (int x = 1; x <= MaxSizeOfBoard; x++) {
                 for (int y = 0; y <= MaxSizeOfBoard; y++) {
                     //Animation curve 200 * x = combined distance to the square, subtract 0.4 from the animation curve, add plus or minus 0.5
@@ -138,12 +133,21 @@ namespace TC{
                     allTheSquares.LastOrDefault().name = System.Convert.ToString(Mathf.RoundToInt(Random.Range(0, 1000000)));
                 }
             }
-            new Gamestate(null, null);
+            StartCoroutine(WaitOneSecond(allTheSquares));
+        }
+        IEnumerator WaitOneSecond(List<GameObject> allTheSquares) {
+            yield return new WaitForFixedUpdate();
+            yield return new WaitForFixedUpdate();
+
             //get each square starting from this one to check itself and its neighbours to ensure that they are all directly connected back to the starting one
-            ConnectsToCenter();
+            ConnectsToCenter(-3);
+            int count = 0;
             foreach (GameObject child in allTheSquares.Where(child => child.GetComponent<CubeBase>().connectsToCenter == false)) {
                 Destroy(child);
+                count += 1;
             }
+            yield return new WaitForFixedUpdate();
+            BoundaryFill();
         }
 
         public void SetSizeOfBoard(Slider slider) {
@@ -194,7 +198,7 @@ namespace TC{
             else {
                 yield return null;
             }
-            ConnectsToCenter();
+            ConnectsToCenter(0);
         }
         IEnumerator RemoveSurrounding() {
             for (int i = maxValue * 2; i >= 0; i--) {
