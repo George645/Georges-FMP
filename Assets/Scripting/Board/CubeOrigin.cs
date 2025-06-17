@@ -15,7 +15,6 @@ public class OriginCube : CubeBase {
     [SerializeField]
     AnimationCurve animationCurve;
     GameObject newCube;
-    bool firstFrame = true;
     bool coroutineRunning = false;
     public readonly static int MaxSizeOfBoard = 50;
 
